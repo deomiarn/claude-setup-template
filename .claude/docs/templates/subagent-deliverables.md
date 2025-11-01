@@ -1,90 +1,53 @@
-# Subagent Deliverables Template
+# Subagent Deliverables
 
-All subagents MUST deliver following artifacts after completing tasks.
+All subagents MUST deliver after completing tasks.
 
 ## 1. Implementation
 
-Execute the assigned task per planning doc spec.
+Execute assigned task per planning doc spec.
 
-## 2. Communication Stream Update
+## 2. Communication Stream Update (Required)
 
-**File**: `.claude/docs/internal/communication/[feature]-comms.md`
+**File**: `.claude/sessions/[session]/communication.md`
 
-Append entry using communication-entry template:
+Append using format from `.claude/docs/output-format.md`:
+
 ```markdown
-## [ISO_8601] - [your-agent-name]
-Task: [brief]
-Status: completed|blocked
-Files: [paths:lines]
-Notes: [decisions/findings]
-Next: [handoff]
+## [ISO_8601] - [agent-name]
+Problem: [1-2 lines]
+Solution: [how done]
+Files: [path:line-range]
+Next: [dependencies/handoffs]
 ```
 
-## 3. External Documentation Update
+Read ALL entries before executing for full context.
 
-**If feature adds new capability:**
+## 3. External Documentation (If User-Facing)
 
-Update `.claude/docs/features/[feature]/implementation.md`:
-- What was implemented
-- How it works
+**If feature adds capability:**
+
+Update `/docs/features/[feature]/implementation.md`:
+- What implemented
+- How works
 - Usage examples
 - Testing approach
 
 **If architecture changed:**
 
-Update `.claude/docs/architecture/[relevant].md`
+Update `/docs/architecture/[relevant].md`
 
-## 4. Agent Summary Report
+## 4. SOP Creation (If New Pattern)
 
-**File**: `.claude/agents/summaries/[agent]_[feature]_[timestamp].md`
-
-```markdown
----
-agent: [your-name]
-feature: [feature-name]
-model: [haiku|sonnet|opus]
-tokens: [estimate]
-duration: [estimate]
-timestamp: [ISO_8601]
----
-
-## Task Context
-Requested: [what was asked]
-Scope: [boundaries]
-
-## Approach
-Strategy: [high-level approach]
-Tools/Patterns: [technologies used]
-Alternatives: [other options considered]
-
-## Files Modified
-- `path/file.ts:123-145` - [description]
-
-## Key Decisions
-1. Decision: [what]
-   Rationale: [why]
-   Impact: [implications]
-
-## Next Steps
-[Recommended follow-up]
-```
-
-## 5. Session Update (Optional)
-
-If major milestone or blocker, update `.claude/sessions/[session].md`
-
-## 6. SOP Creation (If New Pattern)
-
-If you discovered reusable pattern:
+If reusable pattern discovered:
 
 **File**: `.claude/sop/[pattern-name].md`
 
 ```markdown
 # SOP: [Pattern Name]
 
-Created: [ISO_8601]
-Agent: [your-name]
-Discovered During: [feature]
+**Created**: [ISO_8601]
+**Agent**: [agent-name]
+**Discovered During**: [feature]
 
 ## Overview
 [What pattern solves]
@@ -109,8 +72,6 @@ Before reporting completion:
 - [ ] Implementation works as specified
 - [ ] Communication stream appended
 - [ ] External docs updated (if user-facing)
-- [ ] Summary report created
-- [ ] Session updated (if milestone)
 - [ ] SOP created (if new pattern)
 - [ ] All file refs include line numbers
-- [ ] Concise, brevity-first communication style
+- [ ] Extreme concision maintained

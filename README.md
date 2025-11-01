@@ -1,15 +1,15 @@
 # Claude Multi-Agent Orchestration Template
 
-Starter template for building custom websites efficiently using Claude Code with a Parent Orchestrator pattern coordinating 31+ specialized agents.
+Universal template for building projects with Claude Code using Parent Orchestrator pattern coordinating specialized agents.
 
 ## Problem
 
-Building custom websites with AI introduces complexity:
-- **Cost overhead**: Running Opus model for simple tasks wastes budget
-- **Context fragmentation**: Each conversation loses history, repeating research
-- **No reusable patterns**: Hard-won solutions lost across projects
-- **Manual coordination**: Developers juggle multiple agent conversations manually
-- **Documentation drift**: Code changes, docs fall behind, teams lose sync
+Building with AI introduces complexity:
+- **Cost overhead**: Wrong model for task wastes budget
+- **Context fragmentation**: Each conversation loses history
+- **No reusable patterns**: Solutions lost across projects
+- **Manual coordination**: Juggling multiple agent conversations
+- **Documentation drift**: Code changes, docs fall behind
 
 ## Solution
 
@@ -27,79 +27,85 @@ Parent (sonnet) - Plan & delegate only
 ```
 
 **Parent workflow**:
-1. Read context (docs, session, SOPs)
+1. Read context (docs, sessions, SOPs)
 2. Create 500-token plan → agent + model assignment
 3. Delegate via Task tool
-4. Review summaries, update tracking
+4. Review output, update tracking
 
 **Subagent workflow**:
-1. Read context (plan, communication stream, SOPs)
+1. Read context (plan, communication, docs, SOPs)
 2. Execute task
-3. Document (append communication, update docs, create summary)
+3. Document (append communication, update docs, create SOP if pattern)
 4. Report to parent
 
 ## Features
 
 ### Multi-Agent System
-- **31+ agents**: 28 marketplace (wshobson/agents) + 3 custom project agents
+- **Marketplace agents**: 54 plugins from wshobson/agents (enabled in settings.json)
+- **Custom agents**: Project-specific (examples: animation-specialist, sitemap-analyst, ui-design-architect)
 - **Model-tier assignment**: Haiku (fast), Sonnet (balanced), Opus (critical)
 - **Cost optimization**: Use lowest capable model per task
 - **Specialization**: SEO, frontend, mobile, database, performance, security
 
 ### Documentation Protocol
-- **External**: User-facing (README, architecture, features, agent catalog)
-- **Internal**: Agent context (planning, communication streams, templates)
-- **Non-redundant**: Auto-merge duplicate content via `/update-docs` command
-- **Versioned**: ISO 8601 timestamps, file references with line numbers
+- **Separation**: `.claude/` (Claude ops) vs `/docs/` (developer docs)
+- **Sessions**: Internal work per session (planning + communication)
+- **Non-redundant**: Auto-merge via `/update-docs` command
+- **Versioned**: ISO 8601 timestamps, file refs with line numbers
 
 ### Prompt Caching (~90% Savings)
 Claude Code auto-caches stable content (5min TTL):
-- **High priority**: CLAUDE.md, agents-reference.md, SOPs, architecture docs
-- **Medium priority**: Feature docs, planning docs
+- **High priority**: CLAUDE.md, model-selection.md, SOPs, architecture docs
+- **Medium priority**: Feature docs
 - **Never cache**: Sessions, communication streams (dynamic)
 
 **Cost benefit**: First agent pays full token cost, subsequent agents use cache.
 
 ### Reusable SOPs
 Agents create Standard Operating Procedures when discovering reusable patterns:
-- **Baseline**: Pre-seeded critical patterns (design-standards, animation-patterns)
 - **Dynamic**: Agents document patterns during work
 - **Referenced**: Future agents read SOPs before execution
 - **Prevents mistakes**: Codified best practices
 
-## Quick Start
+## Structure
 
-### 1. Clone Template
-```bash
-git clone https://github.com/[your-username]/claude-setup-template.git
-cd claude-setup-template
-```
-
-### 2. Understand Structure
 ```
 .claude/
-├── docs/
-│   ├── README.md                    # Documentation index
-│   ├── agents-reference.md          # All 31+ agents
-│   ├── internal/                    # Agent context
-│   │   ├── planning/                # 500-token task plans
-│   │   └── communication/           # Per-feature agent logs
-│   ├── architecture/                # System design
-│   ├── features/                    # Implementation guides
-│   └── templates/                   # Standard formats
-├── sessions/                         # Active work tracking
-├── sop/                             # Reusable patterns
-├── agents/
-│   ├── custom/                      # Project-specific agents
-│   └── summaries/                   # Agent deliverables
-└── commands/                        # Custom slash commands
+├── agents/               # Custom agent definitions
+├── docs/                 # Claude operations docs
+│   ├── model-selection.md
+│   ├── output-format.md
+│   ├── workflows/        # Parent + subagent workflows
+│   └── templates/        # Standard formats
+├── sessions/             # Internal work
+│   └── [session]/
+│       ├── planning.md
+│       └── communication.md
+├── sop/                  # Agent-created patterns
+└── commands/             # Slash commands
+
+docs/                     # Root - developer docs
+├── architecture/         # System design
+└── features/             # Implementation guides
 ```
 
-### 3. Start Building
-Open with Claude Code:
+## Quick Start
+
+### 1. Use This Template
+
+Click "Use this template" on GitHub or clone:
+```bash
+git clone https://github.com/your-username/your-project.git
+cd your-project
+```
+
+### 2. Open with Claude Code
+
 ```bash
 claude code .
 ```
+
+### 3. Start Building
 
 Ask Parent Orchestrator:
 ```
@@ -113,7 +119,8 @@ Parent will:
 - Review quality, update docs
 
 ### 4. Custom Agents (Optional)
-Add project-specific agents in `.claude/agents/custom/[agent-name].md`:
+
+Add project-specific agents in `.claude/agents/[agent-name].md`:
 ```markdown
 You are [agent-name].
 Specialty: [specific domain]
@@ -121,19 +128,20 @@ Model: haiku|sonnet|opus
 ...
 ```
 
-Register in `.claude/docs/agents-reference.md` Custom section.
+See existing agents (animation-specialist, sitemap-analyst, ui-design-architect) as examples.
 
 ## Documentation
 
-**Main index**: [`.claude/docs/README.md`](.claude/docs/README.md)
-**Agent catalog**: [`.claude/docs/agents-reference.md`](.claude/docs/agents-reference.md)
+**Claude operations**: [`.claude/docs/README.md`](.claude/docs/README.md)
 **Orchestrator instructions**: [`CLAUDE.md`](CLAUDE.md)
+**Developer docs**: [`docs/README.md`](docs/README.md)
+**Workflows**: [`.claude/docs/workflows/`](.claude/docs/workflows/)
 
 ## Commands
 
 ### `/update-docs`
 Auto-consolidate documentation:
-- Identify redundancies across all docs
+- Identify redundancies across docs
 - Merge duplicate content
 - Regenerate README index
 - Validate cross-references
@@ -159,14 +167,15 @@ Run after feature work or when docs feel scattered.
 
 Use lowest capable model. Parent always Sonnet.
 
+See [`.claude/docs/model-selection.md`](.claude/docs/model-selection.md) for orchestration patterns.
+
 ## Quality Standards
 
 - Every file change documented
 - Every feature has context + implementation docs
 - Every reusable pattern creates SOP
-- Every doc referenced in README
 - All timestamps ISO 8601
-- All file references include line numbers
+- All file refs include line numbers
 - No duplicate content
 
 ## Communication Style

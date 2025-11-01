@@ -1,41 +1,34 @@
 # Communication Entry Template
 
-Append to: `.claude/docs/internal/communication/[feature]-comms.md`
+Append to: `.claude/sessions/[session]/communication.md`
+
+See: `.claude/docs/output-format.md` for current standard.
 
 ## Format
 
 ```markdown
 ## [ISO_8601] - [agent-name]
-
-Task: [Brief description]
-Status: started | in_progress | completed | blocked
-Files: [Modified file paths with line ranges]
-Notes: [Key decisions, findings, blockers]
-Next: [What follows or dependencies]
+Problem: [1-2 lines]
+Solution: [how done]
+Files: [path:line-range]
+Next: [dependencies/handoffs]
 ```
 
 ## Example
 
 ```markdown
-## 2025-10-31T14:30:00Z - frontend-developer
-
-Task: Implement homepage hero section
-Status: completed
-Files:
-  - app/page.tsx:15-45
-  - components/Hero.tsx:1-89
-  - styles/hero.module.css:1-34
-Notes:
-  - Used Swiss minimalism design tokens from ui-design-architect
-  - Coordinated with animation-specialist for scroll triggers
-  - Responsive breakpoints at sm/md/lg
-Next: animation-specialist to add scroll animations
+## 2025-01-15T14:30:00Z - frontend-developer
+Problem: Implement homepage hero section per design spec
+Solution: Created responsive Hero component with Swiss minimalism tokens, scroll triggers ready
+Files: app/page.tsx:15-45, components/Hero.tsx:1-89, styles/hero.module.css:1-34
+Next: animation-specialist adds scroll animations
 ```
 
 ## Guidelines
 
 - **Extremely concise** - sacrifice grammar for brevity
-- **File refs** - always include line ranges
-- **Decisions** - note key choices made
-- **Handoffs** - clear what comes next
-- **Blockers** - call out dependencies immediately
+- **Problem** - what needed solving (not implementation details)
+- **Solution** - how task accomplished
+- **Files** - always include line ranges
+- **Next** - clear handoffs/dependencies
+- **Append only** - never overwrite existing entries

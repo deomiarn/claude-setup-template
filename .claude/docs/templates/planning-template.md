@@ -10,18 +10,19 @@
 ## Tasks
 
 ### 1. [Task Name]
-- **Agent**: [agent-name] (from agents-reference.md)
+- **Agent**: [agent-name] (from settings.json or .claude/agents/)
 - **Model**: haiku|sonnet|opus
 - **Context**:
   - .claude/docs/README.md
-  - .claude/docs/architecture/[relevant].md
-  - .claude/docs/features/[feature]/[relevant].md
-  - .claude/docs/internal/communication/[feature]-comms.md
+  - /docs/architecture/[relevant].md
+  - /docs/features/[feature]/[relevant].md
+  - .claude/sessions/[session]/communication.md (previous work)
+  - .claude/sop/[relevant].md (if applicable)
 - **Output**:
   - Implementation in [location]
-  - Documentation update in .claude/docs/features/[feature]/
-  - Append to communication stream
-  - Summary report
+  - Documentation update in /docs/features/[feature]/
+  - Append to .claude/sessions/[session]/communication.md
+  - Use format from .claude/docs/output-format.md
 
 ### 2. [Next Task]
 [Repeat structure]
@@ -38,21 +39,4 @@ Done when:
 
 ---
 
-## Model Decision Guide
-
-Use **Haiku** for:
-- Code generation from spec
-- Test writing
-- Documentation
-- Deployments
-
-Use **Sonnet** for:
-- Architecture
-- Complex implementation
-- Code review
-- Security
-
-Use **Opus** for:
-- System design
-- Critical security
-- Database architecture
+See `.claude/docs/model-selection.md` for model decision patterns.

@@ -125,3 +125,24 @@ migration_lock.toml
 
 # Generated GraphQL
 *.graphql.json
+
+
+# Claude Code Runtime Files
+
+# Settings (local overrides)
+.claude/settings.local.json
+
+# Sessions (runtime work tracking)
+.claude/sessions/*
+!.claude/sessions/README.md
+!.claude/sessions/example-session/
+
+# SOPs (agent-created patterns - runtime)
+.claude/sop/*
+!.claude/sop/README.md
+
+# Developer docs (runtime generated)
+docs/architecture/*
+!docs/architecture/.gitkeep
+docs/features/*
+!docs/features/.gitkeep
