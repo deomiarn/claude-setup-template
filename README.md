@@ -217,7 +217,7 @@ See existing: animation-specialist, sitemap-analyst, ui-design-architect.
 
 ## Multi-Agent System
 
-**Marketplace**: 44 plugins from [wshobson/agents](https://github.com/wshobson/agents) (see `.claude/settings.json` → `enabledPlugins`)
+**Marketplace**: plugins from [wshobson/agents](https://github.com/wshobson/agents) (see `.claude/settings.json` → `enabledPlugins`)
 
 **Categories**: backend, frontend, mobile, database, security, testing, deployment, SEO, performance, debugging, documentation, LLM apps
 
