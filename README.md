@@ -262,14 +262,6 @@ Most of the MCPs are provided with `http`.
 
 ### Manual MCP Setups:
 
-#### Tailwind CSS MCP
-
-The Tailwind CSS MCP needs a separate installation. Install it via npm:
-
-```bash
-  npm install tailwindcss-mcp-server
-```
-
 #### Context7 MCP
 
 The Context7 MCP provides extensive capabilities.
