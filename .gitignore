@@ -1,0 +1,127 @@
+# OS & System Files
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# Linux
+.Xauthority
+
+
+# IDE & Editor Files
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Vim/Neovim
+*.swp
+*.swo
+*~
+.vim/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Emacs
+\#*\#
+.\#*
+
+# General editor backups
+*.bak
+*.backup
+
+
+# Node.js & Package Management
+
+# Dependencies
+node_modules/
+.pnpm-store/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+.next/
+.vercel/
+out/
+.turbo/
+*.tsbuildinfo
+
+# Logs & PID files
+*.log
+lerna-debug.log*
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+
+# Environment & Secrets (CRITICAL - DO NOT COMMIT)
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# SSH & Credentials
+*.pem
+*.key
+credentials.json
+.credentials
+
+
+# Testing
+
+# Coverage reports
+coverage/
+.nyc_output/
+*.lcov
+
+# Test results
+test-results/
+playwright-report/
+
+
+# Database
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+.mongo_history
+
+# Prisma
+.prisma/
+migration_lock.toml
+
+
+# Package Manager Artifacts
+
+# Yarn
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+
+# Generated GraphQL
+*.graphql.json

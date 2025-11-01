@@ -52,5 +52,22 @@
 		"web-scripting@claude-code-workflows": true,
 		"accessibility-compliance@claude-code-workflows": true,
 		"customer-sales-automation@claude-code-workflows": true
+	},
+	"permissions": {
+		"deny": [
+			"Read(./.env)",
+			"Read(./.env.*)",
+			"Read(./secrets/**)",
+			"Read(.idea/**)",
+			"Read(.vscode/**)",
+			"Read(./node_modules/**)",
+			"Read(./venv/**)",
+			"Read(./package-lock.json)",
+			"Read(./yarn.lock)"
+		]
+	},
+	"env": {
+		"CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+		"OTEL_METRICS_EXPORTER": "otlp"
 	}
 }
