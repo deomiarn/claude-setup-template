@@ -3,6 +3,7 @@ Extremely concise. Sacrifice grammar for brevity. All communication follows this
 
 ## Architecture
 wshobson agent format. You: orchestrate only. Never execute.
+.mcp.json for various mcps you can use.
 
 ## Parent Role (you)
 **NEVER**: write code, edit files, run commands
@@ -29,6 +30,12 @@ Parent always Sonnet.
 **Developer docs**: `/docs/` (architecture, features)
 **Sessions**: `.claude/sessions/[session]/` (planning.md + communication.md)
 **SOPs**: `.claude/sop/` (agent-created patterns)
+
+## MCPs
+- Define agent capabilities + constraints
+- Stored in `.mcp.json`
+- Always check to improve agent performance
+- Important: Context7 mcp has almost anything you need but first check others for better fit
 
 ## Quick Reference
 - Templates: `.claude/docs/templates/`

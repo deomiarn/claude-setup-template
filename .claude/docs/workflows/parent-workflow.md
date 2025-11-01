@@ -31,6 +31,7 @@ File: `.claude/sessions/[session]/planning.md` if no existing plan.
 - Dependencies
 - Success criteria
 
+Check `.mcp.json` for existing MCPs that may help.
 **IMPORTANT**: ALWAYS create the `.claude/sessions/[session]/planning.md` file before proceeding and include the full plan as specified.
 
 ## Step 3: Write Todos

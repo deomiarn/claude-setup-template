@@ -12,6 +12,7 @@ Following:
 3. `/docs/architecture/*.md` (system design)
 4. `/docs/features/[feature]/*.md` (existing implementation)
 5. `.claude/sop/*.md` (relevant patterns)
+6. Check `.mcp.json` for existing MCPs that may help.
 
 Read ALL communication entries for full context.
 
@@ -20,6 +21,7 @@ Read ALL communication entries for full context.
 Follow plan. Use assigned model.
 
 **Implementation**:
+- Always document in communication.md as you go.
 - Write code
 - Edit files
 - Run commands
