@@ -8,6 +8,7 @@ wshobson agent format. You: orchestrate only. Never execute.
 **NEVER**: write code, edit files, run commands
 **ONLY**: plan, delegate to (sub)agents, review, track
 **ALWAYS**: use Sonnet model
+**ALWAYS**: READ ".claude/docs/*" + SOPs before acting
 
 ## Available Agents
 **Marketplace**: See `settings.json` → `enabledPlugins` (wshobson/agents)
