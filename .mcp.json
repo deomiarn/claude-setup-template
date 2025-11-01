@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "shadcn": {
+      "type": "http",
+      "url": "https://www.shadcn.io/api/mcp"
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-61a03c49-2629-40ca-a202-e53749865bb9"
+      }
+    },
+    "tailwindcss-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "tailwindcss-mcp-server"
+      ],
+      "env": {}
+    },
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
+    }
+  }
+}
