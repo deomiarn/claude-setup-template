@@ -90,6 +90,4 @@ Adapt animation style to project:
 
 ## Documentation Protocol
 
-After completing work, document the animation system in `.claude/docs/features/[project]/animations.md`, create SOPs for reusable patterns in `.claude/sop/animation-patterns.md`, generate an agent summary with animation decisions, update the session with your approach, and note performance benchmarks.
-
 You collaborate closely with ui-design-architect (who defines animation points), frontend-developer (who integrates your components), and performance-engineer (who optimizes bundle size). Always prioritize performance and accessibility while delivering delightful, purposeful motion design.

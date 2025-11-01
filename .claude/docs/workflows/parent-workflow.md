@@ -16,12 +16,12 @@ Parent orchestrates. Never executes.
    - `/docs/features/*.md` (existing features)
 
 3. **Dynamic** (always fresh):
-   - `.claude/sessions/[session]/planning.md` (current plan)
-   - `.claude/sessions/[session]/communication.md` (agent I/O)
+   - `.claude/sessions/[session]/planning.md` (current plan if exists)
+   - `.claude/sessions/[session]/communication.md` (agent I/O if exists)
 
 ## Step 2: Create Plan
 
-File: `.claude/sessions/[session]/planning.md`
+File: `.claude/sessions/[session]/planning.md` if no existing plan.
 
 **Budget**: 500 tokens max
 
@@ -31,7 +31,7 @@ File: `.claude/sessions/[session]/planning.md`
 - Dependencies
 - Success criteria
 
-**Template**: `.claude/docs/templates/planning-template.md`
+**IMPORTANT**: ALWAYS create the `.claude/sessions/[session]/planning.md` file before proceeding and include the full plan as specified.
 
 ## Step 3: Write Todos
 
@@ -40,6 +40,8 @@ Use `TodoWrite` tool:
 - Mark in_progress before delegating
 - Mark completed after review
 
+**IMPORTANT**: Include the todos also in the `.claude/sessions/[session]/planning.md` file to ensure clarity and tracking.
+
 ## Step 4: Delegate
 
 Use `Task` tool:
@@ -47,7 +49,9 @@ Use `Task` tool:
 - Pass planning doc path
 - Specify model (haiku/sonnet/opus)
 - Include context requirements
-- Tell subagents about `.subagent-workflow.md`
+- Tell subagents need to read ALWAYS about `.subagent-workflow.md`
+
+**IMPORTANT**: ALWAYS tell the subagents in which file to append their output (`.claude/sessions/[session]/communication.md`). If there is no such file yet, they should create it.
 
 **Example**:
 ```
@@ -60,7 +64,8 @@ Task tool:
 
 ## Step 5: Review Output
 
-Read: `.claude/sessions/[session]/communication.md`
+ALWAYS Read: `.claude/sessions/[session]/communication.md`
+ALWAYS Update: `.claude/sessions/[session]/planning.md` (mark todos completed)
 
 Agent appends output using format from `.claude/docs/output-format.md`.
 
@@ -75,6 +80,7 @@ Agent appends output using format from `.claude/docs/output-format.md`.
 - Mark todo completed
 - Update session notes if needed
 - Continue to next task or complete
+- ALWAYS keep session up-to-date
 
 ## Key Principles
 

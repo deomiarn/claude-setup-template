@@ -2,9 +2,11 @@
 
 Subagents execute tasks. Document everything.
 
-## Step 1: Read Context
+## Step 1: Read Context ALWAYS
 
 **Order**:
+ALWAYS READ ALL FILES IN THE CURRENT SESSION WHICH IS ASSIGNED TO YOU FROM THE PARENT AGENT.
+Following:
 1. `.claude/sessions/[session]/planning.md` (your task assignment)
 2. `.claude/sessions/[session]/communication.md` (previous agent work)
 3. `/docs/architecture/*.md` (system design)
@@ -29,7 +31,8 @@ Follow extreme concision principle.
 ## Step 3: Document
 
 ### Internal (Required)
-Append to `.claude/sessions/[session]/communication.md`:
+**IMPORTANT**: ALWAYS append to `.claude/sessions/[session]/communication.md`:
+**IMPORTANT**: Check if new lines in the communication.md file exist and read them before appending. Adapt your code/implementation if needed based on new information.
 
 ```markdown
 ## [ISO_8601] - [agent-name]
@@ -39,10 +42,10 @@ Files: [path:line-range]
 Next: [dependencies/handoffs]
 ```
 
-Format: `.claude/docs/output-format.md`
+Always check format: `.claude/docs/output-format.md`
 
 ### External (If User-Facing)
-Update `/docs/`:
+Always Update `/docs/` if changes affect users/devs:
 - `/docs/architecture/` (if architectural changes)
 - `/docs/features/[feature]/` (implementation guide)
 
@@ -73,8 +76,8 @@ Parent reads, verifies, continues.
 ## Example Flow
 
 ```
-1. Read planning.md → Task: "Design auth API"
-2. Read communication.md → Previous: DB schema done
+1. Read current session planning.md → Task: "Design auth API"
+2. Read current session communication.md → Previous: DB schema done
 3. Read /docs/architecture/ → Understand system
 4. Read .claude/sop/api-design.md → Follow pattern
 5. Execute: Create API design doc
