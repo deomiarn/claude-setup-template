@@ -47,6 +47,7 @@ Update `/docs/`:
 - `/docs/features/[feature]/` (implementation guide)
 
 Keep concise. Devs read these.
+No duplicates. Check first if content exists.
 
 ### SOPs (If New Pattern)
 Create `.claude/sop/[pattern].md` when:
