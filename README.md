@@ -1,202 +1,270 @@
 # Claude Multi-Agent Orchestration Template
 
-Universal template for building projects with Claude Code using Parent Orchestrator pattern coordinating specialized agents.
+Template for building projects with Claude Code using Parent Orchestrator pattern. Core system in `.claude/` directory orchestrates specialized agents for cost-effective, context-aware development.
 
-## Problem
+## What This Is
 
-Building with AI introduces complexity:
-- **Cost overhead**: Wrong model for task wastes budget
-- **Context fragmentation**: Each conversation loses history
-- **No reusable patterns**: Solutions lost across projects
-- **Manual coordination**: Juggling multiple agent conversations
-- **Documentation drift**: Code changes, docs fall behind
+Starter template for multi-agent Claude Code projects. Parent Orchestrator (Sonnet) delegates to marketplace/custom agents with model-tier selection (Haiku/Sonnet/Opus), session-based context management, and workflow documentation.
 
-## Solution
+**Template nature**: Framework ready, populate as you build. SOPs created as you discover patterns. Docs structure provided, content added per feature.
 
-Parent Orchestrator pattern: single Sonnet-powered coordinator delegates to specialized agents (haiku/sonnet/opus) based on task complexity.
-
-**Key insight**: Parent never executes. Only plans, delegates, reviews, tracks. Subagents execute and document.
-
-## Architecture
+## Core Architecture
 
 ```
-Parent (sonnet) - Plan & delegate only
-├── Subagent 1 (haiku) - Fast deterministic tasks
-├── Subagent 2 (sonnet) - Complex implementation
-└── Subagent 3 (opus) - Architecture & security
+Parent (sonnet) - Plans, delegates, reviews, tracks (NEVER executes)
+├── Subagent 1 (haiku) - Executes fast/deterministic tasks
+├── Subagent 2 (sonnet) - Executes complex implementation
+└── Subagent 3 (opus) - Executes critical architecture/security
 ```
 
-**Parent workflow**:
+**Key principle**: Separation of orchestration (Parent) from execution (subagents).
+
+## Key Features
+
+### 1. Agent Delegation
+
+**Parent Orchestrator** (`.claude/docs/workflows/parent-workflow.md`):
 1. Read context (docs, sessions, SOPs)
-2. Create 500-token plan → agent + model assignment
-3. Delegate via Task tool
-4. Review output, update tracking
+2. Create 500-token plan with agent + model assignments
+3. Write todos (TodoWrite tool)
+4. Delegate via Task tool
+5. Review output
+6. Update tracking
 
-**Subagent workflow**:
-1. Read context (plan, communication, docs, SOPs)
+**Subagents** (`.claude/docs/workflows/subagent-workflow.md`):
+1. Read context (planning, communication, docs, SOPs)
 2. Execute task
-3. Document (append communication, update docs, create SOP if pattern)
-4. Report to parent
+3. Append to communication.md
+4. Update /docs/ if user-facing
+5. Create SOP if reusable pattern
 
-## Features
+**Critical**: Parent NEVER writes code, edits files, runs commands. Only orchestrates.
 
-### Multi-Agent System
-- **Marketplace agents**: 54 plugins from wshobson/agents (enabled in settings.json)
-- **Custom agents**: Project-specific (examples: animation-specialist, sitemap-analyst, ui-design-architect)
-- **Model-tier assignment**: Haiku (fast), Sonnet (balanced), Opus (critical)
-- **Cost optimization**: Use lowest capable model per task
-- **Specialization**: SEO, frontend, mobile, database, performance, security
+### 2. Context Management (Sessions)
 
-### Documentation Protocol
-- **Separation**: `.claude/` (Claude ops) vs `/docs/` (developer docs)
-- **Sessions**: Internal work per session (planning + communication)
-- **Non-redundant**: Auto-merge via `/update-docs` command
-- **Versioned**: ISO 8601 timestamps, file refs with line numbers
+**Structure**: `.claude/sessions/[session-name]/`
+- `planning.md`: Task breakdown with agent assignments (Parent creates)
+- `communication.md`: Append-only agent log (agents append chronologically)
 
-### Prompt Caching (~90% Savings)
-Claude Code auto-caches stable content (5min TTL):
-- **High priority**: CLAUDE.md, model-selection.md, SOPs, architecture docs
-- **Medium priority**: Feature docs
-- **Never cache**: Sessions, communication streams (dynamic)
+**Flow**:
+1. Parent creates planning.md with tasks
+2. Each subagent reads planning + previous communication
+3. Subagent executes, appends output to communication.md
+4. Next subagent reads full communication history
+5. Parent reviews communication.md for quality
 
-**Cost benefit**: First agent pays full token cost, subsequent agents use cache.
+**Format**: `.claude/docs/output-format.md` (Problem/Solution/Files/Next)
 
-### Reusable SOPs
-Agents create Standard Operating Procedures when discovering reusable patterns:
-- **Dynamic**: Agents document patterns during work
-- **Referenced**: Future agents read SOPs before execution
-- **Prevents mistakes**: Codified best practices
+**Example**: `.claude/sessions/example-session/`
 
-## Structure
+### 3. Workflows
+
+**Parent workflow** (`.claude/docs/workflows/parent-workflow.md`):
+- Read context in caching-optimized order
+- Plan (500 tokens max)
+- Write todos
+- Delegate to agents
+- Review outputs
+- Update tracking
+
+**Subagent workflow** (`.claude/docs/workflows/subagent-workflow.md`):
+- Read all context (planning, communication, docs, SOPs)
+- Execute task
+- Document in communication.md
+- Update /docs/ if needed
+- Create SOP if pattern discovered
+
+**Output format** (`.claude/docs/output-format.md`):
+```markdown
+## [ISO_8601] - [agent-name]
+Problem: [1-2 lines]
+Solution: [how done]
+Files: [path:line-range]
+Next: [dependencies/handoffs]
+```
+
+### 4. Cost Minimization
+
+**Model selection** (`.claude/docs/model-selection.md`):
+- **Haiku**: Code generation, tests, docs, SEO (~$0.25/M tokens)
+- **Sonnet**: Architecture, orchestration (always Parent) (~$3/M tokens)
+- **Opus**: Critical decisions, security, performance (~$15/M tokens)
+
+**Principle**: Use lowest capable model. Parent always Sonnet.
+
+**Prompt caching** (~90% savings on cached input tokens):
+1. Read stable files first (CLAUDE.md, model-selection.md, SOPs)
+2. Claude Code auto-caches (5min TTL)
+3. First agent pays full cost, subsequent use cache
+4. Never cache dynamic content (sessions, communication)
+
+**Savings caveat**: Actual savings vary by project size, agent count, session length. 90% is theoretical max on cached tokens only.
+
+## Directory Structure
 
 ```
-.claude/
+.claude/                  # Claude operations (internal)
 ├── agents/               # Custom agent definitions
-├── docs/                 # Claude operations docs
-│   ├── model-selection.md
-│   ├── output-format.md
-│   ├── workflows/        # Parent + subagent workflows
-│   └── templates/        # Standard formats
-├── sessions/             # Internal work
+├── docs/                 # Claude ops documentation
+│   ├── model-selection.md       # Model tier decision framework
+│   ├── output-format.md         # Agent communication format
+│   ├── workflows/               # Parent + subagent workflows
+│   └── templates/               # Planning, output templates
+├── sessions/             # Session-based context
 │   └── [session]/
-│       ├── planning.md
-│       └── communication.md
-├── sop/                  # Agent-created patterns
+│       ├── planning.md          # Task breakdown (Parent creates)
+│       └── communication.md     # Agent log (agents append)
+├── sop/                  # Standard Operating Procedures (created as patterns discovered)
 └── commands/             # Slash commands
 
-docs/                     # Root - developer docs
-├── architecture/         # System design
-└── features/             # Implementation guides
+docs/                     # Developer documentation (starter structure, populate as needed)
+├── architecture/         # System design (add as you build)
+└── features/             # Implementation guides (add per feature)
 ```
 
 ## Quick Start
 
-### 1. Use This Template
-
-Click "Use this template" on GitHub or clone:
+### 1. Use Template
 ```bash
+# GitHub: Click "Use this template"
+# Or clone:
 git clone https://github.com/your-username/your-project.git
 cd your-project
 ```
 
 ### 2. Open with Claude Code
-
 ```bash
 claude code .
 ```
 
 ### 3. Start Building
-
 Ask Parent Orchestrator:
 ```
 "Build [feature]. Use Parent Orchestrator pattern."
 ```
 
 Parent will:
-- Create plan with agent assignments
-- Delegate to specialists
-- Track progress via todos
-- Review quality, update docs
+- Create session in `.claude/sessions/[feature]/`
+- Write planning.md with tasks + agent assignments
+- Create todos
+- Delegate to specialized agents
+- Review outputs in communication.md
+- Update docs
 
 ### 4. Custom Agents (Optional)
-
-Add project-specific agents in `.claude/agents/[agent-name].md`:
+Add in `.claude/agents/[agent-name].md`:
 ```markdown
 You are [agent-name].
-Specialty: [specific domain]
+Specialty: [domain]
 Model: haiku|sonnet|opus
 ...
 ```
 
-See existing agents (animation-specialist, sitemap-analyst, ui-design-architect) as examples.
+See existing: animation-specialist, sitemap-analyst, ui-design-architect.
 
-## Documentation
+## How It Works
 
-**Claude operations**: [`.claude/docs/README.md`](.claude/docs/README.md)
-**Orchestrator instructions**: [`CLAUDE.md`](CLAUDE.md)
-**Developer docs**: [`docs/README.md`](docs/README.md)
-**Workflows**: [`.claude/docs/workflows/`](.claude/docs/workflows/)
+**1. Parent reads context** (caching-optimized order):
+- CLAUDE.md (orchestrator instructions)
+- `.claude/docs/model-selection.md` (model patterns)
+- `.claude/sop/*.md` (discovered patterns)
+- `/docs/architecture/*.md` (system design)
+- `.claude/sessions/[session]/planning.md` (current plan)
+- `.claude/sessions/[session]/communication.md` (agent I/O)
+
+**2. Parent creates plan**:
+- File: `.claude/sessions/[session]/planning.md`
+- Content: Problem, tasks (agent + model + context), dependencies, success criteria
+- Budget: 500 tokens max
+- Reference: `.claude/docs/templates/planning-template.md`
+
+**3. Parent writes todos**:
+- TodoWrite tool: one todo per task
+- Mark in_progress before delegating
+- Mark completed after review
+
+**4. Parent delegates**:
+- Task tool with agent + model + planning doc path
+- Example: backend-architect (sonnet) reads planning.md, designs API
+
+**5. Subagent executes**:
+- Reads planning.md + communication.md + relevant docs/SOPs
+- Implements task
+- Appends to communication.md using output format
+- Updates /docs/ if user-facing feature
+- Creates SOP if reusable pattern discovered
+
+**6. Parent reviews**:
+- Reads communication.md
+- Verifies quality, files changed, next steps
+- Marks todo completed
+- Continues to next task
+
+## Documentation Map
+
+| What | Where | Purpose |
+|------|-------|---------|
+| Orchestrator instructions | `CLAUDE.md` | Parent behavior, model selection |
+| Parent workflow | `.claude/docs/workflows/parent-workflow.md` | Plan → delegate → review |
+| Subagent workflow | `.claude/docs/workflows/subagent-workflow.md` | Execute → document |
+| Output format | `.claude/docs/output-format.md` | Communication structure |
+| Model selection | `.claude/docs/model-selection.md` | Haiku/Sonnet/Opus patterns |
+| Sessions | `.claude/sessions/` | Context per feature/task |
+| Templates | `.claude/docs/templates/` | Planning, output formats |
+| SOPs | `.claude/sop/` | Discovered patterns (create as needed) |
+| Developer docs | `/docs/` | Architecture, features (populate as you build) |
+| Claude ops docs | `.claude/docs/README.md` | Internal documentation index |
+
+## Multi-Agent System
+
+**Marketplace**: 44 plugins from [wshobson/agents](https://github.com/wshobson/agents) (see `.claude/settings.json` → `enabledPlugins`)
+
+**Categories**: backend, frontend, mobile, database, security, testing, deployment, SEO, performance, debugging, documentation, LLM apps
+
+**Custom agents**: Project-specific in `.claude/agents/` (animation-specialist, sitemap-analyst, ui-design-architect included)
+
+**Model assignment**: Parent assigns Haiku/Sonnet/Opus per task complexity
 
 ## Commands
 
 ### `/update-docs`
-Auto-consolidate documentation:
-- Identify redundancies across docs
+Consolidate documentation:
+- Identify redundancies
 - Merge duplicate content
-- Regenerate README index
-- Validate cross-references
+- Update indexes
+- Validate refs
 
-Run after feature work or when docs feel scattered.
-
-## Model Decision Tree
-
-**Haiku** (fast, ~$0.25/million tokens):
-- Code generation from specs
-- Test writing, documentation
-- SEO optimization
-
-**Sonnet** (balanced, ~$3/million tokens):
-- Architecture design
-- Frontend implementation
-- **Parent orchestration (always)**
-
-**Opus** (most capable, ~$15/million tokens):
-- System architecture
-- Security audits, database design
-- Performance engineering
-
-Use lowest capable model. Parent always Sonnet.
-
-See [`.claude/docs/model-selection.md`](.claude/docs/model-selection.md) for orchestration patterns.
+Run after feature work or when docs scattered.
 
 ## Quality Standards
 
-- Every file change documented
-- Every feature has context + implementation docs
-- Every reusable pattern creates SOP
-- All timestamps ISO 8601
-- All file refs include line numbers
+- Every change documented
+- Timestamps ISO 8601
+- File refs include line numbers
 - No duplicate content
+- Extreme concision (sacrifice grammar, preserve meaning)
 
 ## Communication Style
 
-Extreme brevity:
+**Extreme brevity**:
 - Commit: "add auth flow" (not "Added authentication flow with OAuth2")
 - Docs: "DB Migration" (not "Database Migration Best Practices")
 - Tasks: "fix login bug" (not "Fix the bug in the login functionality")
 
-Sacrifice grammar, preserve meaning.
+## Cost Optimization Example
 
-## Cost Optimization
+**Model tiering**: Haiku for 80% of tasks, Sonnet 15%, Opus 5%
 
-**Prompt caching**: ~90% reduction on cached input tokens
-**Model tiering**: Use haiku for 80% of tasks, sonnet 15%, opus 5%
-**Planning overhead**: 500 tokens max per feature (amortized across tasks)
-**Context efficiency**: Read cached docs once, reuse across agents
+**Prompt caching**: First agent pays full cost, subsequent use cache
 
-**Example project**:
+**Planning overhead**: 500 tokens max per feature, amortized across tasks
+
+**Example** (project-dependent, illustrative only):
 - Without caching: 10M tokens = $30
-- With caching: 1M new + 9M cached = $3.50 + $0.90 = $4.40 (85% savings)
+- With caching: 1M new + 9M cached (90% cache hit) = $3.50 + $0.90 = $4.40
+- Savings: ~85% on cached portions
+
+**Note**: Actual savings vary significantly by project size, agent count, session complexity.
 
 ## License
 
@@ -204,5 +272,4 @@ MIT
 
 ## Credits
 
-Built on [wshobson/agents](https://github.com/wshobson/agents) marketplace.
-Orchestration pattern inspired by hierarchical multi-agent systems.
+Built on [wshobson/agents](https://github.com/wshobson/agents) marketplace. Orchestration pattern inspired by hierarchical multi-agent systems.
