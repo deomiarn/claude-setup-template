@@ -136,13 +136,3 @@ migration_lock.toml
 .claude/sessions/*
 !.claude/sessions/README.md
 !.claude/sessions/example-session/
-
-# SOPs (agent-created patterns - runtime)
-.claude/sop/*
-!.claude/sop/README.md
-
-# Developer docs (runtime generated)
-docs/architecture/*
-!docs/architecture/.gitkeep
-docs/features/*
-!docs/features/.gitkeep
