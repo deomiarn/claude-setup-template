@@ -124,7 +124,8 @@ competitor_insights: [ If research was conducted ]
   development agents can implement this structure."
 - **Request Clarity**: If business goals, target audience, or key constraints are unclear, explicitly ask before
   proceeding.
-- **Use Sections**: Only include the given sections in shadcn-ui-theme skill.
+- **Use Sections**: Only include the given sections in shadcn-ui-blocks skill.
+- **Documentation**: ALWAYS document concisely all pages and sections in the sitemap as yaml in the folder `/planning/sitemap.yaml`.
 
 ## Constraints & Boundaries
 
