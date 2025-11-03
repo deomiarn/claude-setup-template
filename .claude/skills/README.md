@@ -12,6 +12,14 @@ Context-relevant skills for current project. Load only what's needed.
 
 ## Available Skills
 
+- **shadcn-ui-blocks**: 959 pre-built website components across 45+ categories (hero, feature, pricing, testimonial, CTA, footer, navbar, blog, gallery, contact, FAQ, etc.)
+  Path: `.claude/skills/shadcn-ui-blocks/Skill.md`
+  When: Building websites, landing pages, marketing sites, or need responsive UI components with pnpm install commands
+
+- **shadcn-ui-theme**: 17 pre-configured color themes with CSS variables (Default, Claude, Cyberpunk, Neo Brutalism, Supabase, Vercel, etc.)
+  Path: `.claude/skills/shadcn-ui-theme/Skill.md`
+  When: User requests theme changes, color scheme updates, design system modifications, or asks to "change theme to X"
+
 <!-- Add skills below. Template:
 
 - **example-skill**: Description of what skill does
@@ -19,6 +27,9 @@ Context-relevant skills for current project. Load only what's needed.
   When: Use when [specific context/trigger]
 
 -->
+
+## Updating This File
+If you add or remove skills, always update this README.md to reflect the current set of skills available for auto-loading based on context.
 
 ---
 
