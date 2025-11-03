@@ -55,15 +55,15 @@
 	},
 	"permissions": {
 		"deny": [
-			"Read(./.env)",
-			"Read(./.env.*)",
-			"Read(./secrets/**)",
-			"Read(.idea/**)",
-			"Read(.vscode/**)",
-			"Read(./node_modules/**)",
-			"Read(./venv/**)",
-			"Read(./package-lock.json)",
-			"Read(./yarn.lock)"
+			"Read(../.env)",
+			"Read(../.env.*)",
+			"Read(../secrets/**)",
+			"Read(../.idea/**)",
+			"Read(../.vscode/**)",
+			"Read(../node_modules/**)",
+			"Read(../venv/**)",
+			"Read(../package-lock.json)",
+			"Read(../yarn.lock)"
 		]
 	}
 }
