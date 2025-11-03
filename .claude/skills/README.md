@@ -20,8 +20,8 @@ Context-relevant skills for current project. Load only what's needed.
   Path: `.claude/skills/shadcn-ui-theme/Skill.md`
   When: User requests theme changes, color scheme updates, design system modifications, or asks to "change theme to X"
 
-- **seo-website-builder**: Complete SEO-optimized website creation workflow orchestrator. Coordinates SEO analysis, sitemap planning, shadcn component selection, theme application, and content optimization.
-  Path: `.claude/skills/seo-website-builder/Skill.md`
+- **website-builder**: Complete SEO-optimized website creation workflow orchestrator. Coordinates SEO analysis, sitemap planning, shadcn component selection, theme application, and content optimization.
+  Path: `.claude/skills/website-builder/Skill.md`
   When: Building websites, creating landing pages, SEO optimization, requesting site architecture planning, designing web interfaces with search optimization
 
 <!-- Add skills below. Template:

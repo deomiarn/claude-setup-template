@@ -1,5 +1,5 @@
 ---
-name: seo-website-builder
+name: website-builder
 description: Complete SEO-optimized website creation workflow orchestrator. Coordinates SEO analysis (keywords, competitors), sitemap planning, shadcn component selection, theme application, and content optimization. Use when building websites, creating landing pages, designing web interfaces, optimizing for search engines, planning site architecture, or requesting homepage/website builds with SEO considerations.
 version: 1.0.0
 dependencies: sitemap-analyst agent, shadcn-ui-blocks skill, shadcn-ui-theme skill, shadcn-website-builder agent, WebFetch
