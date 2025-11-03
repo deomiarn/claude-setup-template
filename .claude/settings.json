@@ -53,6 +53,18 @@
 		"accessibility-compliance@claude-code-workflows": true,
 		"customer-sales-automation@claude-code-workflows": true
 	},
+	"hooks": {
+		"UserPromptSubmit": [
+			{
+				"hooks": [
+					{
+						"type": "command",
+						"command": "bash $CLAUDE_PROJECT_DIR.claude/hooks/load-skills.sh"
+					}
+				]
+			}
+		]
+	},
 	"permissions": {
 		"deny": [
 			"Read(../.env)",
