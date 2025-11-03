@@ -86,7 +86,7 @@ Agent appends output using format from `.claude/docs/output-format.md`.
 ## Step 7: Complete
 
 When all tasks done and verified always do:
-- Update `/docs/` if user-facing changes with docs agent
+- Update `/docs/` if user-facing changes with docs agent. This includes updating the project architecture or implementation of new features. Extremely concise. Sacrifice grammar for brevity.
 - Mark session as complete
 - Summarize in planning.md
 
