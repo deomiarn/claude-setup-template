@@ -1,261 +1,100 @@
 ---
 name: shadcn-ui-blocks
-description: Build websites using shadcn blocks components (959 blocks, 45+ categories). Use when creating landing pages, marketing sites, or any web interface. Provides pnpm install commands for hero, feature, pricing, testimonial, CTA, footer, navbar, blog, gallery, contact, FAQ, and more sections.
-version: 1.0.0
-dependencies: shadcn/ui, pnpm
-allowed-tools: Read,Write,Edit,Bash
+description: Build websites using shadcn blocks. 929 components across 44 categories with visual reference catalog.
+version: 2.0.0
+dependencies: ["pnpm"], shadcn/ui
+allowed-tools: ["Bash"], Read,Write,Edit
 ---
 
 # Shadcn UI Blocks - Website Component Library
 
-Build websites using pre-built shadcn blocks. 959 components across 45+ categories.
+Build websites using pre-built shadcn blocks. 929 components across 44 categories.
 
-**Installation Pattern:** `pnpm dlx shadcn add @shadcnblocks/[category][number]`
+**Installation Pattern**: `pnpm dlx shadcn add @shadcnblocks/[blockname]`
 
----
-
-## Navigation
-
-### Navbar (16 variants)
-- **navbar1**: Horizontal menu with dropdown navigation. `pnpm dlx shadcn add @shadcnblocks/navbar1`
-- **navbar2**: Mobile-responsive navigation with hamburger menu. `pnpm dlx shadcn add @shadcnblocks/navbar2`
-- **navbar3**: Centered logo with symmetric link layout. `pnpm dlx shadcn add @shadcnblocks/navbar3`
-- **navbar4**: Transparent overlay navigation for hero sections. `pnpm dlx shadcn add @shadcnblocks/navbar4`
-- More: navbar5-16 available
+**Visual Documentation**: Each block has screenshots and detailed descriptions in category-specific docs.
 
 ---
 
-## Hero Sections (166 variants)
+## Category Index
 
-### Primary Heroes
-- **hero1**: 2-column badge+heading+buttons+image layout. `pnpm dlx shadcn add @shadcnblocks/hero1`
-- **hero2**: Centered full-width with gradient background. `pnpm dlx shadcn add @shadcnblocks/hero2`
-- **hero3**: Split screen video+text combination. `pnpm dlx shadcn add @shadcnblocks/hero3`
-- **hero4**: Animated gradient with feature highlights. `pnpm dlx shadcn add @shadcnblocks/hero4`
-- **hero5**: Minimal centered with social proof badges. `pnpm dlx shadcn add @shadcnblocks/hero5`
+Comprehensive block catalog organized by category. Click links for screenshots, descriptions, and install commands.
 
-### Specialized Heroes
-- **hero10**: Product showcase with 3D visuals. `pnpm dlx shadcn add @shadcnblocks/hero10`
-- **hero15**: SaaS landing with pricing preview. `pnpm dlx shadcn add @shadcnblocks/hero15`
-- **hero20**: App download with store buttons. `pnpm dlx shadcn add @shadcnblocks/hero20`
-- **hero25**: Video background with overlay text. `pnpm dlx shadcn add @shadcnblocks/hero25`
-- **hero50**: Multi-CTA with feature grid. `pnpm dlx shadcn add @shadcnblocks/hero50`
-- More: hero6-166 available (use for specific layouts)
+| Category | Blocks | Documentation |
+|----------|--------|---------------|
+| [Feature](./docs/feature.md) | 265 | Feature grids, comparisons, showcases |
+| [Hero](./docs/hero.md) | 166 | Landing page heroes, product showcases |
+| [Pricing](./docs/pricing.md) | 35 | Pricing tables, tier comparisons |
+| [Gallery](./docs/gallery.md) | 33 | Image galleries, portfolio showcases |
+| [Project](./docs/project.md) | 32 | Project showcases, case studies |
+| [Testimonial](./docs/testimonial.md) | 28 | Customer reviews, social proof |
+| [CTA](./docs/cta.md) | 25 | Call-to-action sections |
+| [Projects](./docs/projects.md) | 24 | Project listings, portfolios |
+| [Blog](./docs/blog.md) | 22 | Blog layouts, article grids |
+| [Footer](./docs/footer.md) | 21 | Site footers, information sections |
+| [Stats](./docs/stats.md) | 18 | Statistics, metrics displays |
+| [Services](./docs/services.md) | 18 | Service offerings, feature lists |
+| [Contact](./docs/contact.md) | 17 | Contact forms, information sections |
+| [About](./docs/about.md) | 16 | About sections, company info |
+| [FAQ](./docs/faq.md) | 16 | Question accordions, help sections |
+| [Navbar](./docs/navbar.md) | 16 | Navigation bars, site headers |
+| [Timeline](./docs/timeline.md) | 14 | Timeline displays, histories |
+| [Integration](./docs/integration.md) | 13 | Integration showcases, partner logos |
+| [Logos](./docs/logos.md) | 12 | Logo clouds, partner displays |
+| [Team](./docs/team.md) | 12 | Team member profiles, staff sections |
+| [Download](./docs/download.md) | 11 | Download sections, app stores |
+| [Signup](./docs/signup.md) | 10 | Signup forms, registration pages |
+| [Compare](./docs/compare.md) | 10 | Comparison tables, feature matrices |
+| [Careers](./docs/careers.md) | 9 | Job listings, career pages |
+| [Service](./docs/service.md) | 7 | Service descriptions, offerings |
+| [Banner](./docs/banner.md) | 7 | Announcement banners, alerts |
+| [Changelog](./docs/changelog.md) | 7 | Update logs, version histories |
+| [Community](./docs/community.md) | 7 | Community sections, social links |
+| [Login](./docs/login.md) | 7 | Login forms, authentication pages |
+| [Blogpost](./docs/blogpost.md) | 6 | Blog post templates, article layouts |
+| [Casestudies](./docs/casestudies.md) | 5 | Case study sections, success stories |
+| [Codeexample](./docs/codeexample.md) | 5 | Code snippet displays, examples |
+| [Awards](./docs/awards.md) | 4 | Award displays, recognition sections |
+| [Content](./docs/content.md) | 4 | General content sections |
+| [Experience](./docs/experience.md) | 4 | Experience timelines, milestones |
+| [Resources](./docs/resources.md) | 4 | Resource libraries, downloads |
+| [Casestudy](./docs/casestudy.md) | 3 | Individual case study templates |
+| [Compliance](./docs/compliance.md) | 3 | Compliance badges, certifications |
+| [List](./docs/list.md) | 3 | Feature lists, bullet points |
+| [Process](./docs/process.md) | 3 | Process steps, workflows |
+| [Ratecard](./docs/ratecard.md) | 2 | Rate cards, pricing displays |
+| [Resource](./docs/resource.md) | 2 | Resource sections, downloads |
+| [Skills](./docs/skills.md) | 2 | Skills displays, capabilities |
+| [Waitlist](./docs/waitlist.md) | 1 | Waitlist forms, early access |
 
----
-
-## Features (266 variants)
-
-### Basic Features
-- **feature1**: Two-column text+image with buttons. `pnpm dlx shadcn add @shadcnblocks/feature1`
-- **feature2**: Icon grid with 3-4 columns. `pnpm dlx shadcn add @shadcnblocks/feature2`
-- **feature3**: Alternating left-right layouts. `pnpm dlx shadcn add @shadcnblocks/feature3`
-- **feature4**: Centered with screenshot mockup. `pnpm dlx shadcn add @shadcnblocks/feature4`
-- **feature5**: Card-based feature grid. `pnpm dlx shadcn add @shadcnblocks/feature5`
-
-### Advanced Features
-- **feature10**: Interactive tabs with content switching. `pnpm dlx shadcn add @shadcnblocks/feature10`
-- **feature20**: Animated icon reveals on scroll. `pnpm dlx shadcn add @shadcnblocks/feature20`
-- **feature30**: Video demo with feature list. `pnpm dlx shadcn add @shadcnblocks/feature30`
-- **feature40**: Comparison table layout. `pnpm dlx shadcn add @shadcnblocks/feature40`
-- **feature51**: Bento grid showcase. `pnpm dlx shadcn add @shadcnblocks/feature51`
-- More: feature6-266 available (largest category)
-
----
-
-## About Sections (16 variants)
-- **about1**: Company story with timeline. `pnpm dlx shadcn add @shadcnblocks/about1`
-- **about2**: Team photo grid with mission statement. `pnpm dlx shadcn add @shadcnblocks/about2`
-- **about3**: Stats-driven about with metrics. `pnpm dlx shadcn add @shadcnblocks/about3`
-- **about4**: Video introduction with text overlay. `pnpm dlx shadcn add @shadcnblocks/about4`
-- More: about5-16 available
-
----
-
-## Pricing (35 variants)
-- **pricing1**: 3-tier comparison table with feature checkmarks. `pnpm dlx shadcn add @shadcnblocks/pricing1`
-- **pricing2**: 2-column simple pricing with CTA buttons. `pnpm dlx shadcn add @shadcnblocks/pricing2`
-- **pricing3**: Toggle monthly/annual billing switch. `pnpm dlx shadcn add @shadcnblocks/pricing3`
-- **pricing4**: 4-tier enterprise pricing grid. `pnpm dlx shadcn add @shadcnblocks/pricing4`
-- **pricing5**: Highlighted "Popular" plan design. `pnpm dlx shadcn add @shadcnblocks/pricing5`
-- More: pricing6-35 available
+**Total**: 929 blocks across 44 categories
 
 ---
 
-## Testimonials (28 variants)
-- **testimonial1**: Carousel with customer avatars and quotes. `pnpm dlx shadcn add @shadcnblocks/testimonial1`
-- **testimonial2**: Grid layout with star ratings. `pnpm dlx shadcn add @shadcnblocks/testimonial2`
-- **testimonial3**: Video testimonials with play buttons. `pnpm dlx shadcn add @shadcnblocks/testimonial3`
-- **testimonial4**: Large quote with company logo. `pnpm dlx shadcn add @shadcnblocks/testimonial4`
-- **testimonial5**: Masonry layout for varied content lengths. `pnpm dlx shadcn add @shadcnblocks/testimonial5`
-- More: testimonial6-28 available
+## Usage Workflow
 
----
-
-## Call-to-Action (25 variants)
-- **cta1**: Centered button with gradient background. `pnpm dlx shadcn add @shadcnblocks/cta1`
-- **cta2**: Split image+form layout. `pnpm dlx shadcn add @shadcnblocks/cta2`
-- **cta3**: Email signup with social proof counter. `pnpm dlx shadcn add @shadcnblocks/cta3`
-- **cta4**: Multi-button choice (demo/trial/contact). `pnpm dlx shadcn add @shadcnblocks/cta4`
-- **cta5**: Banner-style sticky bottom CTA. `pnpm dlx shadcn add @shadcnblocks/cta5`
-- More: cta6-25 available
-
----
-
-## Contact Forms (17 variants)
-- **contact1**: Standard form with name/email/message fields. `pnpm dlx shadcn add @shadcnblocks/contact1`
-- **contact2**: Split form+map layout. `pnpm dlx shadcn add @shadcnblocks/contact2`
-- **contact3**: Meeting scheduler with calendar integration. `pnpm dlx shadcn add @shadcnblocks/contact3`
-- **contact4**: Multi-step contact wizard. `pnpm dlx shadcn add @shadcnblocks/contact4`
-- More: contact5-17 available
-
----
-
-## FAQ (16 variants)
-- **faq1**: Accordion-style collapsible Q&A. `pnpm dlx shadcn add @shadcnblocks/faq1`
-- **faq2**: Two-column FAQ grid. `pnpm dlx shadcn add @shadcnblocks/faq2`
-- **faq3**: Tabbed category FAQ sections. `pnpm dlx shadcn add @shadcnblocks/faq3`
-- **faq4**: Search-enabled FAQ with filtering. `pnpm dlx shadcn add @shadcnblocks/faq4`
-- More: faq5-16 available
-
----
-
-## Blog & Content (28 variants)
-
-### Blog Layouts
-- **blog1**: Grid with category filter and pagination. `pnpm dlx shadcn add @shadcnblocks/blog1`
-- **blog2**: Featured post + grid layout. `pnpm dlx shadcn add @shadcnblocks/blog2`
-- **blog3**: List view with excerpts. `pnpm dlx shadcn add @shadcnblocks/blog3`
-- More: blog4-22 available
-
-### Blog Post Templates
-- **blogpost1**: Article layout with sidebar. `pnpm dlx shadcn add @shadcnblocks/blogpost1`
-- **blogpost2**: Full-width reading experience. `pnpm dlx shadcn add @shadcnblocks/blogpost2`
-- More: blogpost3-6 available
-
----
-
-## Gallery (47 variants)
-- **gallery1**: Masonry grid with hover effects. `pnpm dlx shadcn add @shadcnblocks/gallery1`
-- **gallery2**: Side-scrolling horizontal gallery. `pnpm dlx shadcn add @shadcnblocks/gallery2`
-- **gallery3**: Lightbox modal on click. `pnpm dlx shadcn add @shadcnblocks/gallery3`
-- **gallery4**: Video gallery with thumbnails. `pnpm dlx shadcn add @shadcnblocks/gallery4`
-- More: gallery5-47 available
-
----
-
-## Stats & Metrics (18 variants)
-- **stats1**: 4-metric grid with icons and numbers. `pnpm dlx shadcn add @shadcnblocks/stats1`
-- **stats2**: Animated counter with descriptions. `pnpm dlx shadcn add @shadcnblocks/stats2`
-- **stats3**: Timeline stats with milestones. `pnpm dlx shadcn add @shadcnblocks/stats3`
-- More: stats4-18 available
-
----
-
-## Team (12 variants)
-- **team1**: Avatar grid with names and titles. `pnpm dlx shadcn add @shadcnblocks/team1`
-- **team2**: Card layout with social links. `pnpm dlx shadcn add @shadcnblocks/team2`
-- **team3**: Hover reveal bios. `pnpm dlx shadcn add @shadcnblocks/team3`
-- More: team4-12 available
-
----
-
-## Footer (21 variants)
-- **footer1**: Multi-column link organization with logo. `pnpm dlx shadcn add @shadcnblocks/footer1`
-- **footer2**: Centered minimal footer. `pnpm dlx shadcn add @shadcnblocks/footer2`
-- **footer3**: Newsletter signup + social icons. `pnpm dlx shadcn add @shadcnblocks/footer3`
-- **footer4**: Full-width dark footer with categories. `pnpm dlx shadcn add @shadcnblocks/footer4`
-- More: footer5-21 available
-
----
-
-## Additional Sections
-
-### Logos & Integration (29 variants)
-- **logos1**: Logo carousel for partner/client display. `pnpm dlx shadcn add @shadcnblocks/logos1`
-- **integration1**: Grid of supported tools/services. `pnpm dlx shadcn add @shadcnblocks/integration1`
-
-### Timeline (14 variants)
-- **timeline1**: Vertical milestone display. `pnpm dlx shadcn add @shadcnblocks/timeline1`
-- **timeline2**: Horizontal process flow. `pnpm dlx shadcn add @shadcnblocks/timeline2`
-
-### Banners (7 variants)
-- **banner1**: Announcement bar with dismiss button. `pnpm dlx shadcn add @shadcnblocks/banner1`
-- **banner2**: Cookie consent banner. `pnpm dlx shadcn add @shadcnblocks/banner2`
-
-### Authentication (17 variants)
-- **login1**: Simple email/password form. `pnpm dlx shadcn add @shadcnblocks/login1`
-- **signup1**: Multi-field registration form. `pnpm dlx shadcn add @shadcnblocks/signup1`
-
-### Careers (9 variants)
-- **careers1**: Job listing grid with filters. `pnpm dlx shadcn add @shadcnblocks/careers1`
-- **careers2**: Application form layout. `pnpm dlx shadcn add @shadcnblocks/careers2`
-
-### Case Studies (6 variants)
-- **casestudy1**: Project showcase with metrics. `pnpm dlx shadcn add @shadcnblocks/casestudy1`
-
-### Bento Grid (8 variants)
-- **bento1**: Asymmetric grid layout. `pnpm dlx shadcn add @shadcnblocks/bento1`
-
-### Awards (4 variants)
-- **awards1**: Badge display for certifications. `pnpm dlx shadcn add @shadcnblocks/awards1`
-
----
-
-## Usage Guidelines
-
-**When to use this skill:**
-- Building landing pages, marketing sites, SaaS homepages
-- Need pre-designed, responsive components
-- Want consistent shadcn/ui styling
-- Rapid prototyping or MVP development
-
-**Workflow:**
-1. Identify needed section (hero, features, pricing, etc.)
-2. Pick variant number based on layout preference
-3. Run `pnpm dlx shadcn add @shadcnblocks/[component]`
-4. Customize content, images, text in component file
-
-**Component count by category:**
-- Feature: 266 variants (largest)
-- Hero: 166 variants
-- Gallery: 47 variants
-- Pricing: 35 variants
-- Testimonial: 28 variants
-- CTA: 25 variants
-- Blog: 22 variants
-- Footer: 21 variants
-- Stats: 18 variants
-- Contact: 17 variants
-- About: 16 variants
-- FAQ: 16 variants
-- Navbar: 16 variants
-- Timeline: 14 variants
-- Logos: 13 variants
-- Team: 12 variants
-- Signup: 10 variants
-- Careers: 9 variants
-- Bento: 8 variants
-- Banner: 7 variants
-- Login: 7 variants
-- Blogpost: 6 variants
-- Case Studies: 6 variants
-- Awards: 4 variants
-- Content: 4 variants
-
-**Total: 959 blocks across 45+ categories**
+1. **Browse Categories**: Check category docs for screenshots and descriptions
+2. **Select Block**: Choose block matching your design needs
+3. **Install**: Run `pnpm dlx shadcn add @shadcnblocks/[blockname]`
+4. **Customize**: Modify component to match your brand/requirements
+5. **Integrate**: Import and use in your application
 
 ---
 
 ## Tips
 
-- **High variant categories (Hero, Feature):** Test multiple numbers to find best fit
-- **Responsive:** All components mobile-adaptive
-- **Customizable:** Edit props, images, text after installation
-- **Dependencies:** Some blocks require additional shadcn/ui components (button, card, carousel, etc.)
-- **Framework:** Built for React, Next.js, Astro
-- **Access:** Free, Pro ($149), Premium ($299) tiers
+- **Category Search**: Use docs/[category].md for visual browsing
+- **Screenshots**: All blocks have full-page preview screenshots
+- **Descriptions**: Each block includes 5-sentence description with keywords
+- **Installation**: Follow install command format exactly
+- **Customization**: Blocks are fully customizable after installation
+- **Combinations**: Mix blocks from different categories for complete pages
 
 ---
 
-**Reference:** https://www.shadcnblocks.com
+## Quick Reference
+
+- **Documentation**: `./docs/[category].md`
+- **Screenshots**: `./images/[category]/[blockname].png`
+- **Install Command**: `pnpm dlx shadcn add @shadcnblocks/[blockname]`
+- **Example**: `pnpm dlx shadcn add @shadcnblocks/hero1`
