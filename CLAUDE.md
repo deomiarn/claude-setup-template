@@ -61,6 +61,7 @@ Parent always Sonnet.
 
 ALL Agents always follow these rules:
 
+- ALWAYS read `.claude/skills/README.md` before acting (contains context-relevant skills + paths)
 - ALWAYS read relevant docs, SOPs, communication.md before acting
 - ALWAYS communicate in the specified session files for more context
 - ALWAYS try to use existing MCPs from .mcp.json (context7 mcp has almost anything you need but first check others for better fit)

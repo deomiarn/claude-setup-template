@@ -83,6 +83,13 @@ Agent appends output using format from `.claude/docs/output-format.md`.
 - Continue to next task or complete
 - ALWAYS keep session up-to-date
 
+## Step 7: Complete
+
+When all tasks done and verified always do:
+- Update `/docs/` if user-facing changes with docs agent. This includes updating the project architecture or implementation of new features. Extremely concise. Sacrifice grammar for brevity.
+- Mark session as complete
+- Summarize in planning.md
+
 ## Key Principles
 
 - **NEVER** write code, edit files, run commands

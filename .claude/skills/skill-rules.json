@@ -1,0 +1,25 @@
+{
+  "seo-website-builder": {
+    "type": "domain",
+    "enforcement": "suggest",
+    "priority": "high",
+    "promptTriggers": {
+      "keywords": [
+        "website",
+        "seo",
+        "landing page",
+        "web design",
+        "sitemap",
+        "homepage",
+        "site builder",
+        "web development",
+        "website creation",
+        "website build"
+      ],
+      "intentPatterns": [
+        "(build|create|design|make).*?(website|homepage|landing page|site)",
+        "(seo|optimize).*?(website|site|page)"
+      ]
+    }
+  }
+}

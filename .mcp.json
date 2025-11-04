@@ -1,9 +1,5 @@
 {
   "mcpServers": {
-    "shadcn": {
-      "type": "http",
-      "url": "https://www.shadcn.io/api/mcp"
-    },
     "context7": {
       "type": "http",
       "url": "https://mcp.context7.com/mcp",
