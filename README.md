@@ -242,6 +242,11 @@ See existing: animation-specialist, sitemap-analyst, ui-design-architect.
 | SOPs                      | `.claude/sop/`                                | Discovered patterns (create as needed)         |
 | Developer docs            | `/docs/`                                      | Architecture, features (populate as you build) |
 | Claude ops docs           | `.claude/docs/README.md`                      | Internal documentation index                   |
+| Commands                  | `.claude/commands/`                           | Slash commands for common tasks                |
+| Marketplace plugins       | `.claude/settings.json`                       | Enabled MCPs                                   |
+| Custom agents             | `.claude/agents/`                             | Project-specific agents                        |
+| Hooks                     | `.claude/hooks/`                              | Pre/post processing (if needed)                |
+| Skills                    | `.claude/skills/`                             | Reusable skills (plug into agents)             |
 
 ## Multi-Agent System
 
@@ -254,11 +259,13 @@ documentation, LLM apps
 **Custom agents**: Project-specific in `.claude/agents/` (animation-specialist, sitemap-analyst, ui-design-architect
 included)
 
+**Custom skills**: Reusable skills in `.claude/skills/` (if needed)
+
 **Model assignment**: Parent assigns Haiku/Sonnet/Opus per task complexity
 
 ## MCP Usage
 
-Most of the MCPs are provided with `http`.
+If needed, you can add more MCPs via marketplace or custom. (http or npx / npm install).
 
 ### Manual MCP Setups:
 
@@ -266,7 +273,6 @@ Most of the MCPs are provided with `http`.
 
 The Context7 MCP provides extensive capabilities.
 It requires an API key. Set it in your environment variables `.env` as `CONTEXT7_API_KEY`.
-
 
 ## Commands
 
