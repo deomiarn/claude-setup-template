@@ -15,7 +15,7 @@ Orchestrates complete website creation workflow: SEO analysis → sitemap planni
 ## 5-Step Workflow
 
 ### Step 1: SEO Analysis
-**Create SEO research foundation:**
+**Create SEO research foundation (if nothing specified by user):**
 
 1. Create `/planning/seo/` directory
 2. Analyze target website (if provided via WebFetch):
@@ -50,6 +50,7 @@ Call sitemap-analyst with:
 - Business goals (from user or inferred)
 - Target audience personas
 - Primary conversion objectives
+- Use only sections from shadcn-ui-blocks skill
 - Constraints/preferences
 
 Agent outputs `/planning/sitemap.yaml` with:
@@ -68,6 +69,8 @@ Output destination: /planning/sitemap.yaml
 
 ### Step 3: Website Build
 **Select & configure components:**
+
+**IMPORTANT:** The sitemap-analyst from Step 2 decides the pages and structure. You only implement the design and SEO aspects here.
 
 1. Review sitemap structure
 2. For each page type, use **shadcn-ui-blocks** skill:

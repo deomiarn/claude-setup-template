@@ -8,29 +8,28 @@ Compliance and legal information sections. Display privacy policies, terms, and 
 
 ![screenshot](../images/compliance/compliance1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A two-column layout with the left column containing a main heading, descriptive body text, and two certification images positioned horizontally below. The right column displays three vertically-stacked cards, each with a heading, body text, and a certification image aligned to the right side of each card.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/compliance1`
 
 ---
 
-## compliance2
+## compliance5
 
-![screenshot](../images/compliance/compliance2.png)
+![screenshot](../images/compliance/compliance5.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A centered section displays a main heading at the top, followed by descriptive body text. Below this, four certification badge images are arranged horizontally in a row. A dark button labeled "Learn more" is positioned centrally beneath the badges.
 
-**Install**: `pnpm dlx shadcn add @shadcnblocks/compliance2`
-
----
-
-## compliance3
-
-![screenshot](../images/compliance/compliance3.png)
-
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/compliance3`
+**Install**: `pnpm dlx shadcn add @shadcnblocks/compliance5`
 
 ---
 
+## compliance6
+
+![screenshot](../images/compliance/compliance6.png)
+
+A compliance section is structured with a main heading and body text positioned on the left, followed by a row of four certification badge images horizontally aligned at the top right. Below this, three feature cards are arranged horizontally across the full width, each containing an icon, a subheading, and descriptive body text stacked vertically.
+
+**Install**: `pnpm dlx shadcn add @shadcnblocks/compliance6`
+
+---

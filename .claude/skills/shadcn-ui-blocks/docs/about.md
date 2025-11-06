@@ -1,4 +1,4 @@
-# About Blocks (16)
+# About Blocks (14)
 
 About sections for company information and team introductions. Showcase mission statements, values, and organizational culture.
 
@@ -8,7 +8,7 @@ About sections for company information and team introductions. Showcase mission 
 
 ![screenshot](../images/about/about1.png)
 
-Image-text split featuring structured content presentation and clear visual hierarchy. Displays team photos and mission statement for enhanced user engagement. Perfect for company profiles and conversion-focused applications. Authentic design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring company profiles with professional visual impact.
+A webpage section contains a main heading at the top, followed by body text. Below this, content is arranged in two columns: the left column features a centered image, while the right column contains a label, a secondary heading, and body text. Further down, a large heading spans the full width, with smaller body text positioned beneath it.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about1`
 
@@ -18,7 +18,7 @@ Image-text split featuring structured content presentation and clear visual hier
 
 ![screenshot](../images/about/about2.png)
 
-Grid blocks containing structured content presentation and clear visual hierarchy. Includes storytelling layout and CTA button for enhanced user engagement. Optimal for value propositions and conversion-focused applications. Narrative-driven design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring value propositions with professional visual impact.
+A centered section with a main heading and body text at the top, followed by three images arranged horizontally in a row. Below this, a larger heading is positioned on the left side, with three statistics (displayed as large numbers with labels) arranged horizontally beneath it.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about2`
 
@@ -28,7 +28,7 @@ Grid blocks containing structured content presentation and clear visual hierarch
 
 ![screenshot](../images/about/about3.png)
 
-Two-column with structured content presentation and clear visual hierarchy. Features hero image and heading for enhanced user engagement. Ideal for about pages and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring about pages with professional visual impact.
+An "About Us" section displays content in a two-column layout. The left column features a large image centered vertically. The right column contains a heading, body text, and two stacked card components, each with an icon, heading, descriptive text, and a button. Below this section, a label sits above a horizontal row of client logos.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about3`
 
@@ -38,7 +38,7 @@ Two-column with structured content presentation and clear visual hierarchy. Feat
 
 ![screenshot](../images/about/about4.png)
 
-Image-text split featuring structured content presentation and clear visual hierarchy. Displays team photos and mission statement for enhanced user engagement. Perfect for company profiles and conversion-focused applications. Authentic design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring company profiles with professional visual impact.
+An "About Us" section features a centered heading and descriptive body text at the top. Below this, six images are arranged in a 3-column grid layout, displayed horizontally across two rows with equal spacing between each item.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about4`
 
@@ -48,7 +48,7 @@ Image-text split featuring structured content presentation and clear visual hier
 
 ![screenshot](../images/about/about5.png)
 
-Centered content including structured content presentation and clear visual hierarchy. Showcases brand elements and value props for enhanced user engagement. Excellent for mission statements and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring mission statements with professional visual impact.
+A webpage section is divided into two columns with a light gray background. The left column contains a small "ABOUT US" label, followed by a large heading and body text positioned vertically. The right column features a centered image, with a tagline positioned below it.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about5`
 
@@ -58,7 +58,7 @@ Centered content including structured content presentation and clear visual hier
 
 ![screenshot](../images/about/about6.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents minimal design and team showcase for enhanced user engagement. Well-suited for brand stories and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring brand stories with professional visual impact.
+A two-column layout with text content positioned on the left and images arranged on the right. The left column contains a large heading, followed by two paragraphs of body text. The right side displays five images of varying sizes arranged in an asymmetrical grid pattern, with larger images at the top and smaller ones positioned below.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about6`
 
@@ -68,7 +68,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/about/about7.png)
 
-Grid blocks containing structured content presentation and clear visual hierarchy. Includes storytelling layout and CTA button for enhanced user engagement. Optimal for value propositions and conversion-focused applications. Narrative-driven design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring value propositions with professional visual impact.
+A two-column layout with text content on the left and images on the right. The left column contains a small label at the top, followed by a large heading and body text. The right column displays two images stacked vertically, positioned in the upper and lower portions of the column respectively.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about7`
 
@@ -78,7 +78,7 @@ Grid blocks containing structured content presentation and clear visual hierarch
 
 ![screenshot](../images/about/about8.png)
 
-Two-column with structured content presentation and clear visual hierarchy. Features hero image and heading for enhanced user engagement. Ideal for about pages and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring about pages with professional visual impact.
+A centered webpage section displays a main heading at the top, followed by descriptive body text. Below this is a "By the numbers" label with four key metrics displayed horizontally in a row. Further down, additional body text is positioned centrally, followed by a large heading and more descriptive paragraphs arranged vertically.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about8`
 
@@ -88,7 +88,7 @@ Two-column with structured content presentation and clear visual hierarchy. Feat
 
 ![screenshot](../images/about/about9.png)
 
-Image-text split featuring structured content presentation and clear visual hierarchy. Displays team photos and mission statement for enhanced user engagement. Perfect for company profiles and conversion-focused applications. Authentic design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring company profiles with professional visual impact.
+A webpage section displays a two-column layout with text content on the left and a large image on the right. The left side contains a main heading, followed by body text, with a job title label and location positioned at the bottom. The image spans the full height of the right column.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about9`
 
@@ -98,29 +98,9 @@ Image-text split featuring structured content presentation and clear visual hier
 
 ![screenshot](../images/about/about10.png)
 
-Centered content including structured content presentation and clear visual hierarchy. Showcases brand elements and value props for enhanced user engagement. Excellent for mission statements and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring mission statements with professional visual impact.
+A two-column layout displays an "About Us" section. The left column contains a logo with a label, a "Contact Us" button, and a subheading. The right column features a large heading, body text describing the company, a "Core Philosophy" section with accompanying text, and a large image positioned below spanning the full width.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about10`
-
----
-
-## about11
-
-![screenshot](../images/about/about11.png)
-
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents minimal design and team showcase for enhanced user engagement. Well-suited for brand stories and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring brand stories with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/about11`
-
----
-
-## about12
-
-![screenshot](../images/about/about12.png)
-
-Grid blocks containing structured content presentation and clear visual hierarchy. Includes storytelling layout and CTA button for enhanced user engagement. Optimal for value propositions and conversion-focused applications. Narrative-driven design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring value propositions with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/about12`
 
 ---
 
@@ -128,7 +108,7 @@ Grid blocks containing structured content presentation and clear visual hierarch
 
 ![screenshot](../images/about/about13.png)
 
-Two-column with structured content presentation and clear visual hierarchy. Features hero image and heading for enhanced user engagement. Ideal for about pages and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring about pages with professional visual impact.
+A webpage section displays a two-column layout with text content on the left and right, separated by a centered heading. The left column contains a small label, a subtitle, a team member profile with avatar and title, while the right column features a large body text block followed by additional descriptive text. Below both columns, a full-width image spans the bottom of the section.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about13`
 
@@ -138,7 +118,7 @@ Two-column with structured content presentation and clear visual hierarchy. Feat
 
 ![screenshot](../images/about/about14.png)
 
-Image-text split featuring structured content presentation and clear visual hierarchy. Displays team photos and mission statement for enhanced user engagement. Perfect for company profiles and conversion-focused applications. Authentic design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring company profiles with professional visual impact.
+A webpage section features a large heading on the left, followed by a full-width image positioned centrally below. To the left of the image is a label and descriptive body text, with a team member profile (including an avatar and name) positioned underneath. On the right side, a larger body text block appears aligned to the right, describing the team's mission and values.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about14`
 
@@ -148,7 +128,7 @@ Image-text split featuring structured content presentation and clear visual hier
 
 ![screenshot](../images/about/about15.png)
 
-Centered content including structured content presentation and clear visual hierarchy. Showcases brand elements and value props for enhanced user engagement. Excellent for mission statements and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring mission statements with professional visual impact.
+A dark background section is divided into two columns. On the left, a polaroid-style image is positioned vertically. On the right, a large heading is followed by two paragraphs of body text, all aligned to the left side of the column.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about15`
 
@@ -158,9 +138,8 @@ Centered content including structured content presentation and clear visual hier
 
 ![screenshot](../images/about/about16.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents minimal design and team showcase for enhanced user engagement. Well-suited for brand stories and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring brand stories with professional visual impact.
+A webpage section is organized in two columns. The left column contains a small tag label at the top, followed by a large centered heading and body text below. The right column features a large image positioned at the top, with a statistics section below displaying a large number on the left and descriptive text on the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/about16`
 
 ---
-

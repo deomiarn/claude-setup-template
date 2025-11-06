@@ -8,7 +8,7 @@ Login and authentication forms for user access. Secure entry points with credent
 
 ![screenshot](../images/login/login1.png)
 
-Split screen featuring structured content presentation and clear visual hierarchy. Displays minimal design and password field for enhanced user engagement. Perfect for user login and conversion-focused applications. Functional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring user login with professional visual impact.
+A login form is centered on the page, consisting of a logo image at the top, followed by a "Login" heading. Below are two vertically stacked input fields for email and password, a black button labeled "Login", and body text with a "Sign up" link positioned at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login1`
 
@@ -18,7 +18,7 @@ Split screen featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/login/login2.png)
 
-Modal dialog including structured content presentation and clear visual hierarchy. Showcases logo placement and submit button for enhanced user engagement. Excellent for app access and conversion-focused applications. Secure design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring app access with professional visual impact.
+A login form is centered on the page, positioned vertically with a logo image at the top. Below the logo is a heading, followed by two labeled text input fields stacked vertically. A button spans the full width at the bottom of the form, with body text and a link positioned below the form.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login2`
 
@@ -28,7 +28,7 @@ Modal dialog including structured content presentation and clear visual hierarch
 
 ![screenshot](../images/login/login3.png)
 
-Full-page form incorporating structured content presentation and clear visual hierarchy. Presents input styling and signup link for enhanced user engagement. Well-suited for member portals and conversion-focused applications. Accessible design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring member portals with professional visual impact.
+A centered login form with a vertical layout. At the top is an image logo, followed by a "Login" heading. Below are two input fields labeled "Email" and "Password," stacked vertically. A full-width button labeled "Login" sits beneath the inputs. At the bottom, body text with an embedded "Sign up" link is centered.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login3`
 
@@ -38,7 +38,7 @@ Full-page form incorporating structured content presentation and clear visual hi
 
 ![screenshot](../images/login/login4.png)
 
-Compact box containing structured content presentation and clear visual hierarchy. Includes button emphasis and social login buttons for enhanced user engagement. Optimal for secure entry and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring secure entry with professional visual impact.
+A centered login interface displays a logo at the top, followed by vertically stacked input fields for email and password. Below the inputs sits a primary button, with three secondary authentication buttons arranged vertically underneath. At the bottom, body text with a linked action directs users to sign up.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login4`
 
@@ -48,7 +48,7 @@ Compact box containing structured content presentation and clear visual hierarch
 
 ![screenshot](../images/login/login5.png)
 
-Centered card with structured content presentation and clear visual hierarchy. Features form card and email field for enhanced user engagement. Ideal for authentication pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring authentication pages with professional visual impact.
+A centered login form displays vertically with an image at the top, followed by a heading. Below are two input fields for email and password, stacked vertically, then a primary button. Three secondary buttons for social login options (Google, Facebook, GitHub) are arranged vertically below. At the bottom, body text with a linked "Sign up" option is centered.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login5`
 
@@ -58,7 +58,7 @@ Centered card with structured content presentation and clear visual hierarchy. F
 
 ![screenshot](../images/login/login6.png)
 
-Split screen featuring structured content presentation and clear visual hierarchy. Displays minimal design and password field for enhanced user engagement. Perfect for user login and conversion-focused applications. Functional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring user login with professional visual impact.
+A login form is centered vertically and horizontally on the page. At the top is a heading with an image, followed by a "Login with Google" button and an "OR" divider. Below are two stacked input fields labeled "Email" and "Password," with a "Login" button positioned underneath. At the bottom is body text with a link to sign up for a new account.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login6`
 
@@ -68,9 +68,8 @@ Split screen featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/login/login7.png)
 
-Modal dialog including structured content presentation and clear visual hierarchy. Showcases logo placement and submit button for enhanced user engagement. Excellent for app access and conversion-focused applications. Secure design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring app access with professional visual impact.
+A centered login form displays vertically with a logo at the top, followed by a "Sign up with Google" button. Below a divider marked "OR", there are two input fields stacked vertically for email and password entry. A "Log in" button is positioned below the form fields, with a sign-up link centered at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/login7`
 
 ---
-

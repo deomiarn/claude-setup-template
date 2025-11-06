@@ -8,7 +8,7 @@ Frequently asked questions accordions and lists. Provide quick answers to common
 
 ![screenshot](../images/faq/faq1.png)
 
-Two-column featuring structured content presentation and clear visual hierarchy. Displays minimal design and expand/collapse for enhanced user engagement. Perfect for help sections and conversion-focused applications. Scannable design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring help sections with professional visual impact.
+A vertically stacked FAQ section displays a centered heading at the top, followed by seven expandable question items arranged in a single column. Each question item is a clickable label with a dropdown icon positioned on the right side.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq1`
 
@@ -18,7 +18,7 @@ Two-column featuring structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/faq/faq2.png)
 
-Searchable list containing structured content presentation and clear visual hierarchy. Includes category labels and answer text for enhanced user engagement. Optimal for quick answers and conversion-focused applications. Functional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring quick answers with professional visual impact.
+A webpage section displays a centered main heading at the top, followed by a vertically stacked list of question-and-answer pairs. Each pair consists of a bold question label positioned above body text containing the answer. The entire content is organized in a single column format with consistent spacing between each Q&A item.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq2`
 
@@ -28,7 +28,7 @@ Searchable list containing structured content presentation and clear visual hier
 
 ![screenshot](../images/faq/faq3.png)
 
-Accordion layout with structured content presentation and clear visual hierarchy. Features collapsible sections and accordion items for enhanced user engagement. Ideal for FAQ pages and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring faq pages with professional visual impact.
+A vertically stacked FAQ section is centered on the page. At the top, a main heading is followed by two lines of body text. Below this introduction, seven accordion-style questions are arranged vertically, each expandable with a toggle button positioned on the right side of each question label.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq3`
 
@@ -38,7 +38,7 @@ Accordion layout with structured content presentation and clear visual hierarchy
 
 ![screenshot](../images/faq/faq4.png)
 
-Two-column featuring structured content presentation and clear visual hierarchy. Displays minimal design and expand/collapse for enhanced user engagement. Perfect for help sections and conversion-focused applications. Scannable design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring help sections with professional visual impact.
+A FAQ section displays a main heading centered at the top, followed by subheading text. Below this, eight expandable question items are stacked vertically in a single column. At the bottom, a new section contains a heading on the left with accompanying body text, and a "Contact Support" link positioned on the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq4`
 
@@ -48,7 +48,7 @@ Two-column featuring structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/faq/faq5.png)
 
-Stacked sections including structured content presentation and clear visual hierarchy. Showcases question styling and category filters for enhanced user engagement. Excellent for support documentation and conversion-focused applications. Accessible design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring support documentation with professional visual impact.
+A FAQ section is centered on the page with a label, main heading, and descriptive body text at the top. Below this introduction, four numbered questions and answers are vertically stacked, with each question displayed as a bold heading followed by accompanying explanatory text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq5`
 
@@ -58,7 +58,7 @@ Stacked sections including structured content presentation and clear visual hier
 
 ![screenshot](../images/faq/faq6.png)
 
-Category tabs incorporating structured content presentation and clear visual hierarchy. Presents expand icons and search bar for enhanced user engagement. Well-suited for knowledge bases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring knowledge bases with professional visual impact.
+A FAQ section displays content in a two-column grid layout. At the top, a centered label, heading, and descriptive body text are stacked vertically. Below this, six question-and-answer pairs are arranged in two columns with three rows, each containing a numbered item, a question heading, and supporting body text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq6`
 
@@ -68,7 +68,7 @@ Category tabs incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/faq/faq7.png)
 
-Searchable list containing structured content presentation and clear visual hierarchy. Includes category labels and answer text for enhanced user engagement. Optimal for quick answers and conversion-focused applications. Functional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring quick answers with professional visual impact.
+A two-column layout with a left sidebar and right content area. The left column contains a main heading, subheading, body text, and a button stacked vertically. The right column displays a series of expandable accordion-style questions arranged vertically, each with a dropdown arrow indicator.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq7`
 
@@ -78,7 +78,7 @@ Searchable list containing structured content presentation and clear visual hier
 
 ![screenshot](../images/faq/faq8.png)
 
-Accordion layout with structured content presentation and clear visual hierarchy. Features collapsible sections and accordion items for enhanced user engagement. Ideal for FAQ pages and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring faq pages with professional visual impact.
+A webpage section displays a FAQ layout organized vertically into two category groups. On the left side, category labels ("General" and "Billing") are positioned as headers, with expandable question items listed to the right of each category. Each question item has a chevron button aligned to the far right for expanding/collapsing content.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq8`
 
@@ -88,7 +88,7 @@ Accordion layout with structured content presentation and clear visual hierarchy
 
 ![screenshot](../images/faq/faq9.png)
 
-Two-column featuring structured content presentation and clear visual hierarchy. Displays minimal design and expand/collapse for enhanced user engagement. Perfect for help sections and conversion-focused applications. Scannable design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring help sections with professional visual impact.
+A FAQ section displays a vertical stack of collapsible accordion items. Each accordion item contains a question label aligned to the left with a chevron icon positioned on the right. The items are evenly spaced and span the full width of the container.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq9`
 
@@ -98,7 +98,7 @@ Two-column featuring structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/faq/faq10.png)
 
-Stacked sections including structured content presentation and clear visual hierarchy. Showcases question styling and category filters for enhanced user engagement. Excellent for support documentation and conversion-focused applications. Accessible design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring support documentation with professional visual impact.
+A FAQ section displays a main heading centered at the top, followed by body text with a linked reference. Below this, six expandable question items are stacked vertically in a single column, each with a question label and a dropdown indicator on the right side.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq10`
 
@@ -108,7 +108,7 @@ Stacked sections including structured content presentation and clear visual hier
 
 ![screenshot](../images/faq/faq11.png)
 
-Category tabs incorporating structured content presentation and clear visual hierarchy. Presents expand icons and search bar for enhanced user engagement. Well-suited for knowledge bases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring knowledge bases with professional visual impact.
+A support page layout with two main columns. The left column contains a large heading, body text, and a "get in touch" link. The right column displays a "Support" section header followed by multiple expandable FAQ items organized under three category headings: "Support," "Your account," and "Other questions." Each category contains accordion-style question buttons.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq11`
 
@@ -118,19 +118,9 @@ Category tabs incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/faq/faq12.png)
 
-Searchable list containing structured content presentation and clear visual hierarchy. Includes category labels and answer text for enhanced user engagement. Optimal for quick answers and conversion-focused applications. Functional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring quick answers with professional visual impact.
+A FAQ section is structured in two columns. The left column contains a main heading, subtitle text, and a vertical list of category labels. The right column displays an accordion-style list of expandable questions, with the first question expanded to show body text below it.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq12`
-
----
-
-## faq13
-
-![screenshot](../images/faq/faq13.png)
-
-Accordion layout with structured content presentation and clear visual hierarchy. Features collapsible sections and accordion items for enhanced user engagement. Ideal for FAQ pages and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring faq pages with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/faq13`
 
 ---
 
@@ -138,7 +128,7 @@ Accordion layout with structured content presentation and clear visual hierarchy
 
 ![screenshot](../images/faq/faq14.png)
 
-Two-column featuring structured content presentation and clear visual hierarchy. Displays minimal design and expand/collapse for enhanced user engagement. Perfect for help sections and conversion-focused applications. Scannable design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring help sections with professional visual impact.
+A vertically stacked FAQ section with a centered main heading, subtitle, and three content categories. Each category contains collapsible question items arranged vertically, with expandable sections labeled "SUPPORT," "YOUR ACCOUNT," and "OTHER QUESTIONS" positioned sequentially down the page.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq14`
 
@@ -148,7 +138,7 @@ Two-column featuring structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/faq/faq15.png)
 
-Stacked sections including structured content presentation and clear visual hierarchy. Showcases question styling and category filters for enhanced user engagement. Excellent for support documentation and conversion-focused applications. Accessible design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring support documentation with professional visual impact.
+A centered section displays a main heading at the top, followed by four content blocks arranged in a 2x2 grid layout. Each block contains a small icon on the left, a bold subheading, and body text describing the benefit of pet adoption from a shelter.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq15`
 
@@ -158,9 +148,18 @@ Stacked sections including structured content presentation and clear visual hier
 
 ![screenshot](../images/faq/faq16.png)
 
-Category tabs incorporating structured content presentation and clear visual hierarchy. Presents expand icons and search bar for enhanced user engagement. Well-suited for knowledge bases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring knowledge bases with professional visual impact.
+A vertically stacked FAQ section is centered on the page, with a heading at the top. Below the heading, eight expandable accordion items are arranged in a single column, each containing a question label with a dropdown arrow positioned on the right side.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/faq16`
 
 ---
 
+## faq17
+
+![screenshot](../images/faq/faq17.png)
+
+A two-column FAQ layout with the left column containing a profile image, name, title, a heading, body text, and a contact link. The right column displays a large "FAQ" heading followed by five expandable question sections stacked vertically, with the first question expanded to show answer text.
+
+**Install**: `pnpm dlx shadcn add @shadcnblocks/faq17`
+
+---

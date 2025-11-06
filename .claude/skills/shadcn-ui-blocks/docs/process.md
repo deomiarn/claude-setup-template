@@ -8,7 +8,7 @@ Process flows and step-by-step guides. Visualize workflows and procedural inform
 
 ![screenshot](../images/process/process1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A two-column layout displays a process section. The left column contains a main heading, body text, and a clickable link positioned vertically. The right column features four numbered process steps arranged vertically, each with a heading, descriptive body text, and a small decorative icon aligned to the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/process1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/process/process2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A two-column layout with the left column containing a main heading, body text, an image, and a clickable link positioned below. The right column displays two vertically stacked process steps, each with a large numerical label, a subheading, and descriptive body text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/process2`
 
@@ -28,9 +28,8 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/process/process3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A webpage section displays a centered main heading with descriptive body text underneath. Below this, a horizontal timeline layout presents five stages listed vertically on the left side, each paired with corresponding numbered labels positioned progressively to the right, creating a staggered cascade effect across the blue-gradient background.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/process3`
 
 ---
-

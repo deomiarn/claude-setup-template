@@ -8,7 +8,7 @@ Awards and recognition sections highlighting achievements and accolades. Display
 
 ![screenshot](../images/awards/awards1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A section titled "Milestones" displays a table with four columns arranged horizontally: "Achievements," "Name of the Award," "Description," and "Year." Four rows of content are vertically stacked beneath the column headers, each containing award information with left-aligned text and right-aligned years ranging from 2022 to 2024.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/awards1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/awards/awards2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+An awards section displays a vertically stacked list of award titles centered on the page. Each award entry is positioned horizontally, with the award name on the left and its corresponding year aligned to the right. The list contains nine award items arranged in chronological order from most recent to oldest.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/awards2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/awards/awards3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A vertically stacked list section displays three award entries. Each entry contains a colored circular icon on the left, followed by a main heading, descriptive labels, and a year, aligned to the left. On the far right of each entry, a small icon button is positioned. The entries are separated by subtle horizontal dividers.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/awards3`
 
@@ -38,9 +38,8 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/awards/awards4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A table layout displays award information organized in four columns: a numbered label on the left, an award name with an icon, a descriptive nomination text in the center, and a year on the right. Six rows of award entries are vertically stacked, each containing consistent column alignment. A main heading "Awards" is positioned at the top left, with a date range label aligned to the top right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/awards4`
 
 ---
-

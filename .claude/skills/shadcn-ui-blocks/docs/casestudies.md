@@ -8,7 +8,7 @@ Case study grid layouts showcasing client success stories. Display project outco
 
 ![screenshot](../images/casestudies/casestudies1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A grid layout displays six cards arranged in three rows and two columns. Each card contains a logo or heading positioned at the top, a descriptive body text at the bottom, and a background image spanning the full card. The cards are evenly spaced horizontally and vertically throughout the layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudies1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/casestudies/casestudies2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A testimonial section displays content in two main columns. The left column contains an image, followed by a customer quote in body text, a customer name, job title, and company logo. The right column presents four key metrics arranged vertically, each with a large number, label, and descriptive subtitle. A centered heading and subheading appear above the entire layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudies2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/casestudies/casestudies3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A webpage section displays three horizontally-arranged cards in a grid layout. The top card spans the full width and contains a logo on the left, followed by a label, a main heading, body text, and a call-to-action link. Two smaller cards are positioned below, each containing a logo, a category label, a heading, descriptive text, and a call-to-action link, with an image positioned on the right side of each card.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudies3`
 
@@ -38,7 +38,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/casestudies/casestudies4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A two-column layout with the left column containing a company logo, three metric labels with numerical values and descriptive text, and an author attribution with a small profile image. The right column features a large heading, body text, and a clickable link positioned below, all aligned to the left within their column.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudies4`
 
@@ -48,9 +48,8 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/casestudies/casestudies5.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features minimal design and content blocks for enhanced user engagement. Ideal for landing pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring landing pages with professional visual impact.
+A two-column layout section with a grid of images on the left side and centered text content on the right. The left column displays multiple rectangular image placeholders arranged in a 3x3 grid pattern. The right column contains a logo at the top, followed by a heading and body text, with navigation arrows positioned at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudies5`
 
 ---
-

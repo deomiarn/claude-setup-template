@@ -8,7 +8,7 @@ Team sections featuring member profiles and bios. Introduce staff with photos an
 
 ![screenshot](../images/team/team1.png)
 
-Card grid featuring structured content presentation and clear visual hierarchy. Displays card design and avatars for enhanced user engagement. Perfect for team showcases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring team showcases with professional visual impact.
+A centered section displays a main heading and descriptive body text at the top. Below, six team member profiles are arranged in two rows of three columns, each containing an image, a name, and a job title label positioned underneath.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team1`
 
@@ -18,7 +18,7 @@ Card grid featuring structured content presentation and clear visual hierarchy. 
 
 ![screenshot](../images/team/team2.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features profile images and team member cards for enhanced user engagement. Ideal for about pages and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring about pages with professional visual impact.
+A team section features a centered heading with supporting body text at the top. Below, six team member cards are arranged in two rows of three, displayed horizontally across the page. Each card contains a small image, a name label, a job title label, and three icon buttons positioned below.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team2`
 
@@ -28,7 +28,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/team/team3.png)
 
-Card grid featuring structured content presentation and clear visual hierarchy. Displays card design and avatars for enhanced user engagement. Perfect for team showcases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring team showcases with professional visual impact.
+A team section features a centered heading and descriptive body text at the top. Below, six team member cards are arranged in two rows of three columns. Each card contains a circular image, a name label, a job title label, and three icon buttons positioned horizontally at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team3`
 
@@ -38,7 +38,7 @@ Card grid featuring structured content presentation and clear visual hierarchy. 
 
 ![screenshot](../images/team/team4.png)
 
-Centered rows including structured content presentation and clear visual hierarchy. Showcases role labels and name labels for enhanced user engagement. Excellent for staff directories and conversion-focused applications. Personal design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring staff directories with professional visual impact.
+A webpage section displays a main heading centered at the top, followed by descriptive body text. Below this, four team member profiles are arranged horizontally in a row, each containing an image, a name label, a job title, body text description, and social media icons at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team4`
 
@@ -48,7 +48,7 @@ Centered rows including structured content presentation and clear visual hierarc
 
 ![screenshot](../images/team/team5.png)
 
-Responsive columns incorporating structured content presentation and clear visual hierarchy. Presents social links and role titles for enhanced user engagement. Well-suited for company profiles and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring company profiles with professional visual impact.
+A centered page section displays a main heading with supporting body text at the top. Below this introduction, six team member cards are arranged in two horizontal rows of three columns each. Each card contains a small circular image, a name heading, a job title, a department label, descriptive body text, and multiple skill tags displayed horizontally at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team5`
 
@@ -58,7 +58,7 @@ Responsive columns incorporating structured content presentation and clear visua
 
 ![screenshot](../images/team/team6.png)
 
-Uniform cards containing structured content presentation and clear visual hierarchy. Includes minimal styling and social icons for enhanced user engagement. Optimal for leadership displays and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring leadership displays with professional visual impact.
+A team section displays a centered heading with descriptive body text. Below, eight team member profiles are arranged in two horizontal rows of four, each containing a small image, name, title, and department label. At the bottom, a centered heading with supporting body text is followed by a button aligned to the center.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team6`
 
@@ -68,7 +68,7 @@ Uniform cards containing structured content presentation and clear visual hierar
 
 ![screenshot](../images/team/team7.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features profile images and team member cards for enhanced user engagement. Ideal for about pages and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring about pages with professional visual impact.
+A section displays a heading positioned on the left, followed by five profile cards arranged horizontally below. Each card contains an image centered at the top, with a name label and organization text aligned below it.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team7`
 
@@ -78,7 +78,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/team/team8.png)
 
-Card grid featuring structured content presentation and clear visual hierarchy. Displays card design and avatars for enhanced user engagement. Perfect for team showcases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring team showcases with professional visual impact.
+A webpage section displays a main heading and subtitle aligned on the left, followed by body text. Below this, six team member cards are arranged horizontally in a row, each containing an image, a name, a job title label, and experience text centered within the card. Navigation arrows are positioned in the top right corner.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team8`
 
@@ -88,7 +88,7 @@ Card grid featuring structured content presentation and clear visual hierarchy. 
 
 ![screenshot](../images/team/team9.png)
 
-Centered rows including structured content presentation and clear visual hierarchy. Showcases role labels and name labels for enhanced user engagement. Excellent for staff directories and conversion-focused applications. Personal design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring staff directories with professional visual impact.
+A "Meet Our Team" section displays a heading with descriptive body text at the top left. Below this is a horizontal navigation menu with category filters, and a search bar positioned on the right. The main content area shows a grid of eight team member cards arranged in two rows of four columns. Each card contains a centered image, a name heading, a job title label, and experience text positioned vertically.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team9`
 
@@ -98,19 +98,9 @@ Centered rows including structured content presentation and clear visual hierarc
 
 ![screenshot](../images/team/team10.png)
 
-Centered rows including structured content presentation and clear visual hierarchy. Showcases role labels and name labels for enhanced user engagement. Excellent for staff directories and conversion-focused applications. Personal design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring staff directories with professional visual impact.
+A page section displays a main heading and body text on the left side, followed by a button below. The remainder of the section is organized into four vertically-stacked columns, each containing team member entries arranged horizontally with an image, name, and job title label for each person.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team10`
-
----
-
-## team11
-
-![screenshot](../images/team/team11.png)
-
-Responsive columns incorporating structured content presentation and clear visual hierarchy. Presents social links and role titles for enhanced user engagement. Well-suited for company profiles and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring company profiles with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/team11`
 
 ---
 
@@ -118,9 +108,18 @@ Responsive columns incorporating structured content presentation and clear visua
 
 ![screenshot](../images/team/team12.png)
 
-Uniform cards containing structured content presentation and clear visual hierarchy. Includes minimal styling and social icons for enhanced user engagement. Optimal for leadership displays and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring leadership displays with professional visual impact.
+A section titled "Meet the Awesome Team" displays three team member profiles horizontally across the layout. Each profile contains an image positioned above a name label and job title text. Navigation elements appear at the top left and right of the section.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/team12`
 
 ---
 
+## team13
+
+![screenshot](../images/team/team13.png)
+
+A team section displays four team members in a horizontal layout. Each member is represented by an image positioned above their name and job title label. A section heading appears on the left, with a "call-to-action" link positioned on the right.
+
+**Install**: `pnpm dlx shadcn add @shadcnblocks/team13`
+
+---

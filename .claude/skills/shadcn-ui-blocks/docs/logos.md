@@ -8,7 +8,7 @@ Logo grids showcasing clients, partners, or supported platforms. Build credibili
 
 ![screenshot](../images/logos/logos1.png)
 
-Grid layout featuring structured content presentation and clear visual hierarchy. Displays uniform sizing and brand icons for enhanced user engagement. Perfect for partner displays and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring partner displays with professional visual impact.
+A header section displays text on the left side reading "Used by the world's leading companies," with five company logos arranged horizontally on the right side.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos1`
 
@@ -18,7 +18,7 @@ Grid layout featuring structured content presentation and clear visual hierarchy
 
 ![screenshot](../images/logos/logos2.png)
 
-Horizontal row with structured content presentation and clear visual hierarchy. Features grayscale logos and logo images for enhanced user engagement. Ideal for client showcases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring client showcases with professional visual impact.
+A section displays content in two columns with a left-aligned layout. The left column contains a heading, body text, and a button stacked vertically. The right side features a grid of six images arranged in three columns and two rows, positioned horizontally across the section.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos2`
 
@@ -28,7 +28,7 @@ Horizontal row with structured content presentation and clear visual hierarchy. 
 
 ![screenshot](../images/logos/logos3.png)
 
-Grid layout featuring structured content presentation and clear visual hierarchy. Displays uniform sizing and brand icons for enhanced user engagement. Perfect for partner displays and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring partner displays with professional visual impact.
+A centered section displays a heading at the top, with six company logos arranged horizontally below it in a single row. The logos are evenly distributed across the width of the section.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos3`
 
@@ -38,7 +38,7 @@ Grid layout featuring structured content presentation and clear visual hierarchy
 
 ![screenshot](../images/logos/logos4.png)
 
-Centered strip including structured content presentation and clear visual hierarchy. Showcases spacing and company names for enhanced user engagement. Excellent for trust signals and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring trust signals with professional visual impact.
+A centered section displays a label at the top, followed by a large heading and body text. Below the text is a button, also centered. Underneath, a grid of partner logos is arranged horizontally across multiple rows, with images displayed in a balanced layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos4`
 
@@ -48,19 +48,9 @@ Centered strip including structured content presentation and clear visual hierar
 
 ![screenshot](../images/logos/logos5.png)
 
-Marquee scroll incorporating structured content presentation and clear visual hierarchy. Presents minimal design and link wrappers for enhanced user engagement. Well-suited for integration lists and conversion-focused applications. Minimal design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring integration lists with professional visual impact.
+A centered section displays a main heading at the top, followed by a subtitle beneath it. Below the text, nine company logos are arranged horizontally in two rows—three logos in the top row and six logos distributed across the bottom row, all positioned at the center of the layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos5`
-
----
-
-## logos6
-
-![screenshot](../images/logos/logos6.png)
-
-Wrapped grid containing structured content presentation and clear visual hierarchy. Includes brand alignment and filter effects for enhanced user engagement. Optimal for brand associations and conversion-focused applications. Credible design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring brand associations with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/logos6`
 
 ---
 
@@ -68,7 +58,7 @@ Wrapped grid containing structured content presentation and clear visual hierarc
 
 ![screenshot](../images/logos/logos7.png)
 
-Horizontal row with structured content presentation and clear visual hierarchy. Features grayscale logos and logo images for enhanced user engagement. Ideal for client showcases and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring client showcases with professional visual impact.
+A centered header section displays a main heading followed by body text. Below this, a horizontal row of company logos is arranged evenly across the width of the page, with additional logo elements positioned at the far left and right edges.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos7`
 
@@ -78,7 +68,7 @@ Horizontal row with structured content presentation and clear visual hierarchy. 
 
 ![screenshot](../images/logos/logos8.png)
 
-Grid layout featuring structured content presentation and clear visual hierarchy. Displays uniform sizing and brand icons for enhanced user engagement. Perfect for partner displays and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring partner displays with professional visual impact.
+A centered section displays a main heading "Trusted by these companies" with supporting body text underneath. Below this text, five company logos are arranged horizontally in a row, centered on the page.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos8`
 
@@ -88,7 +78,7 @@ Grid layout featuring structured content presentation and clear visual hierarchy
 
 ![screenshot](../images/logos/logos9.png)
 
-Centered strip including structured content presentation and clear visual hierarchy. Showcases spacing and company names for enhanced user engagement. Excellent for trust signals and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring trust signals with professional visual impact.
+A section displays a centered heading at the top, followed by a horizontally-arranged row of company logos. Below this, three testimonial cards are positioned side-by-side in equal columns. Each card contains body text at the top, with a job title, company name, and company logo aligned at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos9`
 
@@ -98,7 +88,7 @@ Centered strip including structured content presentation and clear visual hierar
 
 ![screenshot](../images/logos/logos10.png)
 
-Centered strip including structured content presentation and clear visual hierarchy. Showcases spacing and company names for enhanced user engagement. Excellent for trust signals and conversion-focused applications. Trustworthy design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring trust signals with professional visual impact.
+A section displays a large heading at the top, with body text underneath. Below this, a bullet point with a label appears on the left. Further down, a horizontal timeline spans the full width, featuring six numbered positions (08, 01, 02, 03, 04, 05) with corresponding images and logos aligned vertically beneath each marker.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos10`
 
@@ -108,7 +98,7 @@ Centered strip including structured content presentation and clear visual hierar
 
 ![screenshot](../images/logos/logos11.png)
 
-Marquee scroll incorporating structured content presentation and clear visual hierarchy. Presents minimal design and link wrappers for enhanced user engagement. Well-suited for integration lists and conversion-focused applications. Minimal design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring integration lists with professional visual impact.
+A webpage section displays a centered heading at the top, with two rows of logos and text labels arranged horizontally below. The first row contains three logo/text combinations positioned on the left, center, and right. The second row mirrors this layout with three additional logo/text pairs. Two orange rectangular blocks with logos are positioned on the left and right sides of the layout. At the bottom, two buttons are centered horizontally.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos11`
 
@@ -118,9 +108,18 @@ Marquee scroll incorporating structured content presentation and clear visual hi
 
 ![screenshot](../images/logos/logos12.png)
 
-Wrapped grid containing structured content presentation and clear visual hierarchy. Includes brand alignment and filter effects for enhanced user engagement. Optimal for brand associations and conversion-focused applications. Credible design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring brand associations with professional visual impact.
+A horizontal navigation bar displays six company logos evenly spaced across the width of the page. The logos are centered vertically within the bar and positioned from left to right in a single row.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/logos12`
 
 ---
 
+## logos13
+
+![screenshot](../images/logos/logos13.png)
+
+A section titled "OUR PARTNERS" on the left is followed by a grid layout displaying six partner cards arranged in three columns and two rows. Each card contains a centered logo image with a year label positioned at the bottom right (/2021 through /2026).
+
+**Install**: `pnpm dlx shadcn add @shadcnblocks/logos13`
+
+---

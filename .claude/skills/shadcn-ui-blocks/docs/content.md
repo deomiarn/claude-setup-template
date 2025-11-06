@@ -8,7 +8,7 @@ General content blocks for flexible page layouts. Adaptable sections for various
 
 ![screenshot](../images/content/content1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A webpage displays a two-column layout. The left column contains a main heading, descriptive body text, and a centered image. Below the image, a subheading is followed by two labeled sections with body text. On the right side, a vertical navigation menu lists several linked items.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/content1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/content/content2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A feature section displays vertically stacked content with a small label at the top, followed by a large heading and body text. Below this introductory text, a centered image is positioned in a light gray background area. Further down, another heading introduces a grid of four content type cards arranged in two columns and two rows, each card containing a small icon, a label, and descriptive text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/content2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/content/content3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A webpage layout with a left sidebar and centered main content area. The left sidebar contains topic labels, a "Last Updated" timestamp, and navigation links. The main content area features a large centered heading, descriptive body text, and two action buttons positioned horizontally below. Further down, an image is centered with a subheading underneath. On the right side, a vertical navigation menu with section links is aligned to the top.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/content3`
 
@@ -38,9 +38,8 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/content/content4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A blog post layout displays content in two columns. The left column contains a main heading, author information with a date, a large centered image, and body text below. On the right side, a narrow column lists navigation links under an "ON THIS PAGE" label, positioned vertically.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/content4`
 
 ---
-

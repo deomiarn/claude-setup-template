@@ -8,7 +8,7 @@ Community and social sections for user engagement. Feature forums, discussions, 
 
 ![screenshot](../images/community/community1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A centered section displays a small image at the top, followed by a main heading and subheading stacked vertically. Below the text, three small icon buttons are horizontally aligned and centered.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/community/community2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A "Join our community" section displays a main heading followed by descriptive body text at the top. Below this, four cards are arranged horizontally in a grid layout, each containing an icon, a platform name (label), and supporting text describing the purpose of connecting on that platform.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/community/community3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A centered section displays a community network interface with a heading, subheading, and descriptive text at the top. Below this, three cards are arranged horizontally, each containing an image, a title, and body text describing different platforms. A closing statement appears centered beneath the cards.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community3`
 
@@ -38,7 +38,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/community/community4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A centered section with a main heading and subheading at the top. Below this, four cards are arranged horizontally in a grid layout. Each card contains an icon, a title, body text describing the offering, and a clickable link with an arrow at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community4`
 
@@ -48,7 +48,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/community/community5.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features minimal design and content blocks for enhanced user engagement. Ideal for landing pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring landing pages with professional visual impact.
+A centered section displays a header with "Contribute to our community" as the main heading and supporting body text beneath it. Below this is a horizontally-oriented card containing an image on the left, followed by a title, description text, and three metric labels aligned to the right. At the bottom, three buttons are centered horizontally in a row.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community5`
 
@@ -58,7 +58,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/community/community6.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A centered section features a main heading at the top with supporting body text below. Horizontally aligned underneath are six card components arranged in a row, each containing an icon image, a label, and descriptive body text stacked vertically within the card.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community6`
 
@@ -68,9 +68,8 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/community/community7.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A centered section displays a main heading followed by descriptive body text at the top. Below this, six social media platform cards are arranged in a 3x2 grid layout, each containing a platform icon, name, URL link, status indicator, and follower count.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/community7`
 
 ---
-

@@ -8,7 +8,7 @@ Rate card and pricing breakdown sections. Detail service costs and package optio
 
 ![screenshot](../images/ratecard/ratecard1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A pricing page displays two columns: the left column contains a main heading, a price label with "/Month" text, and three bullet points. The right column vertically stacks five service offerings, each with an icon on the left and a heading followed by body text describing the service details.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/ratecard1`
 
@@ -18,9 +18,8 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/ratecard/ratecard2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A section displays two pricing plan cards arranged horizontally side-by-side. Each card contains a heading at the top, followed by body text, a "What's Included" label, a bulleted list of features, and pricing information at the bottom. A "Get Started" button is positioned in the lower right corner of each card.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/ratecard2`
 
 ---
-

@@ -8,7 +8,7 @@ Code example and documentation blocks for technical content. Display syntax-high
 
 ![screenshot](../images/codeexample/codeexample1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A two-column layout with text content on the left and a code editor panel on the right. The left column contains a large heading, body text, and a button positioned vertically. The right column displays a tabbed code editor interface with multiple language tabs at the top and code content below, occupying the upper portion of the layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/codeexample1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/codeexample/codeexample2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A webpage section is divided into two columns. The left column contains a large heading, descriptive body text, and a button positioned below. The right column displays a code editor window showing JavaScript syntax with line numbers and syntax highlighting.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/codeexample2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/codeexample/codeexample3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A webpage section is divided into two main columns. The left column contains a heading, body text describing custom hooks, and a "Learn more" link, followed by a code block below. The right column displays two code editor windows stacked vertically, with the top showing a TypeScript file and the bottom showing a component file, each with syntax highlighting and line numbers.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/codeexample3`
 
@@ -38,7 +38,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/codeexample/codeexample4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A documentation page is organized in two columns. On the left side, a vertical file tree navigation menu displays folder and file structure. The right column contains a large code editor window showing TypeScript code, with line numbers and syntax highlighting, centered below a heading and descriptive body text at the top of the page.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/codeexample4`
 
@@ -48,9 +48,8 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/codeexample/codeexample5.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features minimal design and content blocks for enhanced user engagement. Ideal for landing pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring landing pages with professional visual impact.
+A two-column layout with a heading centered at the top. The left column contains three vertically stacked items, each with an icon, title, and descriptive body text. The right column displays a tabbed interface with three language options (Javascript, Python, Ruby), with a code editor panel beneath showing numbered lines of code and a copy button in the top-right corner.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/codeexample5`
 
 ---
-

@@ -8,19 +8,18 @@ Resource sections linking to external materials. Provide access to guides, tools
 
 ![screenshot](../images/resource/resource1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A two-column layout with a sidebar on the left and main content on the right. The left sidebar contains a label, a heading, download buttons with accompanying text, and social sharing icons arranged vertically. The right column displays a large heading, body text, section subheadings, and bulleted lists, organized in a single-column vertical flow.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/resource1`
 
 ---
 
-## resource2
+## resource3
 
-![screenshot](../images/resource/resource2.png)
+![screenshot](../images/resource/resource3.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A two-column layout presents a Professional Service Agreement template. The left column contains a centered image, followed by a heading, subheading, and body text describing a narrative scenario. The right column includes a main heading, descriptive body text, a download button, reviewer information with an avatar, a features list with icons, and social media sharing icons aligned horizontally at the bottom.
 
-**Install**: `pnpm dlx shadcn add @shadcnblocks/resource2`
+**Install**: `pnpm dlx shadcn add @shadcnblocks/resource3`
 
 ---
-

@@ -1,4 +1,4 @@
-# Gallery Blocks (33)
+# Gallery Blocks (31)
 
 Image galleries and portfolio showcases for visual content. Display photos, artwork, and project collections.
 
@@ -8,19 +8,9 @@ Image galleries and portfolio showcases for visual content. Display photos, artw
 
 ![screenshot](../images/gallery/gallery1.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A layout with four vertically stacked cards arranged horizontally. The leftmost card contains a heading, body text, a label, and an image on the left side with a button on the right. The remaining three cards to the right display images only, with the center card featuring a heading overlay.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery1`
-
----
-
-## gallery2
-
-![screenshot](../images/gallery/gallery2.png)
-
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/gallery2`
 
 ---
 
@@ -28,7 +18,7 @@ Carousel including structured content presentation and clear visual hierarchy. S
 
 ![screenshot](../images/gallery/gallery3.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A horizontal carousel section displays five case study cards arranged in a row. Each card contains an image centered at the top, a category label below it, a title heading, descriptive body text, and a "Read more" link with an arrow at the bottom. Navigation arrows appear on the right side of the section header for scrolling through additional cards.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery3`
 
@@ -38,7 +28,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery4.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A section displays a heading and body text on the left, followed by a horizontally scrollable carousel of five card components. Each card contains an image, a heading, descriptive body text, and a "Read more" button aligned at the bottom. Navigation arrows are positioned on the right side, with pagination dots centered below the carousel.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery4`
 
@@ -48,7 +38,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery5.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes aspect ratios and caption overlays for enhanced user engagement. Optimal for visual catalogs and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring visual catalogs with professional visual impact.
+A section with a main heading and descriptive body text positioned on the left, followed by a row of five icon buttons below. The main content area displays three horizontally-aligned cards, each containing an image on the left or top, with a label and descriptive text positioned to the right or below the image.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery5`
 
@@ -58,7 +48,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/gallery/gallery6.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features image tiles and image cards for enhanced user engagement. Ideal for portfolio showcases and conversion-focused applications. Visual design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring portfolio showcases with professional visual impact.
+A gallery section displays four horizontally scrollable cards in a row. Each card contains an image centered at the top, followed by a heading, body text, and a "Read more" link positioned below. Navigation arrows for scrolling appear on the right side of the section header, with a "Book a demo" link positioned on the left.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery6`
 
@@ -68,7 +58,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/gallery/gallery7.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A webpage section displays a two-column layout. On the left, a main heading is positioned above body text and a clickable link. On the right, a descriptive paragraph of body text is aligned to the top. Below both columns, a horizontal row of evenly-spaced images is displayed.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery7`
 
@@ -78,7 +68,7 @@ Masonry grid featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/gallery/gallery8.png)
 
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
+A page section displays a main heading at the top, followed by a two-column layout. The left column contains three vertically stacked items, each with a label, title, and an arrow. The right side features three horizontally arranged cards, each with an image centered at the top, a label, and a title below. Navigation arrows are positioned at the bottom center.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery8`
 
@@ -88,7 +78,7 @@ Carousel including structured content presentation and clear visual hierarchy. S
 
 ![screenshot](../images/gallery/gallery9.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A centered section displays a heading at the top, followed by body text below it. Beneath the text, a large image is positioned centrally within a light gray background area that spans the full width of the block.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery9`
 
@@ -98,7 +88,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery10.png)
 
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
+A section displays content in two columns with left and right alignment. The left column contains a main heading, descriptive body text, and navigation arrows positioned below. The center features an image. The right column displays a testimonial card in a contrasting color, containing a user handle label at the top, a quoted testimonial text in the middle, and an attribution name at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery10`
 
@@ -108,7 +98,7 @@ Carousel including structured content presentation and clear visual hierarchy. S
 
 ![screenshot](../images/gallery/gallery11.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A section with a main heading at the top left and an "Explore All" link at the top right. Below, four equal-width cards are arranged horizontally, each containing a centered image, followed by a bold title and descriptive body text positioned at the bottom of each card.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery11`
 
@@ -118,7 +108,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery12.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes aspect ratios and caption overlays for enhanced user engagement. Optimal for visual catalogs and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring visual catalogs with professional visual impact.
+A features section with a centered heading and body text at the top. Below this, four feature cards are arranged horizontally in a grid, each containing an image, a label, and descriptive body text. Navigation arrows appear on the left and right edges, with a "Download Now" button centered below the cards.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery12`
 
@@ -128,7 +118,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/gallery/gallery13.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features image tiles and image cards for enhanced user engagement. Ideal for portfolio showcases and conversion-focused applications. Visual design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring portfolio showcases with professional visual impact.
+A section with two columns displays content horizontally. The left column contains a small icon label, a heading, body text, and navigation arrows positioned below. The right column features a large image centered vertically and horizontally within the space.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery13`
 
@@ -138,7 +128,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/gallery/gallery14.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A webpage section displays a two-column layout. On the left, a large heading, smaller subtitle, body text, and navigation buttons are vertically stacked. On the right, three cards are arranged horizontally, each containing an image and text overlay at the top. Below the cards, a row of circular pagination indicators is centered.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery14`
 
@@ -148,7 +138,7 @@ Masonry grid featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/gallery/gallery15.png)
 
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
+A services section displays six horizontally-scrollable cards in a grid layout. Each card contains a label at the top, a centered image in the middle, a service title, and pricing information at the bottom. Navigation arrows appear on the right side of the heading to scroll through additional service options.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery15`
 
@@ -158,7 +148,7 @@ Carousel including structured content presentation and clear visual hierarchy. S
 
 ![screenshot](../images/gallery/gallery16.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A webpage section displays two side-by-side content cards in a horizontal layout. The left card contains a main heading, body text across multiple paragraphs, and a centered image below. The right card features a main heading, body text, a bulleted list, and an image positioned on the right side. Navigation arrows appear at the top right of the section.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery16`
 
@@ -168,7 +158,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery17.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes aspect ratios and caption overlays for enhanced user engagement. Optimal for visual catalogs and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring visual catalogs with professional visual impact.
+A carousel layout displays content horizontally with three visible sections. The center section is highlighted in a light gray box and contains a large centered image. Navigation arrows are positioned on the left and right sides, with a series of dot indicators for slide pagination centered below the carousel.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery17`
 
@@ -178,7 +168,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/gallery/gallery18.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features image tiles and image cards for enhanced user engagement. Ideal for portfolio showcases and conversion-focused applications. Visual design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring portfolio showcases with professional visual impact.
+A centered square icon with rounded corners displays an image on a tan background. A dark red or maroon stripe runs vertically along the left edge of the icon. Below the icon, a small text label is positioned at the bottom center.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery18`
 
@@ -188,7 +178,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/gallery/gallery19.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A centered card layout features an image positioned at the top, with a name heading and body text overlaid at the bottom. Below the text sits a white button labeled "Know More" with an arrow icon. A horizontal row of navigation dots appears underneath the card, indicating multiple slides in a carousel.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery19`
 
@@ -198,7 +188,7 @@ Masonry grid featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/gallery/gallery20.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A centered section displays a row of four rounded images horizontally aligned at the top. Below the images, a heading and body text are stacked vertically and centered. A dark button with text and an icon is positioned centrally below the text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery20`
 
@@ -208,7 +198,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery21.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes aspect ratios and caption overlays for enhanced user engagement. Optimal for visual catalogs and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring visual catalogs with professional visual impact.
+A centered section displays three images arranged horizontally across the top. Below the images, a main heading and subheading are vertically stacked and centered. Underneath the text, a button labeled with text and an icon is positioned centrally.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery21`
 
@@ -218,7 +208,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/gallery/gallery22.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features image tiles and image cards for enhanced user engagement. Ideal for portfolio showcases and conversion-focused applications. Visual design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring portfolio showcases with professional visual impact.
+A carousel section displays three images horizontally arranged with navigation arrows on either side. Below the centered image, a heading and subheading are stacked vertically, with small close buttons positioned in the top corners of the outer images. Navigation arrows appear at the bottom to scroll between items.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery22`
 
@@ -228,7 +218,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/gallery/gallery23.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A horizontal layout with two columns displays content side-by-side. The left column contains a large heading, body text, and a button positioned vertically. The right column features a vertical stack of four images, with the top image accompanied by a label and an action button overlaid at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery23`
 
@@ -238,7 +228,7 @@ Masonry grid featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/gallery/gallery24.png)
 
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
+A centered section features a main heading at the top, followed by body text. Below is a horizontally scrolling gallery of vertically-oriented rounded rectangular images, with one larger image prominently displayed in the center containing an overlay label and a button. A secondary button is positioned centrally below the gallery.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery24`
 
@@ -248,7 +238,7 @@ Carousel including structured content presentation and clear visual hierarchy. S
 
 ![screenshot](../images/gallery/gallery25.png)
 
-Lightbox grid incorporating structured content presentation and clear visual hierarchy. Presents spacing and category tabs for enhanced user engagement. Well-suited for work displays and conversion-focused applications. Engaging design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring work displays with professional visual impact.
+A gallery grid layout displays images arranged in an asymmetric pattern across multiple columns and rows. The images vary in size, with larger images positioned on the left side and smaller images stacked vertically on the right. The overall composition creates a dynamic, masonry-style arrangement with images of different dimensions distributed throughout the layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery25`
 
@@ -258,7 +248,7 @@ Lightbox grid incorporating structured content presentation and clear visual hie
 
 ![screenshot](../images/gallery/gallery26.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes aspect ratios and caption overlays for enhanced user engagement. Optimal for visual catalogs and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring visual catalogs with professional visual impact.
+A gallery grid layout displays images in an asymmetrical arrangement. The top row contains two smaller images positioned side-by-side. Below them, a large horizontal image spans the full width. The bottom row features two smaller images aligned left and right, flanking the centered layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery26`
 
@@ -268,7 +258,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/gallery/gallery27.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features image tiles and image cards for enhanced user engagement. Ideal for portfolio showcases and conversion-focused applications. Visual design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring portfolio showcases with professional visual impact.
+A section displays a main heading centered at the top, followed by body text below it. Underneath, four images are arranged horizontally in a row, each with a label and job title positioned directly beneath. Navigation buttons are positioned in the top right corner.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery27`
 
@@ -278,7 +268,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/gallery/gallery28.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A centered section displays a main heading at the top, followed by descriptive body text. Below this, two images are positioned side-by-side horizontally, each with navigation arrows on their outer edges.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery28`
 
@@ -288,7 +278,7 @@ Masonry grid featuring structured content presentation and clear visual hierarch
 
 ![screenshot](../images/gallery/gallery29.png)
 
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
+A gallery section features a centered heading and descriptive body text at the top. Below, five images are arranged horizontally in a row, with the center image slightly larger and more prominent than the others on either side.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery29`
 
@@ -298,7 +288,7 @@ Carousel including structured content presentation and clear visual hierarchy. S
 
 ![screenshot](../images/gallery/gallery30.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes aspect ratios and caption overlays for enhanced user engagement. Optimal for visual catalogs and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring visual catalogs with professional visual impact.
+A centered layout displays a main heading with body text in the middle of the screen. Surrounding this central content are multiple images positioned around the layout—on the left, right, top, and bottom—creating a scattered, circular composition around the core text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery30`
 
@@ -308,7 +298,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/gallery/gallery31.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features image tiles and image cards for enhanced user engagement. Ideal for portfolio showcases and conversion-focused applications. Visual design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring portfolio showcases with professional visual impact.
+A catalog section features a centered heading and descriptive body text at the top. Below, four images are arranged in a grid layout—a larger rectangular image spans the top left and center, a smaller image occupies the top right, and two equally-sized images are positioned in the bottom row.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery31`
 
@@ -318,19 +308,8 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/gallery/gallery32.png)
 
-Masonry grid featuring structured content presentation and clear visual hierarchy. Displays hover effects and lightbox for enhanced user engagement. Perfect for photo galleries and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring photo galleries with professional visual impact.
+A scattered layout displays multiple rounded square images positioned across the page at varying coordinates. Two centered text blocks are overlaid on the composition, with one heading and body text positioned in the upper-middle area and another identical text block in the lower-left portion of the layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/gallery32`
 
 ---
-
-## gallery33
-
-![screenshot](../images/gallery/gallery33.png)
-
-Carousel including structured content presentation and clear visual hierarchy. Showcases overlay captions and filter buttons for enhanced user engagement. Excellent for product images and conversion-focused applications. Organized design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring product images with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/gallery33`
-
----
-

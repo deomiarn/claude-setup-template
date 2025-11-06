@@ -8,7 +8,7 @@ Individual service description layouts. Detail specific offerings with benefits 
 
 ![screenshot](../images/service/service1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A vertically stacked content section features a centered heading at the top, followed by a subheading and body text. Below this, multiple paragraphs of body text are arranged in a single column, with consistent spacing between each text block.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/service/service2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A full-width section with a centered hero image at the top displaying design workspace elements. Below, the content is organized vertically with a centered main heading, followed by body text. Further down, a secondary heading is positioned above multiple paragraphs of body text, all aligned to the left within a contained width.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/service/service3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A centered section displays a main heading "Creating Meaningful Digital Experiences" with body text below it. Beneath the text, three card elements are arranged horizontally, each containing an icon, a numeric value, a label, and descriptive text positioned vertically and centered within their respective cards.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service3`
 
@@ -38,7 +38,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/service/service4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A webpage section displays content in two columns with a centered header at the top. The left column contains multiple headings and body text paragraphs arranged vertically, with an icon list at the bottom. The right column features a "Our Expertise" section with three labeled items, each accompanied by a small icon positioned to the left of the text.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service4`
 
@@ -48,7 +48,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/service/service5.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features minimal design and content blocks for enhanced user engagement. Ideal for landing pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring landing pages with professional visual impact.
+A two-column layout with the left column containing a centered image at the top, followed by a main heading, body text, a subheading, additional paragraphs, and a list of services. The right column displays a sidebar with three sections stacked vertically: "Our Expertise" with labeled items, "Related Services" with icons and descriptions, positioned at the top and bottom respectively.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service5`
 
@@ -58,7 +58,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/service/service6.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A centered page section displays a heading at the top, followed by body text. Below this is a subheading labeled "Our Expertise," with three horizontally arranged cards containing an image, a label, and descriptive text each. Further down is another heading followed by multiple paragraphs of body text stacked vertically.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service6`
 
@@ -68,9 +68,8 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/service/service7.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A centered layout displays a heading "UX/UI Design" with an icon above it, followed by descriptive body text. Below this, a "Our Expertise" section lists three horizontally-arranged cards, each containing an icon, label, and descriptive text. Further down, another heading "Creating Meaningful Digital Experiences" is followed by multiple paragraphs of body text arranged in a single column.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/service7`
 
 ---
-

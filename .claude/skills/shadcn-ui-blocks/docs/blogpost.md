@@ -8,7 +8,7 @@ Individual blog post layouts with rich typography and media support. Optimized f
 
 ![screenshot](../images/blogpost/blogpost1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A centered webpage layout displays a main heading at the top, followed by descriptive body text and author information. Below this is a large image positioned centrally, with a secondary heading placed underneath.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/blogpost1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/blogpost/blogpost2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A webpage layout displays content in two columns with a left-aligned text section and a right-aligned image area. The left column contains a back button link, a large main heading, author information with a timestamp, and body text with an embedded link. Below this is a subheading followed by additional body text and a block quote. The right column features a centered image occupying the upper portion of the layout.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/blogpost2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/blogpost/blogpost3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A centered layout displays a product update section with a small tag at the top. Below that is a large main heading followed by body text describing features and benefits. An author profile with an avatar, name, and date appears horizontally centered beneath the descriptive text. A large image is positioned below, taking up most of the remaining vertical space.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/blogpost3`
 
@@ -38,7 +38,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/blogpost/blogpost4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A blog article layout with a two-column structure. The left column contains the main content including a headline, author byline with date and read time, section headings, body text, and quoted passages. The right column displays a sidebar with "On this page" navigation links and sharing buttons positioned below the main content area.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/blogpost4`
 
@@ -48,7 +48,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/blogpost/blogpost5.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features minimal design and content blocks for enhanced user engagement. Ideal for landing pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring landing pages with professional visual impact.
+A blog post layout with two columns. The left column contains a breadcrumb navigation at the top, followed by a large heading, author and date information, a centered image, body text, and a subheading. The right column displays a sidebar with an "ON THIS PAGE" section listing related links and social sharing buttons below.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/blogpost5`
 
@@ -58,9 +58,8 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/blogpost/blogpost6.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A blog article page with content centered vertically. At the top is a navigation breadcrumb, followed by a reading time indicator and publication date. The main heading is centered, with supporting body text below. Two icon buttons are positioned horizontally beneath the text. Further down, a two-column layout displays chapter links on the left and author information with key takeaways on the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/blogpost6`
 
 ---
-

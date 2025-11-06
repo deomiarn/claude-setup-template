@@ -8,7 +8,7 @@ Announcement banners and notification bars for important messages. Ideal for pro
 
 ![screenshot](../images/banner/banner1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A banner notification is positioned at the top of the page, horizontally centered. It contains a heading announcing a new version release, followed by a link to read full release notes, with a close button positioned on the right side of the banner.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/banner/banner2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A notification banner is positioned at the top of the page, spanning horizontally across the full width. The banner contains a heading on the left side, followed by body text with an embedded link, and a close button aligned to the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner2`
 
@@ -28,7 +28,7 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/banner/banner3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A horizontal banner spans the full width at the top of the page with a dark background. On the left side, a heading and promotional text are positioned, while a "Shop Now" button and close icon are aligned to the right. The rest of the page appears to be a blank, light-colored content area.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner3`
 
@@ -38,7 +38,7 @@ Stacked sections incorporating structured content presentation and clear visual 
 
 ![screenshot](../images/banner/banner4.png)
 
-Responsive columns containing structured content presentation and clear visual hierarchy. Includes balanced spacing and navigation elements for enhanced user engagement. Optimal for business websites and conversion-focused applications. User-friendly design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring business websites with professional visual impact.
+A banner is positioned at the top of the page with centered text announcing a promotional offer. The banner contains a heading, descriptive body text, and a close button aligned to the right side.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner4`
 
@@ -48,7 +48,7 @@ Responsive columns containing structured content presentation and clear visual h
 
 ![screenshot](../images/banner/banner5.png)
 
-Grid layout with structured content presentation and clear visual hierarchy. Features minimal design and content blocks for enhanced user engagement. Ideal for landing pages and conversion-focused applications. Clean design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring landing pages with professional visual impact.
+A notification banner is centered horizontally at the top of the page. It contains a heading followed by body text on the left, with a "Learn More" button and a close icon positioned on the right side of the banner.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner5`
 
@@ -58,7 +58,7 @@ Grid layout with structured content presentation and clear visual hierarchy. Fea
 
 ![screenshot](../images/banner/banner6.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A banner is positioned at the top center of the page, containing an image on the left, followed by body text reading "Used by over 2K+ customers worldwide" in the center, and a close button on the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner6`
 
@@ -68,9 +68,8 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/banner/banner7.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A horizontal banner is positioned at the top of the page and spans the full width. The banner contains centered body text with an embedded link labeled "Learn more" on the right side, along with a close button positioned at the far right edge.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/banner7`
 
 ---
-

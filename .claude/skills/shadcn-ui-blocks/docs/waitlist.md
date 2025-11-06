@@ -8,9 +8,8 @@ Waitlist signup forms for pre-launch products. Capture early user interest and b
 
 ![screenshot](../images/waitlist/waitlist1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A centered vertical layout displays a main heading, followed by body text and an email input field with a call-to-action button positioned horizontally below. Under the form, a row of small profile images appears on the left, followed by text indicating user count on the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/waitlist1`
 
 ---
-

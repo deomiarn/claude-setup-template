@@ -8,7 +8,7 @@ List layouts for organized content presentation. Display items in structured, sc
 
 ![screenshot](../images/list/list1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A table layout with seven rows and five columns displaying product information. Column headers are positioned horizontally across the top, with an icon column on the left followed by Category, Description, Year, Offer, and Segment columns. Each row contains an icon on the left, followed by text entries and colored labels aligned to the right side of the table.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/list1`
 
@@ -18,7 +18,7 @@ Centered layout featuring structured content presentation and clear visual hiera
 
 ![screenshot](../images/list/list2.png)
 
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
+A vertical list layout displaying six achievement items. Each item is organized horizontally with an icon on the left, followed by a category label and main heading in the center-left area, and a "View project" link aligned to the right. The items are stacked vertically with consistent spacing between them.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/list2`
 
@@ -28,9 +28,8 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/list/list3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A resume section displays professional information in a structured layout with multiple rows. At the top, a large heading is centered, followed by two main subsections organized vertically: "Experience" and "Achievements." Each subsection contains horizontally aligned rows with three columns—dates on the left, job titles or award names in the center, and company or organization names on the right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/list3`
 
 ---
-

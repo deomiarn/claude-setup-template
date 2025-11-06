@@ -8,19 +8,9 @@ Individual case study layouts with detailed project narratives. Present challeng
 
 ![screenshot](../images/casestudy/casestudy1.png)
 
-Centered layout featuring structured content presentation and clear visual hierarchy. Displays card styling and headings for enhanced user engagement. Perfect for marketing sites and conversion-focused applications. Professional design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring marketing sites with professional visual impact.
+A webpage is divided into two columns. The left column contains a main heading, introductory body text, a centered image, four metric labels with values arranged horizontally, a subheading, and additional body text. The right column displays an overview section with a logo at the top, followed by labeled metadata fields, and a button positioned at the bottom.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudy1`
-
----
-
-## casestudy2
-
-![screenshot](../images/casestudy/casestudy2.png)
-
-Card-based including structured content presentation and clear visual hierarchy. Showcases clean typography and descriptive text for enhanced user engagement. Excellent for web applications and conversion-focused applications. Modern design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring web applications with professional visual impact.
-
-**Install**: `pnpm dlx shadcn add @shadcnblocks/casestudy2`
 
 ---
 
@@ -28,9 +18,18 @@ Card-based including structured content presentation and clear visual hierarchy.
 
 ![screenshot](../images/casestudy/casestudy3.png)
 
-Stacked sections incorporating structured content presentation and clear visual hierarchy. Presents icon elements and CTA buttons for enhanced user engagement. Well-suited for content pages and conversion-focused applications. Responsive design with responsive structure and mobile-optimized layout. Best applied in scenarios requiring content pages with professional visual impact.
+A webpage layout displays content in two columns. The left column contains a main heading, featuring insights attribution with an avatar and name/title, followed by a sidebar with overview information, sector details, and team size. The right column contains an image positioned at the top, with a table below organizing information into three columns labeled "Problem," "Approach," and "Outcomes," each containing body text and checkmarked items. A secondary navigation menu appears on the far right.
 
 **Install**: `pnpm dlx shadcn add @shadcnblocks/casestudy3`
 
 ---
 
+## casestudy8
+
+![screenshot](../images/casestudy/casestudy8.png)
+
+A two-column layout with the left column containing a centered image, followed by a large heading, body text, a subheading, and a block quote. The right column displays a company information card with a logo at the top, followed by several labeled fields and descriptive text stacked vertically.
+
+**Install**: `pnpm dlx shadcn add @shadcnblocks/casestudy8`
+
+---
