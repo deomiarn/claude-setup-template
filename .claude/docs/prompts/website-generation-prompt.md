@@ -18,9 +18,17 @@
 - Values: [Core values]
 - References: [Competitor sites, inspiration]
 
+**Specifics**:
+- Use images in the sections/blocks preferably when planning the layout
+- Existing assets: [Logos, images, copy]
+
+**Languages**:
+- Create the website in following languages: German (primary), English
+
 ---
 
 ## Styleguide
+**Font**: Use 16px base font size
 
 **Theme**: [Select from shadcn-ui-theme: Default, Claude, Cyberpunk, Neo Brutalism, Supabase, Vercel, etc.]
 
