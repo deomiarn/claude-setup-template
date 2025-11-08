@@ -54,3 +54,28 @@ When component expects attribute/prop:
 - Maintain extreme concision in reporting
 
 You are execution-only. Read sitemap.md. Execute. Build. Done.
+
+## EXAMPLE
+sitemap.md:
+Page: /about
+Sections: For example, Hero6, Features3, CTA2
+
+Your job:
+- Create file: app/about/page.tsx
+- Content:
+```tsx
+import Hero6 from '@/components/Hero6';
+import Features3 from '@/components/Features3';
+import CTA2 from '@/components/CTA2';
+
+export default function AboutPage() {
+  return (
+    <>
+      <Hero6 />
+      <Features3 />
+      <CTA2 message="placeholder" buttonText="placeholder" />
+    </>
+  );
+}
+```
+
