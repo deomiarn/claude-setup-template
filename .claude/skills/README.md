@@ -12,17 +12,17 @@ Context-relevant skills for current project. Load only what's needed.
 
 ## Available Skills
 
-- **shadcn-ui-blocks**: 959 pre-built website components across 45+ categories (hero, feature, pricing, testimonial, CTA, footer, navbar, blog, gallery, contact, FAQ, etc.)
+- **shadcn-ui-blocks**: 929 pre-built website components across 45+ categories (hero, feature, pricing, testimonial, CTA, footer, navbar, blog, gallery, contact, FAQ, etc.)
   Path: `.claude/skills/shadcn-ui-blocks/Skill.md`
   When: Building websites, landing pages, marketing sites, or need responsive UI components with pnpm install commands
 
-- **shadcn-ui-theme**: 17 pre-configured color themes with CSS variables (Default, Claude, Cyberpunk, Neo Brutalism, Supabase, Vercel, etc.)
-  Path: `.claude/skills/shadcn-ui-theme/Skill.md`
-  When: User requests theme changes, color scheme updates, design system modifications, or asks to "change theme to X"
+- **sitemap-pages**: 13 pre-defined page templates (homepage, about, services, blog, contact, pricing, portfolio, etc.) with structured sections
+  Path: `.claude/skills/sitemap-pages/skill.md`
+  When: Planning website architecture, structuring page layouts, or generating sitemaps
 
-- **website-builder**: Complete SEO-optimized website creation workflow orchestrator. Coordinates SEO analysis, sitemap planning, shadcn component selection, theme application, and content optimization.
+- **website-builder**: Website sitemap generation workflow. Analyzes requirements, delegates to sitemap-analyst agent, generates sitemap with shadcn-ui-blocks component selections.
   Path: `.claude/skills/website-builder/Skill.md`
-  When: Building websites, creating landing pages, SEO optimization, requesting site architecture planning, designing web interfaces with search optimization
+  When: Planning website architecture, structuring pages, selecting components, or requesting sitemap/page structure planning
 
 <!-- Add skills below. Template:
 
