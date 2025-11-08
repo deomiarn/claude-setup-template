@@ -1,266 +1,130 @@
 ---
 name: website-builder
-description: Complete SEO-optimized website creation workflow orchestrator. Coordinates SEO analysis (keywords, competitors), sitemap planning, shadcn component selection, theme application, and content optimization. Use when building websites, creating landing pages, designing web interfaces, optimizing for search engines, planning site architecture, or requesting homepage/website builds with SEO considerations.
-version: 1.0.0
-dependencies: sitemap-analyst agent, shadcn-ui-blocks skill, shadcn-ui-theme skill, shadcn-website-builder agent, WebFetch
-allowed-tools: Read,Write,Edit,Bash,WebFetch
+description: Website sitemap generation workflow. Analyzes requirements, delegates to sitemap-analyst agent, generates sitemap with shadcn-ui-blocks component selections. Use when planning website architecture, structuring pages, selecting components, or requesting sitemap/page structure planning.
+version: 2.0.0
+dependencies: sitemap-analyst agent, shadcn-ui-blocks skill, sitemap-pages skill
+allowed-tools: Read
 ---
 
-# SEO-Optimized Website Builder
+# Website Sitemap Generator
 
-Orchestrates complete website creation workflow: SEO analysis → sitemap planning → component selection → theme application → SEO integration → verification.
-
----
-
-## 5-Step Workflow
-
-### Step 1: SEO Analysis
-**Create SEO research foundation (if nothing specified by user):**
-
-1. Create `/planning/seo/` directory
-2. Analyze target website (if provided via WebFetch):
-   - Extract current SEO metadata
-   - Identify primary/secondary keywords
-   - Analyze page structure, headings, content
-3. Create `/planning/seo/analysis.md`:
-   - Current state assessment
-   - SEO audit findings
-   - Key opportunities
-4. Create `/planning/seo/keywords.md`:
-   - Primary keywords (search volume, difficulty)
-   - Secondary keywords
-   - Long-tail variations
-   - Keyword mapping to pages
-5. Create `/planning/seo/competitors.md`:
-   - Top 3-5 competitors
-   - Their keyword focus
-   - Content gaps you can fill
-   - Unique positioning strategy
-
-**Use WebFetch when user provides target URL:**
-```
-Fetch: <user-provided-url>
-Prompt: "Extract SEO metadata, primary keywords, page structure, content themes"
-```
-
-### Step 2: Sitemap Creation
-**Delegate to sitemap-analyst agent:**
-
-Call sitemap-analyst with:
-- Business goals (from user or inferred)
-- Target audience personas
-- Primary conversion objectives
-- Use only sections from shadcn-ui-blocks skill
-- Constraints/preferences
-
-Agent outputs `/planning/sitemap.yaml` with:
-- Page hierarchy (path, title, priority)
-- Purpose & SEO focus per page
-- CMS collections (if applicable)
-- Internal linking strategy
-- User journey mapping
-
-Example invocation:
-```
-Use sitemap-analyst agent:
-Context: [Business goals, audience, conversion targets]
-Output destination: /planning/sitemap.yaml
-```
-
-### Step 3: Website Build
-**Select & configure components:**
-
-**IMPORTANT:** The sitemap-analyst from Step 2 decides the pages and structure. You only implement the design and SEO aspects here.
-
-1. Review sitemap structure
-2. For each page type, use **shadcn-ui-blocks** skill:
-   - Homepage → hero1-50 + feature + pricing/cta
-   - Feature pages → feature1-266 (largest category)
-   - Pricing → pricing1-35
-   - Testimonials → testimonial1-28
-   - FAQ → faq1-16
-   - Blog → blog1-22 + blogpost1-6
-   - Contact → contact1-17
-   - Footer → footer1-21
-   - Navigation → navbar1-16
-
-3. Use **shadcn-ui-theme** skill:
-   - Select theme matching brand
-   - Apply CSS variables
-   - Test light/dark modes
-   - Verify accessibility
-
-4. Coordinate with **shadcn-website-builder agent**:
-   - Provide sitemap + component selections
-   - Get built pages with responsive layouts
-   - Review and refine
-
-### Step 4: SEO Integration
-**Optimize for search engines:**
-
-1. **Meta Tags**:
-   - Title (50-60 chars): Primary keyword + brand
-   - Description (150-160 chars): Call-to-action + benefit
-   - Canonical URLs (prevent duplicates)
-   - Open Graph (social sharing)
-
-2. **Structured Data**:
-   - JSON-LD Schema.org markup
-   - Organization schema (homepage)
-   - BreadcrumbList (navigation)
-   - Product schema (if applicable)
-   - FAQPage schema (FAQ sections)
-
-3. **Content Optimization**:
-   - H1: Single, primary keyword
-   - H2-H4: Secondary keywords, natural flow
-   - Image alt text: Descriptive, keyword-relevant
-   - Internal links: Anchor text with keywords
-   - Meta descriptions: Unique per page
-
-4. **Performance Optimization**:
-   - Core Web Vitals (LCP, FID, CLS)
-   - Image optimization (next/image component)
-   - CSS/JS minification
-   - Mobile responsiveness verification
-   - Page speed analysis
-
-5. **Technical SEO**:
-   - XML sitemap: `/sitemap.xml` list of all pages
-   - robots.txt: Control crawler access
-   - Canonical tags: Prevent duplicate content
-   - Mobile-first indexing: Responsive design
-   - No broken links (404 audit)
-
-### Step 5: Verification
-**Test implementation:**
-
-1. **Page Testing**:
-   - Load all pages in browser
-   - Verify responsive on mobile/tablet/desktop
-   - Check navigation, links, forms work
-   - Validate HTML (W3C validator)
-
-2. **SEO Verification**:
-   - Meta tags present and unique (view source)
-   - Structured data valid (schema.org validator)
-   - Robots.txt accessible
-   - Sitemap.xml valid XML
-   - Page titles/descriptions follow best practices
-
-3. **Performance Check**:
-   - Google PageSpeed Insights score
-   - Core Web Vitals status
-   - Mobile usability test
-   - Accessibility audit (WCAG 2.1 AA)
-
-4. **Content Audit**:
-   - Keyword presence verified (tool or manual)
-   - H1-H6 hierarchy correct
-   - Image alt text present
-   - Internal links functioning
-   - CTA buttons visible and clickable
+Generates website architecture with intelligent shadcn-ui-blocks component selection. Output: Markdown sitemap with copy-paste pnpm commands.
 
 ---
 
-## SEO Best Practices
+## WORKFLOW
 
-### Meta Tags
-```html
-<head>
-  <title>Primary Keyword | Brand (50-60 chars)</title>
-  <meta name="description" content="Action-oriented description with secondary keyword (150-160 chars)">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://example.com/page">
-  <meta property="og:title" content="Social title">
-  <meta property="og:description" content="Social description">
-  <meta property="og:image" content="Social image URL">
-</head>
+**Triggered by:** User request for website sitemap/architecture planning
+
+**References:** `.claude/docs/prompts/website-build/01-sitemap.md`
+
+### Process
+
+1. **Gather Requirements**
+   - Business name, industry, target audience
+   - Goals and objectives
+   - Required pages (homepage, about, services, contact, etc.)
+   - Brand voice and values
+
+2. **Delegate to sitemap-analyst Agent**
+   - Agent model: `sonnet` (architecture/reasoning)
+   - Agent reads:
+     - `.claude/skills/sitemap-pages/` → Page templates
+     - `.claude/skills/shadcn-ui-blocks/docs/` → Block descriptions
+   - Agent matches sections to **best-fit blocks** (NOT sequential)
+   - Agent generates `pnpm dlx shadcn add` commands
+
+3. **Output**
+   - File: `.claude/planning/[project]/sitemap.md`
+   - Format: Markdown
+   - Contains:
+     - Page structure (routes, sections)
+     - Selected shadcn-ui-blocks with reasons
+     - Copy-paste ready pnpm commands
+     - Internal linking strategy
+     - User journeys
+
+### Example Sitemap Output
+
+```markdown
+# Sitemap: Local Studios
+
+## 1. Homepage (/)
+**Template:** sitemap-pages/pages/homepage.md
+
+### Sections
+
+**Hero Section**
+- Block: @shadcnblocks/hero-18
+- Reason: Clean CTA with background video support
+- Command: `pnpm dlx shadcn add @shadcnblocks/hero-18`
+
+**Features Grid**
+- Block: @shadcnblocks/feature-12
+- Reason: Icon-based 3-column layout, perfect for services
+- Command: `pnpm dlx shadcn add @shadcnblocks/feature-12`
 ```
 
-### Structured Data (JSON-LD)
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Brand Name",
-  "url": "https://example.com",
-  "logo": "https://example.com/logo.png",
-  "sameAs": [
-    "https://twitter.com/brand",
-    "https://linkedin.com/company/brand"
-  ]
-}
-```
+---
 
-### Content Structure
-- **H1**: One per page, primary keyword
-- **H2-H4**: Secondary keywords, logical hierarchy
-- **Paragraphs**: 2-4 sentences, natural keyword integration
-- **Images**: Descriptive alt text, WebP format, lazy loading
-- **Internal Links**: 3-5 contextually relevant per page
+## Next Steps
 
-### Core Web Vitals Targets
-- **Largest Contentful Paint (LCP)**: < 2.5 seconds
-- **First Input Delay (FID)**: < 100ms (or Interaction to Next Paint INP < 200ms)
-- **Cumulative Layout Shift (CLS)**: < 0.1
+After receiving sitemap.md, user should:
 
-### Mobile SEO
-- Responsive design (no fixed widths)
-- Touch-friendly buttons (44x44px minimum)
-- Readable font size (16px base minimum)
-- Avoid intrusive interstitials
-- Fast mobile page load
+1. **Execute Commands**
+   - Run each `pnpm dlx shadcn add` command
+   - Downloads shadcn-ui-blocks to project
+
+2. **Manual Integration**
+   - Insert downloaded blocks into page files
+   - Create `global.css` with theme/colors
+
+3. **Optional Workflows** (separate prompts):
+   - `02-unsplash.md` → Integrate stock images
+   - `03-animation.md` → Add mikroanimations
+   - `04-seo.md` → SEO optimization
+   - `05-midjourney.md` → Generate AI image prompts
 
 ---
 
 ## Keywords to Trigger This Skill
 
-Primary: website, SEO, landing page, web design, sitemap, homepage, site builder, web development
-Secondary: website creation, website build, web page design, search optimization, site structure, information architecture, web layout, digital presence
+Primary: sitemap, website architecture, page structure, website planning
+Secondary: site structure, information architecture, component selection, page planning
 
 ---
 
 ## Integration Summary
 
-| Component | Purpose | Link |
-|-----------|---------|------|
-| sitemap-analyst | Site structure & IA | Use when designing page hierarchy |
-| shadcn-ui-blocks | 959 pre-built components | Use for visual pages |
-| shadcn-ui-theme | 17 color themes | Use for design system |
-| shadcn-website-builder | Implementation agent | Coordinates build phase |
-| WebFetch | Target site analysis | Use when user provides URL |
+| Component | Purpose |
+|-----------|---------|
+| sitemap-analyst | Generates sitemap with block selections (Model: sonnet) |
+| sitemap-pages | Provides page templates/structures |
+| shadcn-ui-blocks | 929 pre-built components library |
 
 ---
 
 ## Example Request Triggers
 
-- "Build me a website with SEO"
-- "Create a landing page optimized for search"
-- "Design a website for my SaaS product"
-- "Help me structure my site for better rankings"
-- "Build a homepage that converts and ranks"
-- "Create a website with proper site architecture"
-- "Design a landing page with sitemap planning"
+- "Create a sitemap for my website"
+- "Plan website architecture"
+- "Generate page structure with component selections"
+- "Help me structure my site pages"
+- "Build a sitemap with shadcn blocks"
 
 ---
 
-## Output Artifacts
+## Output Artifact
 
-After workflow completion, user receives:
+User receives:
 
-1. `/planning/seo/analysis.md` - SEO research summary
-2. `/planning/seo/keywords.md` - Keyword strategy & targeting
-3. `/planning/seo/competitors.md` - Competitive analysis
-4. `/planning/sitemap.yaml` - Site structure (YAML format)
-5. Website code with:
-   - Responsive shadcn components
-   - Applied theme
-   - Optimized meta tags
-   - Structured data
-   - Performance-tuned images
-   - Internal linking strategy
+`.claude/planning/[project]/sitemap.md` containing:
+- Page hierarchy (routes, sections)
+- Selected shadcn-ui-blocks with reasons
+- Copy-paste ready `pnpm dlx shadcn add` commands
+- Internal linking strategy
+- User journey mapping
 
 ---
 
-**Note:** This is an orchestrating skill. It delegates analysis to sitemap-analyst and building to shadcn-website-builder + component skills. Your role is coordinating the workflow, not implementing every step directly.
+**Note:** This skill now focuses ONLY on sitemap generation. SEO, animations, and image integration are handled by separate optional workflow prompts.
