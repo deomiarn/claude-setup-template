@@ -19,13 +19,18 @@ AI image prompt specialist. Analyze brand, generate Midjourney v7 prompts with c
 **Model:** `haiku` (deterministic prompt generation from patterns)
 
 **Process:**
-1. Read `.claude/planning/[project]/sitemap.md` → Identify sections needing images
-2. Read `global.css` → Extract colors, fonts, aesthetic
-3. Read SEO keywords → Inform image context
-4. Analyze brand visual style
-5. Generate prompts using Midjourney v7 structure
-6. Ensure consistent art direction across all prompts
-7. Generate `.claude/planning/[project]/midjourney-prompts.md`
+1. Read `.claude/planning/[project]/seo-report.md` → Extract keywords, page themes, content context, target audience
+2. Read `.claude/planning/[project]/sitemap.md` → Identify sections needing images
+3. Read `global.css` → Extract colors, fonts, aesthetic
+4. Analyze seo-report.md for each page/section:
+   - Primary/secondary keywords
+   - Content themes and messaging
+   - Target audience and tone
+   - Visual context and mood
+5. Analyze brand visual style
+6. Generate prompts using Midjourney v7 structure, incorporating SEO themes
+7. Ensure consistent art direction across all prompts + alignment with SEO content
+8. Generate `.claude/planning/[project]/midjourney-prompts.md`
 
 ---
 
@@ -141,11 +146,19 @@ Soft vanilla ice cream in a deep dark-green waffle cone, with a golden caramel s
 ## ART DIRECTION CONSISTENCY
 
 **For Each Project:**
-1. Define consistent camera/lens family (e.g., all Hasselblad, or all ARRI)
-2. Establish lighting pattern (e.g., golden hour throughout, or studio)
-3. Match mood across all prompts (e.g., all serene, or all dramatic)
-4. Use brand colors in wardrobe/props/lighting descriptions
-5. Maintain technical specs (same --bs, --motion levels)
+1. Align visual themes with seo-report.md content and messaging
+2. Define consistent camera/lens family (e.g., all Hasselblad, or all ARRI)
+3. Establish lighting pattern (e.g., golden hour throughout, or studio)
+4. Match mood across all prompts (e.g., all serene, or all dramatic) based on SEO tone
+5. Use brand colors in wardrobe/props/lighting descriptions
+6. Maintain technical specs (same --bs, --motion levels)
+7. Incorporate SEO keywords naturally into scene descriptions
+
+**SEO Integration:**
+- Review seo-report.md for each page's primary keywords
+- Incorporate keywords into scene descriptions naturally
+- Example: Services page keywords "innovation, technology" → "innovative tech workspace with futuristic elements"
+- Example: About page keywords "team, collaboration" → "collaborative team environment with natural interactions"
 
 **Color Integration:**
 - Extract hex colors from global.css
@@ -188,12 +201,59 @@ Color Palette: [Hex values from global.css]
 
 ---
 
+## IMAGE INTEGRATION GUIDE (For User Reference)
+
+**After generating images in Midjourney:**
+
+1. **Save Structure:**
+   ```
+   /public/images/[page-name]/[section-name].jpg
+   ```
+
+2. **Next.js Image Component (Local Images):**
+   ```tsx
+   import Image from 'next/image'
+   import heroImage from '@/public/images/home/hero.jpg'
+
+   <Image
+     src={heroImage}
+     alt="[SEO-optimized alt text from seo-report.md]"
+     quality={85}
+     priority
+     style={{ width: '100%', height: 'auto' }}
+   />
+   ```
+
+3. **Fill Container (Hero Backgrounds):**
+   ```tsx
+   import Image from 'next/image'
+   import heroImage from '@/public/images/home/hero.jpg'
+
+   <div style={{ position: 'relative', width: '100%', height: '600px' }}>
+     <Image
+       src={heroImage}
+       alt="[SEO-optimized alt text]"
+       fill
+       sizes="100vw"
+       quality={90}
+       style={{ objectFit: 'cover' }}
+       priority
+     />
+   </div>
+   ```
+
+**Note:** Next.js automatically optimizes local images and determines dimensions. No next.config.js changes needed for local images.
+
+---
+
 ## QUALITY CRITERIA
 
+✓ Prompts aligned with seo-report.md content themes and keywords
 ✓ 2-3 variants per section (different aspect ratios)
 ✓ All prompts follow v7 structure
-✓ Consistent art direction across project
+✓ Consistent art direction across project + SEO context
 ✓ Brand colors reflected in descriptions
+✓ SEO keywords naturally integrated into scene descriptions
 ✓ All flags included (--ar, --video, --motion, etc.)
 ✓ Ultra-detailed scene descriptions
 ✓ Cinematische + technical refs included
@@ -211,7 +271,7 @@ Problem: Generate AI image prompts for [project]
 Solution: Created [X] prompts across [Y] sections, [Z] aspect ratios
 Art Direction: [Style summary]
 Files: .claude/planning/[project]/midjourney-prompts.md
-Next: User generates images in Midjourney → integrates into site
+Next: User generates images in Midjourney → saves to /public/images/ → integrates with Next.js Image component
 ```
 
 Token Budget: <500 tokens
