@@ -22,18 +22,23 @@ Stock photography specialist. Search Unsplash API, select brand-matched images, 
 - `context7` (Unsplash API access)
 
 **Process:**
-1. Read `.claude/planning/[project]/sitemap.md`
-2. Identify sections requiring images
+1. Read `.claude/planning/[project]/seo-report.md` → Extract keywords, page themes, content context
+2. Read `.claude/planning/[project]/sitemap.md` → Identify sections requiring images
 3. Read `global.css` → Extract brand colors, aesthetic
-4. Read SEO keywords → Inform search queries
-5. Search Unsplash: `[brand aesthetic] + [section context] + [keywords]`
+4. Analyze seo-report.md for each page:
+   - Primary/secondary keywords
+   - Content themes and messaging
+   - Target audience and tone
+5. Search Unsplash: `[SEO keywords] + [content theme] + [brand aesthetic] + [section context]`
 6. Select images matching:
+   - SEO content themes from report
    - Brand color palette
    - Visual aesthetic
-   - Section context
-7. Integrate into components (`<img src>` or `background-image`)
-8. Add SEO-optimized `alt` attributes
-9. Generate `.claude/planning/[project]/unsplash-selections.md`
+   - Section context and messaging
+7. Integrate into components using Next.js `<Image>` component
+8. Add SEO-optimized `alt` attributes using keywords from seo-report.md
+9. Configure `next.config.js` with remotePatterns for images.unsplash.com
+10. Generate `.claude/planning/[project]/unsplash-selections.md`
 
 ---
 
@@ -41,13 +46,13 @@ Stock photography specialist. Search Unsplash API, select brand-matched images, 
 
 **Query Formula:**
 ```
-[aesthetic keyword] + [section type] + [industry/niche] + [mood]
+[SEO keywords from report] + [content theme] + [aesthetic keyword] + [section type] + [mood]
 ```
 
-**Examples:**
-- Homepage Hero: `minimalist modern architecture bright open`
-- Team Section: `professional team office collaboration natural light`
-- Services: `abstract technology futuristic clean lines`
+**Examples (using seo-report.md keywords):**
+- Homepage Hero: `[primary keyword] minimalist modern architecture bright open`
+- Team Section: `[company values keywords] professional team office collaboration natural light`
+- Services: `[service keywords] abstract technology futuristic clean lines`
 
 **Filters:**
 - Orientation: Match section layout (landscape/portrait/square)
@@ -58,37 +63,63 @@ Stock photography specialist. Search Unsplash API, select brand-matched images, 
 
 ## INTEGRATION
 
-**Image Attributes:**
+**Next.js Image Component (Standard):**
 ```tsx
-<img
-  src="https://images.unsplash.com/photo-[id]?w=1200&q=80&fit=crop"
+import Image from 'next/image'
+
+<Image
+  src="https://images.unsplash.com/photo-[id]"
   alt="[SEO-optimized description based on section + keywords]"
+  width={1200}
+  height={800}
+  quality={80}
   loading="lazy"
-  width="1200"
-  height="800"
 />
 ```
 
 **Responsive Images:**
 ```tsx
-<img
-  srcSet="
-    https://images.unsplash.com/photo-[id]?w=400&q=80 400w,
-    https://images.unsplash.com/photo-[id]?w=800&q=80 800w,
-    https://images.unsplash.com/photo-[id]?w=1200&q=80 1200w
-  "
+import Image from 'next/image'
+
+<Image
+  src="https://images.unsplash.com/photo-[id]"
+  alt="[SEO-optimized description based on section + keywords]"
+  width={1200}
+  height={800}
   sizes="(max-width: 768px) 100vw, 50vw"
-  alt="[description]"
-  loading="lazy"
+  quality={80}
+  style={{ width: '100%', height: 'auto' }}
 />
 ```
 
-**Background Images (CSS):**
-```css
-.hero-section {
-  background-image: url('https://images.unsplash.com/photo-[id]?w=1920&q=80&fit=crop');
-  background-size: cover;
-  background-position: center;
+**Fill Container (Hero Backgrounds):**
+```tsx
+import Image from 'next/image'
+
+<div style={{ position: 'relative', width: '100%', height: '600px' }}>
+  <Image
+    src="https://images.unsplash.com/photo-[id]"
+    alt="[SEO-optimized description]"
+    fill
+    sizes="100vw"
+    quality={85}
+    style={{ objectFit: 'cover' }}
+    priority
+  />
+</div>
+```
+
+**Next.js Config Required (next.config.js):**
+```js
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 }
 ```
 
@@ -112,8 +143,9 @@ Generated: [ISO_8601]
 - **Photographer:** [Name] (@username)
 - **Alt Text:** [SEO-optimized description]
 - **Search Query:** [keywords used]
-- **Component:** src/components/[path]
-- **Integration:** [img tag / background-image]
+- **Component:** app/components/[path] or app/[page]/page.tsx
+- **Integration:** Next.js Image component
+- **Dimensions:** width={1200} height={800}
 - **Color Match:** [hex values matching global.css]
 
 ---
@@ -146,12 +178,15 @@ Generated: [ISO_8601]
 
 ## QUALITY CRITERIA
 
-✓ Images match brand aesthetic
+✓ Images aligned with seo-report.md content themes and keywords
+✓ Images match brand aesthetic + SEO context
 ✓ Colors harmonize with global.css
 ✓ High resolution (min 1920px for heroes)
-✓ All images have descriptive alt text
+✓ All images have SEO-optimized alt text from seo-report.md
 ✓ Photographer attribution included
-✓ Components updated with proper src/srcSet
+✓ Components updated with Next.js Image component
+✓ next.config.js configured with remotePatterns
+✓ Proper width/height dimensions specified
 ✓ unsplash-selections.md created
 
 ---

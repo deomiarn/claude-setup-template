@@ -31,11 +31,12 @@ Token Budget: <500 tokens
 - Model: `haiku` (deterministic prompt generation)
 
 **Process:**
-1. Read `.claude/planning/[project]/sitemap.md` → Identify sections
-2. Read `global.css` → Extract colors, fonts, aesthetic
-3. Read SEO keywords → Inform image context
-4. Analyze brand visual style
-5. Generate Midjourney v7 prompts with consistent art direction
+1. Read `.claude/planning/[project]/seo-report.md` → Extract keywords, page themes, content context
+2. Read `.claude/planning/[project]/sitemap.md` → Identify sections needing images
+3. Read `global.css` → Extract colors, fonts, aesthetic
+4. Analyze seo-report.md content themes for each page/section
+5. Analyze brand visual style
+6. Generate Midjourney v7 prompts with consistent art direction based on SEO themes
 
 **Output Location:**
 `.claude/planning/[project]/midjourney-prompts.md`
@@ -129,12 +130,56 @@ Token Budget: <500 tokens
 
 ## SUCCESS CRITERIA
 
+✓ Prompts aligned with seo-report.md content themes and keywords
 ✓ 2-3 prompt variants per section
-✓ Consistent art direction (colors, style, mood)
+✓ Consistent art direction (colors, style, mood) + SEO context
 ✓ Proper Midjourney v7 syntax
 ✓ Multiple aspect ratios provided
 ✓ All flags included (--ar, --video, --motion, etc.)
 ✓ midjourney-prompts.md created
+
+---
+
+## IMAGE INTEGRATION (After Generation)
+
+**Save downloaded images to:**
+```
+/public/images/[page-name]/[section-name].jpg
+```
+
+**Next.js Image Component (Local Images):**
+```tsx
+import Image from 'next/image'
+import heroImage from '@/public/images/home/hero.jpg'
+
+<Image
+  src={heroImage}
+  alt="[SEO-optimized alt text from seo-report.md]"
+  quality={85}
+  priority
+  style={{ width: '100%', height: 'auto' }}
+/>
+```
+
+**Fill Container (Hero Backgrounds):**
+```tsx
+import Image from 'next/image'
+import heroImage from '@/public/images/home/hero.jpg'
+
+<div style={{ position: 'relative', width: '100%', height: '600px' }}>
+  <Image
+    src={heroImage}
+    alt="[SEO-optimized alt text]"
+    fill
+    sizes="100vw"
+    quality={90}
+    style={{ objectFit: 'cover' }}
+    priority
+  />
+</div>
+```
+
+**Note:** Next.js automatically optimizes local images and determines dimensions.
 
 ---
 
@@ -143,6 +188,6 @@ Token Budget: <500 tokens
 **After this step:**
 1. Copy prompts to Midjourney
 2. Generate images
-3. Download high-res versions
-4. Integrate into components (replace Unsplash or add new)
+3. Download high-res versions to `/public/images/`
+4. Integrate into components using Next.js Image component (see examples above)
 5. Run final build + Lighthouse audit
