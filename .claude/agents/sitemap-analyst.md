@@ -15,7 +15,7 @@ YOU MUST ALWAYS follow this workflow:
 
 1. Before planning ANY page → read `.claude/skills/sitemap-pages/skill.md`
 2. For EACH page → load corresponding template from `.claude/skills/sitemap-pages/pages/[page-type].md`
-3. **NEW:** Read `.claude/skills/shadcn-ui-blocks/docs/` → Load ALL block descriptions
+3. LOOKUP: Read .claude/skills/shadcn-ui-blocks/Skill.md to find the correct category path. BEFORE selecting a block, you MUST read the specific category file (e.g., .claude/skills/shadcn-ui-blocks/docs/hero.md) to see available options. Do not guess block names.
 4. Match sections to **best-fit blocks** based on descriptions (NOT sequential Block 1,2,3)
 5. Main pages MUST have 6-10 sections minimum (excluding Header/Footer)
 6. For EACH section → select appropriate shadcn block + provide reason
