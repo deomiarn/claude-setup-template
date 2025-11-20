@@ -1,0 +1,99 @@
+# ------------------------------------------
+# UNIVERSAL CLAUDE IGNORE (Token Saver)
+# ------------------------------------------
+
+# --- SYSTEM & IDE (Global) ---
+.git/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+.settings/
+.classpath
+.project
+
+# --- SECRETS (Critical Security) ---
+# AI should never read real secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+id_rsa
+
+# --- WEB / JAVASCRIPT / TYPESCRIPT / REACT ---
+# Dependencies (Huge token waste)
+node_modules/
+
+# Lockfiles (Machine readable, AI generally doesn't need them)
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
+
+# Build Outputs
+.next/
+dist/
+build/
+out/
+coverage/
+.turbo/
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# --- JAVA (Maven / Gradle) ---
+# Build artifacts
+target/
+build/
+.gradle/
+
+# Binary/Compiled
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# --- GO (Golang) ---
+# Binary output (common names)
+bin/
+dist/
+main
+*.exe
+*.test
+*.out
+
+# Dependency management
+# AI needs go.mod to see versions, but strictly does NOT need checksums
+go.sum
+
+# Vendor folder (contains all 3rd party code - massive token risk)
+vendor/
+
+# --- PYTHON (Just in case) ---
+__pycache__/
+*.pyc
+venv/
+env/
+.pytest_cache/
+
+# --- ASSETS (Binary Data) ---
+# AI cannot read binary files, they just waste tokens/errors
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg
+*.mp4
+*.mov
+*.pdf
+*.zip
+*.tar.gz
+public/images/
