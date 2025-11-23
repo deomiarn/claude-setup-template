@@ -41,21 +41,8 @@ Parent always Sonnet.
 
 - Define agent capabilities + constraints
 - Stored in `.mcp.json`
-- Always check and use to improve agent performance
-- Important: Context7 mcp has almost anything you need but first check others for better fit
-
-## Quick Reference
-
-- Templates: `.claude/docs/templates/`
-- Commands: `.claude/commands/`
-- Caching strategy: Read stable first (CLAUDE.md, model-selection, SOPs)
-
-## Quality Standards
-
-- Extreme concision in all artifacts
-- Every change documented
-- Timestamps ISO 8601
-- File refs include line numbers
+- **shadcn-search**: Local server to query 900+ UI components. ALWAYS use `search_components` to find components. Do NOT read the markdown files manually.
+- **Context7**: General utility (check first if specialized MCP fits better).
 
 ## Rules
 
@@ -63,7 +50,5 @@ ALL Agents always follow these rules:
 
 - ALWAYS read `.claude/skills/README.md` before acting (contains context-relevant skills + paths)
 - ALWAYS read relevant docs, SOPs, communication.md before acting
-- ALWAYS read `.claudeingore` before acting and ignore these files completely always unless the user instructs explicitly to act on them
-- ALWAYS communicate in the specified session files for more context
-- ALWAYS try to use existing MCPs from .mcp.json (context7 mcp has almost anything you need but first check others for better fit)
+- **CRITICAL**: When planning UI, use `search_components` tool. Do NOT read static docs.
 - IF you want to use a mcp, ALWAYS say "use [mcp-name]"

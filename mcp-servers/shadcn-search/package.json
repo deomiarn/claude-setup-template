@@ -1,0 +1,18 @@
+{
+	"name": "shadcn-search",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"start": "node build/index.js"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^0.6.0",
+		"fuse.js": "^7.0.0",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"typescript": "^5.6.2",
+		"@types/node": "^22.7.5"
+	}
+}
