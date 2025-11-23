@@ -114,8 +114,14 @@ Before launching agent:
 3. Verify consistency improves
 4. Document results in SOP
 
-## Need Help?
+## See Also
 
-See existing SOPs for examples:
-- `agent-context-generation.md` (complex workflow)
-- `mcp-first-documentation.md` (simple rule-based)
+- **Existing SOPs**:
+  - `agent-context-generation.md` - Complex workflow SOP example
+  - `mcp-first-documentation.md` - Simple rule-based SOP example
+- **Related HOW-TOs**:
+  - `.claude/agents/HOW-TO-ADD-AGENTS.md` - How to reference SOPs in agents
+  - `.claude/sessions/HOW-TO-CREATE-SESSIONS.md` - How sessions use SOPs
+- **Workflows**:
+  - `.claude/docs/workflows/parent-workflow.md` - How Parent enforces SOPs
+  - `.claude/docs/workflows/subagent-workflow.md` - How agents follow SOPs

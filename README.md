@@ -47,22 +47,10 @@ Parent (sonnet) - Plans, delegates, reviews, tracks (NEVER executes)
 
 ### 2. Context Management (Sessions)
 
-**Structure**: `.claude/sessions/[session-name]/`
+**Details**: See `.claude/sessions/README.md` for complete session structure
 
-- `planning.md`: Task breakdown with agent assignments (Parent creates)
-- `communication.md`: Append-only agent log (agents append chronologically)
-
-**Flow**:
-
-1. Parent creates planning.md with tasks
-2. Each subagent reads planning + previous communication
-3. Subagent executes, appends output to communication.md
-4. Next subagent reads full communication history
-5. Parent reviews communication.md for quality
-
-**Format**: `.claude/docs/output-format.md` (Problem/Solution/Files/Next)
-
-**Example**: `.claude/sessions/example-session/`
+Parent creates session directory with planning.md. Agents append to communication.md.
+Format: `.claude/docs/output-format.md`
 
 ### 3. Workflows
 
@@ -124,10 +112,7 @@ tokens only.
 │   ├── output-format.md         # Agent communication format
 │   ├── workflows/               # Parent + subagent workflows
 │   └── templates/               # Planning, output templates
-├── sessions/             # Session-based context
-│   └── [session]/
-│       ├── planning.md          # Task breakdown (Parent creates)
-│       └── communication.md     # Agent log (agents append)
+├── sessions/             # Session-based context (see sessions/README.md)
 ├── sop/                  # Standard Operating Procedures (created as patterns discovered)
 └── commands/             # Slash commands
 
@@ -153,7 +138,21 @@ cd your-project
 claude code .
 ```
 
-### 3. Start Building
+### 3. Read Documentation (Recommended Order)
+
+**For New Users** (60 minutes):
+1. `/README.md` (this file) - Project overview
+2. `/CLAUDE.md` - Core architecture (concise format)
+3. `.claude/docs/workflows/parent-workflow.md` - Orchestration workflow
+4. `.claude/sessions/HOW-TO-CREATE-SESSIONS.md` - Session setup
+
+**For Reference** (as needed):
+- `.claude/docs/workflows/subagent-workflow.md` - Agent execution
+- `.claude/docs/output-format.md` - Communication standards
+- `.claude/agents/HOW-TO-ADD-AGENTS.md` - Create custom agents
+- `.claude/sop/` - Standard operating procedures
+
+### 4. Start Building
 
 Ask Parent Orchestrator:
 
@@ -171,7 +170,7 @@ Parent will:
 - Review outputs in communication.md
 - Update docs
 
-### 4. Custom Agents (Optional)
+### 5. Custom Agents (Optional)
 
 Add in `.claude/agents/[agent-name].md`:
 
@@ -186,47 +185,17 @@ See existing: animation-specialist, sitemap-analyst, ui-design-architect.
 
 ## How It Works
 
-**1. Parent reads context** (caching-optimized order):
+**Details**: See `.claude/docs/workflows/parent-workflow.md` for complete orchestration workflow
 
-- CLAUDE.md (orchestrator instructions)
-- `.claude/docs/model-selection.md` (model patterns)
-- `.claude/sop/*.md` (discovered patterns)
-- `/docs/architecture/*.md` (system design)
-- `.claude/sessions/[session]/planning.md` (current plan)
-- `.claude/sessions/[session]/communication.md` (agent I/O)
+**Summary**:
+1. Parent reads context (caching-optimized order)
+2. Creates planning.md with tasks + agent assignments
+3. Writes todos, delegates to specialized agents
+4. Agents execute, append to communication.md
+5. Parent reviews outputs, marks todos completed
+6. Repeat until session complete
 
-**2. Parent creates plan**:
-
-- File: `.claude/sessions/[session]/planning.md`
-- Content: Problem, tasks (agent + model + context), dependencies, success criteria
-- Budget: 500 tokens max
-- Reference: `.claude/docs/templates/planning-template.md`
-
-**3. Parent writes todos**:
-
-- TodoWrite tool: one todo per task
-- Mark in_progress before delegating
-- Mark completed after review
-
-**4. Parent delegates**:
-
-- Task tool with agent + model + planning doc path
-- Example: backend-architect (sonnet) reads planning.md, designs API
-
-**5. Subagent executes**:
-
-- Reads planning.md + communication.md + relevant docs/SOPs
-- Implements task
-- Appends to communication.md using output format
-- Updates /docs/ if user-facing feature
-- Creates SOP if reusable pattern discovered
-
-**6. Parent reviews**:
-
-- Reads communication.md
-- Verifies quality, files changed, next steps
-- Marks todo completed
-- Continues to next task
+**Subagent workflow**: See `.claude/docs/workflows/subagent-workflow.md`
 
 ## Documentation Map
 

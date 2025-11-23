@@ -1,7 +1,7 @@
 # Claude Code Setup - Directory Guide
 
 **Version**: 2.0 - Multi-Agent with Validation Loops
-**Status**: Production Ready (85% complete)
+**Status**: Production Ready
 
 ## Quick Navigation
 
@@ -11,13 +11,10 @@
 ├── docs/               # Documentation (guides, workflows, templates)
 ├── sessions/           # Active sessions (planning, communication, context)
 ├── sop/                # Standard Operating Procedures (patterns, best practices)
-├── skills/             # Skills (sitemap-pages active, shadcn deprecated)
+├── skills/             # Skills (sitemap-pages templates)
 ├── planning/           # Project artifacts (sitemap.md, seo-report.md, etc.)
+├── prompts/            # Prompts for workflows
 ├── settings.json       # Claude Code settings (plugins, permissions)
-├── CLAUDE.md           # Architecture overview (read this second)
-├── TRANSFORMATION-COMPLETE.md  # What's been done (read this first)
-├── WHATS-NEW.md        # Changelog + migration guide
-├── CLEANUP-LOG.md      # What was removed + why
 └── README.md           # This file
 ```
 
@@ -30,16 +27,14 @@
 
 **Key agents**:
 - **Validators** (5): requirements, sitemap-quality, code-structure, content-quality, production-readiness
-- **Execution** (1 created, 6 templates): brand-analyzer (+ 6 templates in IMPLEMENTATION-GUIDE.md)
-- **Existing**: sitemap-analyst, sitemap-executor, seo-content-executor, animation-specialist, midjourney-prompt-generator
+- **Execution**: brand-analyzer, sitemap-analyst, sitemap-executor, seo-orchestrator, seo-content-planner, seo-content-executor, i18n-setup-agent, seo-content-writer-en, seo-content-writer-de
+- **Specialists**: animation-specialist, midjourney-prompt-generator
 
 ### `/docs/` - Documentation
 **What**: Guides, workflows, references
 **When to use**: Understanding the system, updating workflows
-**How-to**: Read `docs/HOW-TO-ADD-DOCS.md`
 
 **Key docs**:
-- `IMPLEMENTATION-GUIDE.md` - Complete setup guide (6000+ words)
 - `workflows/parent-workflow.md` - Parent orchestration
 - `workflows/subagent-workflow.md` - Agent execution
 - `output-format.md` - Communication format
@@ -50,14 +45,7 @@
 **When to use**: Running multi-agent workflows
 **How-to**: Read `sessions/HOW-TO-CREATE-SESSIONS.md`
 
-**Structure per session**:
-```
-sessions/[session-id]/
-├── metadata.json          # State, validation, artifacts
-├── planning.md            # Task DAG, 500 token budget
-├── communication.md       # Agent logs
-└── agent-context-*.md     # Filtered context per agent
-```
+**Details**: See `sessions/README.md` for complete session structure and workflow
 
 ### `/sop/` - Standard Operating Procedures
 **What**: Repeatable patterns discovered during workflows
@@ -101,7 +89,7 @@ planning/[project-name]/
 
 ### `CLAUDE.md` (Root Instructions)
 **What**: Architecture overview, rules for ALL agents
-**Read this**: Second (after TRANSFORMATION-COMPLETE.md)
+**Location**: `/CLAUDE.md` (root level, not in .claude/)
 
 **Sections**:
 - Parent role (orchestrate only, never execute)
@@ -114,87 +102,47 @@ planning/[project-name]/
 
 ## Getting Started
 
-### For New Users
+### Recommended Reading Order
 
-**1. Read the transformation docs** (30 minutes):
-```
-1. .claude/TRANSFORMATION-COMPLETE.md  (implementation summary)
-2. CLAUDE.md                            (architecture overview)
-3. .claude/WHATS-NEW.md                 (what's different)
-```
+**1. Overview** (15 minutes):
+- `/README.md` - Project overview, features, quick start
+- `/CLAUDE.md` - Core architecture and rules (concise format)
 
-**2. Understand the system** (1 hour):
-```
-4. .claude/docs/IMPLEMENTATION-GUIDE.md  (complete guide)
-5. .claude/sessions/README.md            (how sessions work)
-6. .claude/sop/mcp-first-documentation.md (MCP rules)
-```
+**2. Workflows** (30 minutes):
+- `.claude/docs/workflows/parent-workflow.md` - Orchestration workflow
+- `.claude/docs/workflows/subagent-workflow.md` - Agent execution
+- `.claude/docs/output-format.md` - Communication standards
 
-**3. Complete the setup** (2-4 hours):
-```
-7. Create 6 remaining agents (templates in IMPLEMENTATION-GUIDE.md)
-8. Update 3 workflow files (exact content provided)
-9. Test with sample project
-```
+**3. Sessions** (20 minutes):
+- `.claude/sessions/HOW-TO-CREATE-SESSIONS.md` - Session setup
+- `.claude/sessions/README.md` - Session structure details
 
-### For Existing Users Migrating
-
-**1. Understand what changed**:
-- Read `.claude/WHATS-NEW.md` (breaking changes + migration)
-- Read `.claude/CLEANUP-LOG.md` (what was removed)
-
-**2. Adapt your workflow**:
-- No more skills hook (intentional)
-- MCP-first for docs (mandatory)
-- Validation gates ensure quality
-- Agent-context reduces tokens
-
-**3. Test**:
-- Run sample project
-- Verify token savings (~62%)
-- Check validation gates trigger
+**4. Customization** (as needed):
+- `.claude/agents/HOW-TO-ADD-AGENTS.md` - Create custom agents
+- `.claude/sop/HOW-TO-ADD-SOPS.md` - Document patterns
+- `.claude/sop/mcp-first-documentation.md` - MCP usage rules
 
 ## Key Concepts
 
 ### 1. Validation Loops
-```
-Execution Agent → Validator (scores 0-100) → PASS or RETRY
-                                                ↓
-                                        Feedback → Retry Execution
-```
+**Details**: See `/CLAUDE.md` lines 72-86 for complete validation loop workflow
 
-**5 Quality Gates**:
-1. Requirements validation (after discovery)
-2. Sitemap quality (after architecture)
-3. Code structure (after build)
-4. Content quality (after content writing)
-5. Production readiness (final audit)
+**5 Quality Gates**: Requirements → Sitemap → Code → Content → Production
 
 ### 2. Agent Context Generation
-```
-Parent generates agent-context-[name].md before EVERY agent:
-- Filtered dependency summaries (not full logs)
-- Direct artifact paths (from metadata.json)
-- Validation feedback (if retry)
-- Token budget: ~300 tokens (vs 4200 before)
-```
+**Details**: See `.claude/sop/agent-context-generation.md` for complete pattern
+
+Parent generates filtered context (~300 tokens) before each agent, replacing full communication logs (4200 tokens)
 
 ### 3. MCP-First Documentation
-```
-❌ Read .claude/skills/shadcn-ui-blocks/docs/hero-01.md (500 tokens)
-✅ MCP: search_components(query="hero with video", limit=3) (150 tokens)
+**Details**: See `.claude/sop/mcp-first-documentation.md` for enforcement rules
 
-Savings: 90% reduction
-```
+Use MCPs instead of static docs: shadcn-search, context7, next-devtools (90% token reduction)
 
 ### 4. Parallel Execution
-```
-Phase 1: brand-analyzer || requirements-analyst  (parallel)
-Phase 3: sitemap-executor || seo-orchestrator    (parallel)
-Phase 5: seo-content-writer-de || seo-content-writer-en (parallel)
+**Details**: See `.claude/docs/workflows/parent-workflow.md` for phase definitions
 
-Time savings: 60% reduction (140 min → 75 min)
-```
+Agents in same phase launch in parallel: 60% time reduction (140 min → 75 min)
 
 ## Performance Metrics
 
@@ -234,16 +182,8 @@ Time savings: 60% reduction (140 min → 75 min)
 
 ### Start a New Session
 ```bash
-Parent automatically creates:
-.claude/sessions/[session-id]/
-- Just provide project name + requirements
-```
-
-### Update Documentation
-```bash
-1. Read: .claude/docs/HOW-TO-ADD-DOCS.md
-2. Edit relevant docs/workflows
-3. Update WHATS-NEW.md if user-facing change
+Parent automatically creates session structure
+See: .claude/sessions/HOW-TO-CREATE-SESSIONS.md
 ```
 
 ## Troubleshooting
@@ -251,7 +191,6 @@ Parent automatically creates:
 ### Skills hook still showing?
 - Check settings.json (hooks section should not exist)
 - Restart Claude Code
-- See CLEANUP-LOG.md for verification steps
 
 ### Token usage still high?
 - Verify MCP usage (should see mcp__* tool calls in communication.md)
@@ -270,48 +209,29 @@ Parent automatically creates:
 
 ## Next Steps
 
-### Complete Setup (15% remaining)
-1. **Create 6 agents** (2 hours) - Templates in IMPLEMENTATION-GUIDE.md
-2. **Update 3 workflows** (30 min) - Exact content in IMPLEMENTATION-GUIDE.md
-3. **Test** (2 hours) - Run sample website build
-
 ### Customize for Your Use Case
-1. Create domain-specific agents
-2. Add new validation gates for your quality standards
-3. Document patterns as SOPs
+1. Create domain-specific agents (see `.claude/agents/HOW-TO-ADD-AGENTS.md`)
+2. Add validation gates for your quality standards
+3. Document patterns as SOPs (see `.claude/sop/HOW-TO-ADD-SOPS.md`)
 4. Optimize token usage further
 
 ## Resources
 
 **Primary Docs**:
-- `.claude/TRANSFORMATION-COMPLETE.md` - What's been done
-- `.claude/docs/IMPLEMENTATION-GUIDE.md` - How to finish
-- `CLAUDE.md` - Architecture overview
-- `.claude/WHATS-NEW.md` - Changelog
+- `/README.md` - Project overview
+- `/CLAUDE.md` - Architecture overview (concise)
+- `.claude/docs/workflows/` - Workflow documentation
+- `.claude/sessions/README.md` - Session structure
 
 **HOW-TOs**:
-- `.claude/agents/HOW-TO-ADD-AGENTS.md`
-- `.claude/sop/HOW-TO-ADD-SOPS.md`
-- `.claude/sessions/HOW-TO-CREATE-SESSIONS.md`
-- `.claude/docs/HOW-TO-ADD-DOCS.md`
+- `.claude/agents/HOW-TO-ADD-AGENTS.md` - Create agents
+- `.claude/sop/HOW-TO-ADD-SOPS.md` - Document patterns
+- `.claude/sessions/HOW-TO-CREATE-SESSIONS.md` - Session setup
 
 **SOPs**:
-- `.claude/sop/agent-context-generation.md`
-- `.claude/sop/mcp-first-documentation.md`
-
-## Support
-
-**For questions**:
-1. Read the relevant HOW-TO guide
-2. Check existing examples in same directory
-3. Review IMPLEMENTATION-GUIDE.md (comprehensive)
-4. Check CLAUDE.md (architecture)
-
-**For issues**:
-1. Read CLEANUP-LOG.md (migration notes)
-2. Read WHATS-NEW.md (breaking changes)
-3. Check troubleshooting section above
+- `.claude/sop/agent-context-generation.md` - Context filtering pattern
+- `.claude/sop/mcp-first-documentation.md` - MCP usage enforcement
 
 ---
 
-**This is the ultimate Claude Code setup template. 85% complete, production-ready, optimized for token efficiency and quality. Welcome! 🚀**
+**Multi-agent Claude Code setup template - Production ready, optimized for token efficiency and quality**

@@ -49,31 +49,9 @@ Sessions organize multi-agent workflows with parallel execution, validation loop
 
 ## Validation Loop Architecture
 
-### Quality Gates (Automated)
-Sessions include validation checkpoints after each major phase:
+**Details**: See `/CLAUDE.md` lines 72-86 for complete validation loop workflow
 
-```
-Phase 1: Discovery
-  ↓
-[Validation Gate 1: Requirements completeness]
-  ↓ PASS → Phase 2 | FAIL → Retry Phase 1
-Phase 2: Architecture
-  ↓
-[Validation Gate 2: Sitemap quality + SEO readiness]
-  ↓ PASS → Phase 3 | FAIL → Refine Phase 2
-Phase 3: Build
-  ↓
-[Validation Gate 3: Code quality + Structure validation]
-  ↓ PASS → Phase 4 | FAIL → Fix Phase 3
-Phase 4: Content
-  ↓
-[Validation Gate 4: SEO + i18n completeness]
-  ↓ PASS → Phase 5 | FAIL → Revise Phase 4
-Phase 5: Final Audit
-  ↓
-[Validation Gate 5: Accessibility + Performance + Production readiness]
-  ↓ PASS → Complete | FAIL → Iterative fixes
-```
+Sessions include validation checkpoints after each major phase. Validators score 0-100, PASS ≥80. Failed validations trigger retries with feedback (max 2 retries).
 
 ### Validation Metadata Structure
 
