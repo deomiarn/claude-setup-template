@@ -1,0 +1,659 @@
+
+ ▐▛███▜▌   Claude Code v2.0.50
+▝▜█████▛▘  Sonnet 4.5 · Claude Pro
+  ▘▘ ▝▝    ~/Documents/GitHub/claude-setup-template
+
+> ultrathink. This repo is built to improve my claude code agentic ai workflow as much as possible to reduce token usage/costs and have a good overall working process when using claude 
+code. it is a general claude-setup-template repository which should be used as a starting project template to have the best expierence with claude code. please read all files in the
+.claude folder. all agents, skills and so on to have the relevant context. read also the CLAUDE.md and README.md and .claudeignore. I also created a custom mcp-server to reduce tokenusage
+for shadcnblocks (components) do not read this directory, just keep my comment in the context. How would you improve everything more? Currently the main agent (you) does the planning phase
+ and delegates the tasks to do as the next step to subagents, is this the correct way? should i have planning agents etc? I also use agents from a plugin (wshobson agents). Last thing to
+say, I have a webdesign / IT-Solution (for KMUs 1-100 employees) agency. I have created some skills and agents for the automatic creation of websites, can those agents be optimized? do i
+need more agents? currently the workflow for a new website looks like following: 1. sitemap-analyst (plans website layouts and sections with the use of my custom mcp server where shadcn
+components are). 2. Sitemap executor, executes the plan of the analyst. SEO analyse which uses a few of wshobson seo agents to create a seo plan. seo-content-executor reads the finished
+seo plan and adds it to the current website layout from the sitmap. Did i miss anything? read also my prompts in .claude/docs/prompts. I think there can be a few things adjusted, make a
+detailed plan. also how to improve my website workflow (i already created a mcp to reduce costs for deciding which sections should be used, in the files the old version is still in there.
+The agents shouldnt read the skills file with the 900+ components, this is not existing anymore, they should use the mcp). How would you create an ultimate built of my claude code setup
+and improve the website creation. use the context7 mcp for more informations about documentation of claude code etc.
+
+⏺ I'll conduct a comprehensive analysis of your Claude Code setup to provide detailed improvement recommendations.
+
+⏺ Plan(Analyze Claude setup architecture)
+  ⎿  Done (38 tool uses · 91.3k tokens · 4m 9s)                                                                                                                                            
+
+⏺ Analysis Complete - Critical Findings
+
+  CRITICAL ISSUES (Fix Immediately)
+
+  1. MCP Documentation Conflict 🚨
+    - sitemap-analyst.md:18-19 tells agents to read .claude/skills/shadcn-ui-blocks/docs/*.md
+    - Those 900+ files are DELETED (git status shows)
+    - CLAUDE.md:44 says use search_components MCP instead
+    - Impact: Agents fail when trying to read deleted files
+  2. No Planning Tier
+    - Parent does orchestration + planning (overloaded)
+    - Planning should be separate agents: requirements-analyst → architecture-planner → task-decomposer
+  3. SEO Workflow Manual Handoff
+    - Step 1: SEO agents → seo-report.md
+    - Step 2: Manually trigger seo-content-executor
+    - Should: Auto-orchestrate both steps
+  4. Token Waste
+    - Orphaned refs to deleted shadcn files
+    - Redundant docs (output-format.md + communication-entry.md)
+    - 54 marketplace plugins (web agency doesn't need jvm-languages, multi-platform-apps)
+    - Savings potential: 20-40% additional reduction
+  5. Missing Validation
+    - No QA after sitemap-executor generates pages
+    - No accessibility audit
+    - No performance validation
+    - No code review
+
+  ARCHITECTURE GAPS
+
+  Current:
+  Parent (Sonnet) → Plans + Orchestrates + Reviews
+    ↓
+  sitemap-analyst → sitemap-executor → SEO agents → seo-content-executor
+
+  Optimal:
+  Parent (Sonnet) → Orchestrates ONLY
+    ↓
+  Planning Tier (requirements → architecture → tasks)
+    ↓
+  Execution Tier (sitemap → code → SEO → content)
+    ↓
+  Validation Tier (code review → accessibility → performance)
+
+  WEBSITE WORKFLOW GAPS
+
+  Missing:
+  - brand-analyzer (extract colors/fonts from assets)
+  - technical-validator (verify Next.js version, dependencies)
+  - qa-validator (validate sitemap.md completeness)
+  - image-orchestrator (coordinate Unsplash/Midjourney)
+  - accessibility-validator (A11y compliance)
+  - performance-validator (Core Web Vitals)
+
+  Underutilized Marketplace:
+  - accessibility-compliance (enabled but not in workflow)
+  - performance-testing-review (enabled but not in workflow)
+  - code-review-ai (enabled but not in workflow)
+
+⏺ User declined to answer questions
+
+> not only the seo should be automated, everything (for websites), also the clear message of using mcps, mention specifically which, use context7 with nextjs for example. and my custom mcp
+ and so on. but also watch out, first the website needs to be created (sitemap-executer) and then the seo can be written in there. also it should be use i18n (context7 mcp) from the start 
+on when replacing the content with the correct seo content etc. i also would enjoy parallel workflows if possible. 
+  ⎿  User rejected Claude's plan:
+     ╭────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+     │ Ultimate Claude Code Setup - Full Website Automation                                                       │
+     │                                                                                                            │
+     │ Phase 1: Critical Fixes (Day 1)                                                                            │
+     │                                                                                                            │
+     │ 1.1 Fix MCP Documentation Conflicts                                                                        │
+     │                                                                                                            │
+     │ Files: .claude/agents/sitemap-analyst.md, .claude/skills/README.md, CLAUDE.md                              │
+     │                                                                                                            │
+     │ sitemap-analyst.md (lines 18-19):                                                                          │
+     │ - 3. LOOKUP: Read .claude/skills/shadcn-ui-blocks/Skill.md...                                              │
+     │ + 3. LOOKUP: Use MCP `mcp__shadcn-search__search_components`:                                              │
+     │ +    - Query: "hero section with video background email signup"                                            │
+     │ +    - Returns: id, category, installCommand, description                                                  │
+     │ +    - Example: {tool: "mcp__shadcn-search__search_components", args: {query: "hero cta", limit: 5}}       │
+     │ + 4. NEVER read .claude/skills/shadcn-ui-blocks/ (deleted, use MCP only)                                   │
+     │                                                                                                            │
+     │ Add MCP usage section to ALL agents:                                                                       │
+     │ ## MCP TOOLS REQUIRED                                                                                      │
+     │                                                                                                            │
+     │ **shadcn-search**: Component discovery                                                                     │
+     │ - Tool: `mcp__shadcn-search__search_components`                                                            │
+     │ - When: Selecting UI blocks for pages                                                                      │
+     │ - Query format: Descriptive (e.g., "pricing table with toggle annual/monthly")                             │
+     │                                                                                                            │
+     │ **context7**: Library documentation                                                                        │
+     │ - Tool: `mcp__context7__get-library-docs`                                                                  │
+     │ - When: Next.js patterns, i18n setup (next-intl), routing                                                  │
+     │ - First: `mcp__context7__resolve-library-id` with "next.js" or "next-intl"                                 │
+     │ - Then: Use returned libraryID with topic (e.g., topic: "app router", topic: "i18n")                       │
+     │                                                                                                            │
+     │ **next-devtools**: Runtime diagnostics (if dev server running)                                             │
+     │ - Tool: `mcp__next-devtools__nextjs_runtime`                                                               │
+     │ - When: Validate pages compile, check errors, inspect routes                                               │
+     │                                                                                                            │
+     │ 1.2 Remove Orphaned References                                                                             │
+     │                                                                                                            │
+     │ - .claude/skills/README.md: Remove shadcn-ui-blocks or update to "Use MCP only"                            │
+     │ - Check .claude/hooks/load-skills.sh exists or remove from settings.json                                   │
+     │                                                                                                            │
+     │ 1.3 Token Optimization                                                                                     │
+     │                                                                                                            │
+     │ - Consolidate output-format.md + templates/communication-entry.md                                          │
+     │ - Extract seo-content-executor.md lines 119-189 (content guidelines) → .claude/docs/content-writing-seo.md │
+     │ - Trim marketplace plugins: Remove jvm-languages, multi-platform-apps (not web agency)                     │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Phase 2: Planning Tier (Day 2-3)                                                                           │
+     │                                                                                                            │
+     │ 2.1 Create Planning Agents                                                                                 │
+     │                                                                                                            │
+     │ .claude/agents/requirements-analyst.md (Sonnet):                                                           │
+     │ Gather project requirements. Extract:                                                                      │
+     │ - Brand assets (colors, fonts, logo from client files)                                                     │
+     │ - Target audience (SMB 1-100 employees, B2B/B2C)                                                           │
+     │ - Pages needed (Home, About, Services, Contact, etc.)                                                      │
+     │ - Languages (default: en, de for i18n)                                                                     │
+     │ - Special features (blog, e-commerce, forms)                                                               │
+     │                                                                                                            │
+     │ MCP: Use context7 to research Next.js project structure best practices                                     │
+     │ Output: requirements.md (500 tokens max)                                                                   │
+     │                                                                                                            │
+     │ .claude/agents/architecture-planner.md (Sonnet):                                                           │
+     │ Design system architecture from requirements.md:                                                           │
+     │ - Next.js app router structure                                                                             │
+     │ - i18n strategy (next-intl with messages/[locale].json)                                                    │
+     │ - Component hierarchy                                                                                      │
+     │ - Data flow (static vs dynamic pages)                                                                      │
+     │ - SEO architecture (metadata, sitemap.xml, robots.txt)                                                     │
+     │                                                                                                            │
+     │ MCP: context7 → Next.js app router + i18n patterns                                                         │
+     │ Output: architecture.md (500 tokens max)                                                                   │
+     │                                                                                                            │
+     │ .claude/agents/task-decomposer.md (Haiku):                                                                 │
+     │ Break architecture.md into atomic tasks:                                                                   │
+     │ 1. Setup i18n (next-intl + middleware)                                                                     │
+     │ 2. Generate sitemap structure                                                                              │
+     │ 3. Install shadcn blocks                                                                                   │
+     │ 4. SEO metadata + content                                                                                  │
+     │ 5. Validation (accessibility, performance)                                                                 │
+     │                                                                                                            │
+     │ Output: tasks.json (array of {agent, dependencies, parallel})                                              │
+     │                                                                                                            │
+     │ 2.2 Parallel Workflow Orchestrator                                                                         │
+     │                                                                                                            │
+     │ .claude/agents/workflow-orchestrator.md (Sonnet):                                                          │
+     │ Execute tasks.json with parallel optimization:                                                             │
+     │                                                                                                            │
+     │ PARALLEL GROUP 1 (no dependencies):                                                                        │
+     │ - brand-analyzer (extract colors/fonts from assets)                                                        │
+     │ - technical-validator (verify Next.js version, deps)                                                       │
+     │                                                                                                            │
+     │ PARALLEL GROUP 2 (after Group 1):                                                                          │
+     │ - i18n-setup-agent (install next-intl, create middleware)                                                  │
+     │ - sitemap-analyst (plan pages + blocks)                                                                    │
+     │                                                                                                            │
+     │ SEQUENTIAL (dependencies):                                                                                 │
+     │ - sitemap-executor (needs sitemap.md)                                                                      │
+     │ - code-validator (needs generated pages)                                                                   │
+     │                                                                                                            │
+     │ PARALLEL GROUP 3 (after sitemap-executor):                                                                 │
+     │ - seo-content-planner (Sonnet - plan SEO for all pages)                                                    │
+     │ - accessibility-validator (check structure)                                                                │
+     │ - performance-validator (initial audit)                                                                    │
+     │                                                                                                            │
+     │ SEQUENTIAL (after planner):                                                                                │
+     │ - seo-content-writer (Haiku - write i18n content from plan)                                                │
+     │                                                                                                            │
+     │ PARALLEL GROUP 4 (final validation):                                                                       │
+     │ - accessibility-validator (full audit with content)                                                        │
+     │ - performance-validator (Lighthouse with content)                                                          │
+     │ - code-review-ai (final code review)                                                                       │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Phase 3: Website Automation Workflow (Day 4-7)                                                             │
+     │                                                                                                            │
+     │ 3.1 Pre-Flight Agents (Parallel)                                                                           │
+     │                                                                                                            │
+     │ .claude/agents/brand-analyzer.md (Haiku):                                                                  │
+     │ Extract brand assets from client files:                                                                    │
+     │ - Colors: Parse global.css, tailwind.config.ts                                                             │
+     │ - Fonts: Check next/font imports                                                                           │
+     │ - Logo: Find SVG/PNG in /public                                                                            │
+     │ - Tone: Analyze existing content if available                                                              │
+     │                                                                                                            │
+     │ Output: brand.json {colors: [], fonts: [], logo: "", tone: ""}                                             │
+     │                                                                                                            │
+     │ .claude/agents/technical-validator.md (Haiku):                                                             │
+     │ Verify technical prerequisites:                                                                            │
+     │ - Next.js version (≥14.0 for app router)                                                                   │
+     │ - Dependencies: next-intl, @shadcn/ui                                                                      │
+     │ - Structure: app/ directory exists                                                                         │
+     │ - Config: next.config.js valid                                                                             │
+     │                                                                                                            │
+     │ MCP: context7 → Check Next.js version compatibility                                                        │
+     │ Output: PASS/FAIL with fixes if needed                                                                     │
+     │                                                                                                            │
+     │ 3.2 i18n Setup Agent (Sequential after Pre-Flight)                                                         │
+     │                                                                                                            │
+     │ .claude/agents/i18n-setup-agent.md (Haiku):                                                                │
+     │ Setup next-intl from scratch:                                                                              │
+     │                                                                                                            │
+     │ 1. MCP: context7 → resolve-library-id "next-intl"                                                          │
+     │ 2. MCP: context7 → get-library-docs with topic "setup"                                                     │
+     │ 3. Install: pnpm add next-intl                                                                             │
+     │ 4. Create: middleware.ts (locale detection)                                                                │
+     │ 5. Create: i18n.ts (config with locales: ['en', 'de'])                                                     │
+     │ 6. Create: messages/en.json + messages/de.json (empty objects)                                             │
+     │ 7. Update: app/[locale]/layout.tsx wrapper                                                                 │
+     │                                                                                                            │
+     │ Output: i18n-ready.md (confirms setup complete)                                                            │
+     │                                                                                                            │
+     │ 3.3 Sitemap Workflow (Sequential after i18n)                                                               │
+     │                                                                                                            │
+     │ Update .claude/agents/sitemap-analyst.md:                                                                  │
+     │ DEPENDENCIES: i18n-ready.md, brand.json                                                                    │
+     │                                                                                                            │
+     │ Plan website structure with i18n awareness:                                                                │
+     │                                                                                                            │
+     │ FOR EACH page (Home, About, Services, etc.):                                                               │
+     │ 1. MCP: shadcn-search → search_components for hero                                                         │
+     │ 2. MCP: shadcn-search → search_components for features                                                     │
+     │ 3. MCP: shadcn-search → search_components for CTA                                                          │
+     │ 4. Design: Section layout using brand colors from brand.json                                               │
+     │ 5. i18n: Define translation keys (e.g., "home.hero.title")                                                 │
+     │                                                                                                            │
+     │ Output: sitemap.md with:                                                                                   │
+     │ - Route: app/[locale]/page.tsx (i18n-aware)                                                                │
+     │ - Blocks: {id, installCommand} from MCP                                                                    │
+     │ - Translation keys: For each text element                                                                  │
+     │                                                                                                            │
+     │ Update .claude/agents/sitemap-executor.md:                                                                 │
+     │ DEPENDENCIES: sitemap.md, i18n-ready.md                                                                    │
+     │                                                                                                            │
+     │ Execute sitemap.md with i18n integration:                                                                  │
+     │                                                                                                            │
+     │ FOR EACH page in sitemap.md:                                                                               │
+     │ 1. Create: app/[locale]/[route]/page.tsx                                                                   │
+     │ 2. MCP: shadcn-search → Verify block IDs from sitemap                                                      │
+     │ 3. Install: Run installCommand from MCP (e.g., pnpm dlx shadcn add navbar-01)                              │
+     │ 4. Generate: Component with useTranslations('home') hook                                                   │
+     │ 5. Replace: Hard-coded text with {t('home.hero.title')}                                                    │
+     │ 6. Add: Empty keys to messages/en.json + messages/de.json                                                  │
+     │                                                                                                            │
+     │ ERROR HANDLING:                                                                                            │
+     │ - If block install fails → Log error, use fallback component                                               │
+     │ - If route conflicts with Next.js reserved → Prefix with "pages-"                                          │
+     │ - Validate: All pages compile (MCP: next-devtools if available)                                            │
+     │                                                                                                            │
+     │ Output: structure-complete.md (list of created files)                                                      │
+     │                                                                                                            │
+     │ 3.4 Validation Tier (Parallel after sitemap-executor)                                                      │
+     │                                                                                                            │
+     │ .claude/agents/code-validator.md (Marketplace: code-review-ai):                                            │
+     │ Review generated Next.js code:                                                                             │
+     │ - Type safety (TypeScript errors)                                                                          │
+     │ - Next.js best practices (metadata, Image optimization)                                                    │
+     │ - i18n correctness (all text uses t() hook)                                                                │
+     │ - Accessibility (semantic HTML)                                                                            │
+     │                                                                                                            │
+     │ Output: code-issues.md (PASS or list of fixes)                                                             │
+     │                                                                                                            │
+     │ .claude/agents/accessibility-validator.md (Marketplace: accessibility-compliance):                         │
+     │ A11y audit of generated structure:                                                                         │
+     │ - Semantic HTML (header, nav, main, footer)                                                                │
+     │ - ARIA labels where needed                                                                                 │
+     │ - Keyboard navigation                                                                                      │
+     │ - Color contrast (using brand.json colors)                                                                 │
+     │                                                                                                            │
+     │ Output: a11y-issues.md (WCAG AA compliance report)                                                         │
+     │                                                                                                            │
+     │ .claude/agents/performance-validator.md (Marketplace: performance-testing-review):                         │
+     │ Initial performance check:                                                                                 │
+     │ - Image optimization (next/image used)                                                                     │
+     │ - Font loading (next/font used)                                                                            │
+     │ - Bundle size (no unnecessary dependencies)                                                                │
+     │ - Static generation (pages are SSG where possible)                                                         │
+     │                                                                                                            │
+     │ Output: perf-baseline.md (before content optimization)                                                     │
+     │                                                                                                            │
+     │ 3.5 SEO Automation (Sequential after Validation)                                                           │
+     │                                                                                                            │
+     │ .claude/agents/seo-orchestrator.md (Sonnet):                                                               │
+     │ DEPENDENCIES: structure-complete.md, brand.json                                                            │
+     │                                                                                                            │
+     │ Coordinate complete SEO workflow:                                                                          │
+     │                                                                                                            │
+     │ STEP 1 - Research (Parallel):                                                                              │
+     │ - Delegate: seo-keyword-strategist (Marketplace)                                                           │
+     │ - Delegate: seo-structure-architect (Marketplace)                                                          │
+     │ - Delegate: seo-meta-optimizer (Marketplace)                                                               │
+     │                                                                                                            │
+     │ STEP 2 - Validate Report:                                                                                  │
+     │ - Check: seo-report.md has keywords, meta tags, content strategy                                           │
+     │ - Validate: Keywords align with brand.json tone                                                            │
+     │ - Verify: Meta tags within character limits                                                                │
+     │                                                                                                            │
+     │ STEP 3 - Content Planning (Sequential):                                                                    │
+     │ - Delegate: seo-content-planner (Sonnet)                                                                   │
+     │ - Input: seo-report.md + sitemap.md + brand.json                                                           │
+     │ - Output: content-plan.md (what content for each page)                                                     │
+     │                                                                                                            │
+     │ STEP 4 - Content Writing (Parallel by page):                                                               │
+     │ - Delegate: seo-content-writer (Haiku) for each page                                                       │
+     │ - Input: content-plan.md for specific page                                                                 │
+     │ - MCP: context7 → next-intl docs for i18n patterns                                                         │
+     │ - Output: Updated messages/en.json + messages/de.json                                                      │
+     │                                                                                                            │
+     │ STEP 5 - Final Validation:                                                                                 │
+     │ - Delegate: seo-content-auditor (Marketplace)                                                              │
+     │ - Verify: E-E-A-T signals, keyword density, readability                                                    │
+     │                                                                                                            │
+     │ Output: seo-complete.md                                                                                    │
+     │                                                                                                            │
+     │ .claude/agents/seo-content-planner.md (Sonnet):                                                            │
+     │ DEPENDENCIES: seo-report.md, sitemap.md, brand.json                                                        │
+     │                                                                                                            │
+     │ Plan SEO-optimized content for all pages:                                                                  │
+     │                                                                                                            │
+     │ FOR EACH page:                                                                                             │
+     │ 1. Keywords: Primary + secondary from seo-report.md                                                        │
+     │ 2. Structure: H1, H2, H3 hierarchy                                                                         │
+     │ 3. Content: 300-500 words per section (E-E-A-T signals)                                                    │
+     │ 4. CTAs: From brand.json tone                                                                              │
+     │ 5. Internal links: Between related pages                                                                   │
+     │ 6. Schema markup: Organization, LocalBusiness, etc.                                                        │
+     │                                                                                                            │
+     │ Output: content-plan.md (detailed outline for writer)                                                      │
+     │                                                                                                            │
+     │ .claude/agents/seo-content-writer.md (Haiku):                                                              │
+     │ DEPENDENCIES: content-plan.md, messages/[locale].json                                                      │
+     │                                                                                                            │
+     │ Write SEO content following plan:                                                                          │
+     │                                                                                                            │
+     │ 1. MCP: context7 → get next-intl docs (topic: "translation files")                                         │
+     │ 2. FOR EACH section in content-plan.md:                                                                    │
+     │    - Write: SEO-optimized content (keywords naturally integrated)                                          │
+     │    - i18n: Add to messages/en.json with key (e.g., "home.hero.title")                                      │
+     │    - DE: Add to messages/de.json (German translation)                                                      │
+     │ 3. Metadata: Generate for page (title, description, keywords)                                              │
+     │ 4. Internal links: Use Next.js Link with locale-aware hrefs                                                │
+     │                                                                                                            │
+     │ NO component changes (structure already exists from sitemap-executor)                                      │
+     │ ONLY update: messages/en.json, messages/de.json, page metadata                                             │
+     │                                                                                                            │
+     │ Output: Updated translation files                                                                          │
+     │                                                                                                            │
+     │ 3.6 Final Validation (Parallel)                                                                            │
+     │                                                                                                            │
+     │ After SEO content:                                                                                         │
+     │ - accessibility-validator (full audit with content)                                                        │
+     │ - performance-validator (Lighthouse with content)                                                          │
+     │ - seo-content-auditor (Marketplace - content quality)                                                      │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Phase 4: Workflow Orchestration DAG (Day 8-9)                                                              │
+     │                                                                                                            │
+     │ 4.1 Parallel Execution Map                                                                                 │
+     │                                                                                                            │
+     │ START                                                                                                      │
+     │   ↓                                                                                                        │
+     │ ┌─────────────────────────────┐ PARALLEL GROUP 1                                                           │
+     │ │ brand-analyzer (Haiku)      │                                                                            │
+     │ │ technical-validator (Haiku) │                                                                            │
+     │ └─────────────────────────────┘                                                                            │
+     │   ↓                                                                                                        │
+     │ i18n-setup-agent (Haiku) ← SEQUENTIAL (needs tech validation)                                              │
+     │   ↓                                                                                                        │
+     │ sitemap-analyst (Sonnet) ← SEQUENTIAL (needs i18n + brand)                                                 │
+     │   ↓                                                                                                        │
+     │ sitemap-executor (Haiku) ← SEQUENTIAL (needs sitemap.md)                                                   │
+     │   ↓                                                                                                        │
+     │ ┌─────────────────────────────────────┐ PARALLEL GROUP 2                                                   │
+     │ │ code-validator (Marketplace)        │                                                                    │
+     │ │ accessibility-validator (Marketplace)│                                                                   │
+     │ │ performance-validator (Marketplace) │                                                                    │
+     │ └─────────────────────────────────────┘                                                                    │
+     │   ↓                                                                                                        │
+     │ seo-orchestrator (Sonnet) ← SEQUENTIAL (coordinates SEO sub-workflow)                                      │
+     │   │                                                                                                        │
+     │   ├─→ ┌──────────────────────────────┐ PARALLEL (SEO research)                                             │
+     │   │   │ seo-keyword-strategist       │                                                                     │
+     │   │   │ seo-structure-architect      │                                                                     │
+     │   │   │ seo-meta-optimizer           │                                                                     │
+     │   │   └──────────────────────────────┘                                                                     │
+     │   │     ↓                                                                                                  │
+     │   ├─→ seo-content-planner (Sonnet) ← SEQUENTIAL                                                            │
+     │   │     ↓                                                                                                  │
+     │   ├─→ ┌──────────────────────────────┐ PARALLEL (write by page)                                            │
+     │   │   │ seo-content-writer (Haiku)   │ ← page 1                                                            │
+     │   │   │ seo-content-writer (Haiku)   │ ← page 2                                                            │
+     │   │   │ seo-content-writer (Haiku)   │ ← page 3                                                            │
+     │   │   └──────────────────────────────┘                                                                     │
+     │   │     ↓                                                                                                  │
+     │   └─→ seo-content-auditor (Marketplace) ← SEQUENTIAL                                                       │
+     │   ↓                                                                                                        │
+     │ ┌─────────────────────────────────────┐ PARALLEL GROUP 3 (final)                                           │
+     │ │ accessibility-validator (Marketplace)│                                                                   │
+     │ │ performance-validator (Marketplace) │                                                                    │
+     │ └─────────────────────────────────────┘                                                                    │
+     │   ↓                                                                                                        │
+     │ END (website-complete.md)                                                                                  │
+     │                                                                                                            │
+     │ 4.2 Parent Workflow Update                                                                                 │
+     │                                                                                                            │
+     │ .claude/docs/workflows/parent-workflow.md:                                                                 │
+     │ - Step 2: Create Plan (500 tokens max)                                                                     │
+     │ + Step 2: Delegate to Planning Tier                                                                        │
+     │ +   - requirements-analyst → requirements.md                                                               │
+     │ +   - architecture-planner → architecture.md                                                               │
+     │ +   - task-decomposer → tasks.json (with parallel groups)                                                  │
+     │                                                                                                            │
+     │ - Step 3: Write Todos                                                                                      │
+     │ + Step 3: Load tasks.json → Parent creates todos                                                           │
+     │                                                                                                            │
+     │ - Step 4: Delegate to Execution Agents                                                                     │
+     │ + Step 4: Execute Parallel Groups                                                                          │
+     │ +   - Group 1: brand-analyzer || technical-validator                                                       │
+     │ +   - Sequential: i18n-setup-agent → sitemap-analyst → sitemap-executor                                    │
+     │ +   - Group 2: code-validator || accessibility-validator || performance-validator                          │
+     │ +   - Sequential: seo-orchestrator (manages SEO sub-workflow)                                              │
+     │ +   - Group 3: Final validation in parallel                                                                │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Phase 5: Token Optimization (Day 10)                                                                       │
+     │                                                                                                            │
+     │ 5.1 Documentation Consolidation                                                                            │
+     │                                                                                                            │
+     │ - Merge output-format.md + templates/communication-entry.md → .claude/docs/output-format.md                │
+     │ - Extract SEO guidelines from seo-content-executor → .claude/docs/content-writing-seo.md                   │
+     │ - Lazy-load: Only read when agent type = "seo-content-*"                                                   │
+     │                                                                                                            │
+     │ 5.2 Marketplace Optimization                                                                               │
+     │                                                                                                            │
+     │ Disable unnecessary plugins in settings.json:                                                              │
+     │ - Remove: jvm-languages, multi-platform-apps, web-scripting (Ruby/PHP)                                     │
+     │ - Keep: SEO, frontend, accessibility, performance, code-review, deployment                                 │
+     │                                                                                                            │
+     │ Estimated reduction: 40% of marketplace context (24 → 14 plugins)                                          │
+     │                                                                                                            │
+     │ 5.3 Session Caching                                                                                        │
+     │                                                                                                            │
+     │ - Add: .claude/sessions/[session]/metadata.json                                                            │
+     │ {                                                                                                          │
+     │   "status": "active",                                                                                      │
+     │   "workflow": "website-creation",                                                                          │
+     │   "agents": ["sitemap-analyst", "sitemap-executor"],                                                       │
+     │   "checkpoints": ["i18n-setup", "structure-complete"]                                                      │
+     │ }                                                                                                          │
+     │ - Hash-based caching for planning.md (avoid re-reading if unchanged)                                       │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Phase 6: Integration & Missing Pieces (Day 11-12)                                                          │
+     │                                                                                                            │
+     │ 6.1 Image Automation                                                                                       │
+     │                                                                                                            │
+     │ .claude/agents/image-orchestrator.md (Haiku):                                                              │
+     │ DEPENDENCIES: sitemap.md, brand.json                                                                       │
+     │                                                                                                            │
+     │ Coordinate image generation/sourcing:                                                                      │
+     │                                                                                                            │
+     │ FOR EACH page requiring images:                                                                            │
+     │ 1. Check: Client provided images in /public?                                                               │
+     │ 2. If not:                                                                                                 │
+     │    - Delegate: midjourney-prompt-generator (generate prompts with brand colors)                            │
+     │    - OR: Use Unsplash MCP (if available) for stock photos                                                  │
+     │ 3. Optimize: Ensure next/image usage in components                                                         │
+     │ 4. Alt text: Generate SEO-optimized alt attributes                                                         │
+     │                                                                                                            │
+     │ Output: images-integrated.md                                                                               │
+     │                                                                                                            │
+     │ 6.2 Deployment Automation                                                                                  │
+     │                                                                                                            │
+     │ .claude/agents/deployment-agent.md (Marketplace: deployment-engineer):                                     │
+     │ DEPENDENCIES: website-complete.md                                                                          │
+     │                                                                                                            │
+     │ Deploy to Vercel/Netlify:                                                                                  │
+     │ 1. Validate: Build succeeds (pnpm build)                                                                   │
+     │ 2. Environment: Check .env.local for required vars                                                         │
+     │ 3. Deploy: Use Vercel CLI or trigger GitHub workflow                                                       │
+     │ 4. Verify: Production URL loads correctly                                                                  │
+     │ 5. Check: Lighthouse score on production                                                                   │
+     │                                                                                                            │
+     │ Output: deployment-complete.md (URL + scores)                                                              │
+     │                                                                                                            │
+     │ 6.3 Client Handoff                                                                                         │
+     │                                                                                                            │
+     │ .claude/agents/client-documentation-agent.md (Haiku):                                                      │
+     │ DEPENDENCIES: deployment-complete.md                                                                       │
+     │                                                                                                            │
+     │ Generate client documentation:                                                                             │
+     │ 1. README: How to edit content (messages/[locale].json)                                                    │
+     │ 2. CMS Guide: If using Sanity/Contentful (future)                                                          │
+     │ 3. Maintenance: How to update dependencies                                                                 │
+     │ 4. Analytics: How to read Google Analytics (if integrated)                                                 │
+     │                                                                                                            │
+     │ Output: docs/CLIENT_GUIDE.md                                                                               │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Phase 7: Testing & Validation (Day 13-14)                                                                  │
+     │                                                                                                            │
+     │ 7.1 Integration Tests                                                                                      │
+     │                                                                                                            │
+     │ - Test: Full workflow with sample client (SMB website)                                                     │
+     │ - Validate: All parallel groups execute correctly                                                          │
+     │ - Measure: Token usage (target: 30% reduction from current)                                                │
+     │ - Verify: i18n works (en + de languages)                                                                   │
+     │                                                                                                            │
+     │ 7.2 Documentation Updates                                                                                  │
+     │                                                                                                            │
+     │ - Update: README.md with new workflow                                                                      │
+     │ - Add: .claude/docs/website-workflow.md (complete flow diagram)                                            │
+     │ - Update: CLAUDE.md with MCP usage mandates                                                                │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Files to Create/Update                                                                                     │
+     │                                                                                                            │
+     │ New Agents (13 total):                                                                                     │
+     │                                                                                                            │
+     │ 1. .claude/agents/requirements-analyst.md                                                                  │
+     │ 2. .claude/agents/architecture-planner.md                                                                  │
+     │ 3. .claude/agents/task-decomposer.md                                                                       │
+     │ 4. .claude/agents/workflow-orchestrator.md                                                                 │
+     │ 5. .claude/agents/brand-analyzer.md                                                                        │
+     │ 6. .claude/agents/technical-validator.md                                                                   │
+     │ 7. .claude/agents/i18n-setup-agent.md                                                                      │
+     │ 8. .claude/agents/code-validator.md                                                                        │
+     │ 9. .claude/agents/seo-orchestrator.md                                                                      │
+     │ 10. .claude/agents/seo-content-planner.md                                                                  │
+     │ 11. .claude/agents/seo-content-writer.md                                                                   │
+     │ 12. .claude/agents/image-orchestrator.md                                                                   │
+     │ 13. .claude/agents/client-documentation-agent.md                                                           │
+     │                                                                                                            │
+     │ Update Existing Agents (3):                                                                                │
+     │                                                                                                            │
+     │ - .claude/agents/sitemap-analyst.md (MCP usage, i18n awareness)                                            │
+     │ - .claude/agents/sitemap-executor.md (i18n integration, error handling)                                    │
+     │ - .claude/agents/seo-content-executor.md (split into planner + writer)                                     │
+     │                                                                                                            │
+     │ New Documentation (3):                                                                                     │
+     │                                                                                                            │
+     │ - .claude/docs/website-workflow.md (complete flow)                                                         │
+     │ - .claude/docs/content-writing-seo.md (extracted guidelines)                                               │
+     │ - .claude/docs/mcp-usage-guide.md (which MCP for what)                                                     │
+     │                                                                                                            │
+     │ Update Documentation (4):                                                                                  │
+     │                                                                                                            │
+     │ - .claude/docs/workflows/parent-workflow.md (parallel orchestration)                                       │
+     │ - .claude/skills/README.md (remove shadcn-ui-blocks or update to MCP)                                      │
+     │ - CLAUDE.md (mandate MCP usage clearly)                                                                    │
+     │ - README.md (new workflow overview)                                                                        │
+     │                                                                                                            │
+     │ Configuration (2):                                                                                         │
+     │                                                                                                            │
+     │ - .claude/settings.json (trim marketplace plugins)                                                         │
+     │ - .claude/sessions/[session]/metadata.json (new template)                                                  │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Expected Outcomes                                                                                          │
+     │                                                                                                            │
+     │ Token Savings: 30-40% reduction                                                                            │
+     │ - MCP usage (no reading 900+ component files)                                                              │
+     │ - Marketplace trim (40% fewer plugins)                                                                     │
+     │ - Doc consolidation (remove redundancy)                                                                    │
+     │ - Lazy-loading (context-aware skill loading)                                                               │
+     │                                                                                                            │
+     │ Workflow Speed: 50% faster via parallel execution                                                          │
+     │ - Pre-flight in parallel (brand + technical)                                                               │
+     │ - Validation in parallel (code + a11y + perf)                                                              │
+     │ - SEO writing in parallel (one agent per page)                                                             │
+     │                                                                                                            │
+     │ Quality: Production-ready websites                                                                         │
+     │ - i18n from start (en + de)                                                                                │
+     │ - Accessibility validated (WCAG AA)                                                                        │
+     │ - Performance optimized (Lighthouse 90+)                                                                   │
+     │ - SEO optimized (E-E-A-T signals)                                                                          │
+     │                                                                                                            │
+     │ Automation: 95% hands-off                                                                                  │
+     │ - Only manual: Client requirements input                                                                   │
+     │ - Everything else: Orchestrated automatically                                                              │
+     │ - Validation: Automated at each stage                                                                      │
+     │ - Deployment: One-click to production                                                                      │
+     │                                                                                                            │
+     │ ---                                                                                                        │
+     │ Timeline: 2 weeks total                                                                                    │
+     │                                                                                                            │
+     │ - Week 1: Fixes + Planning Tier + Core Workflow                                                            │
+     │ - Week 2: Optimization + Integration + Testing                                                             │
+     ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+> its also important that the subagents communicate together to have more context, but it should be summarized with the most important stuff and what needs to be done etc. i have a session
+ markdown but this also can be improved for sure 
+  ⎿  ⧉ Selected 2 lines from prompt in IntelliJ IDEA
+
+⏺ I understand - agent-to-agent communication with context summaries is critical. Let me clarify your requirements:
+
+  Current Session System (from analysis):
+  - .claude/sessions/[session]/planning.md (Parent creates)
+  - .claude/sessions/[session]/communication.md (Agents append)
+
+  Your Requirements:
+  1. Subagents communicate together (not just to Parent)
+  2. Communication summarized (key context only, not verbose)
+  3. Session markdown can be improved
+
+  Questions before I finalize the plan:
+
+  1. Agent Communication Pattern - How should agents share context?
+    - Option A: All agents read/write to communication.md (see all updates)
+    - Option B: Targeted handoffs (sitemap-analyst → sitemap-executor gets specific summary)
+    - Option C: Hierarchical (orchestrator summarizes for next phase)
+  2. Summary Format - What goes in agent communication?
+    - Brand colors extracted: #1a2b3c, #4d5e6f
+    - Pages created: app/[locale]/page.tsx, app/[locale]/about/page.tsx
+    - Issues found: 3 TypeScript errors in Contact page
+    - Next agent needs: SEO content for 5 pages, i18n keys defined
+  3. Session Improvements - What's missing in current session system?
+    - Checkpointing (rollback if agent fails)?
+    - Agent dependency tracking (who needs what from whom)?
+    - Status tracking (which agents completed/failed)?
+    - Output artifact registry (where is sitemap.md, seo-report.md, etc.)?
+  4. Communication Scope - Should I also improve:
+    - Marketplace agent integration (how they communicate with custom agents)?
+    - Error propagation (if sitemap-executor fails, how does SEO know)?
+    - Parallel agent coordination (how do 3 parallel SEO writers avoid conflicts)?
+
+  Is there anything else you want me to consider for the ultimate setup, or should I now create the complete plan with improved agent communication system?
+
+> go, also add the plan as markdown and the current state and then summarize it shortly what now is better and why. and also at the end with all changes 
+  ⎿  Interrupted · What should Claude do instead?
+
+> go, also add the plan as markdown and the current state and then summarize it shortly what now is better and why. and also at the end with all changes 

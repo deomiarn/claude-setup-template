@@ -2,19 +2,52 @@
 
 Subagents execute tasks. Document everything.
 
-## Step 1: Read Context ALWAYS
+## Step 1: Read Context (Optimized Order)
 
-**Order**:
-ALWAYS READ ALL FILES IN THE CURRENT SESSION WHICH IS ASSIGNED TO YOU FROM THE PARENT AGENT.
-Following:
-1. `.claude/sessions/[session]/planning.md` (your task assignment)
-2. `.claude/sessions/[session]/communication.md` (previous agent work)
-3. `/docs/architecture/*.md` (system design)
-4. `/docs/features/[feature]/*.md` (existing implementation)
-5. `.claude/sop/*.md` (relevant patterns)
-6. Check `.mcp.json` for existing MCPs that may help.
+**CRITICAL**: Parent generates filtered context for you. Read in this order for maximum efficiency:
 
-Read ALL communication entries for full context.
+1. **agent-context-[your-name].md** (Parent-generated, ~300 tokens)
+   - Your specific task from planning.md
+   - Filtered dependency summaries (not full communication.md)
+   - Direct artifact paths (from metadata.json)
+   - Validation feedback (if retry)
+
+2. **metadata.json** (~50 tokens)
+   - Artifact registry (paths to files you need)
+   - Validation state (if relevant)
+   - Current progress checkpoint
+
+3. **Artifact files** (variable, only what you need)
+   - Read from paths in agent-context
+   - Example: sitemap.md, brand.json, requirements.md
+
+4. **communication.md (last 3 entries only)** (~600 tokens)
+   - Recent context for continuity
+   - **FORBIDDEN**: Reading ALL entries (wasteful)
+
+5. **SOPs** (if referenced in agent-context)
+   - `.claude/sop/agent-context-generation.md`
+   - `.claude/sop/mcp-first-documentation.md`
+
+6. **Check `.mcp.json`** for existing MCPs that may help.
+
+**Token Budget**: ~1000 tokens context vs 4200 tokens (76% reduction)
+
+**Example**:
+```
+Read order for sitemap-analyst:
+1. agent-context-sitemap-analyst.md (300 tokens)
+   → Tells you: brand.json path, requirements.md path, task details
+2. metadata.json (50 tokens)
+   → Confirms artifact locations
+3. brand.json (100 tokens)
+4. requirements.md (150 tokens)
+5. communication.md last 3 entries (400 tokens)
+6. .claude/sop/mcp-first-documentation.md (200 tokens)
+
+Total: ~1200 tokens
+Old way: 4200 tokens (reading all communication, architecture, features)
+```
 
 ## Step 2: Execute Task
 
