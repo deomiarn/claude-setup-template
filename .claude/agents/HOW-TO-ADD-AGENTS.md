@@ -145,9 +145,14 @@ Example: seo-orchestrator.md
 - Validator: `requirements-validator.md` (~180 lines)
 - Orchestrator: Template in `IMPLEMENTATION-GUIDE.md`
 
-## Need Help?
+## See Also
 
-1. Read `.claude/docs/IMPLEMENTATION-GUIDE.md` (complete templates)
-2. Check `.claude/sop/agent-context-generation.md` (context pattern)
-3. Check `.claude/sop/mcp-first-documentation.md` (MCP rules)
-4. Review `CLAUDE.md` (architecture overview)
+- **SOPs**:
+  - `.claude/sop/agent-context-generation.md` - How Parent generates context for agents
+  - `.claude/sop/mcp-first-documentation.md` - MCP enforcement rules
+- **Workflows**:
+  - `.claude/docs/workflows/subagent-workflow.md` - Standard agent execution workflow
+  - `.claude/docs/workflows/parent-workflow.md` - How Parent delegates to agents
+- **Core Docs**:
+  - `/CLAUDE.md` - Architecture overview
+  - `.claude/docs/output-format.md` - Communication format standards

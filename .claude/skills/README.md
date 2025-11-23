@@ -12,17 +12,15 @@ Context-relevant skills for current project. Load only what's needed.
 
 ## Available Skills
 
-- **shadcn-ui-blocks**: 929 pre-built website components across 45+ categories (hero, feature, pricing, testimonial, CTA, footer, navbar, blog, gallery, contact, FAQ, etc.)
-  Path: `.claude/skills/shadcn-ui-blocks/Skill.md`
-  When: Building websites, landing pages, marketing sites, or need responsive UI components with pnpm install commands
-
 - **sitemap-pages**: 13 pre-defined page templates (homepage, about, services, blog, contact, pricing, portfolio, etc.) with structured sections
   Path: `.claude/skills/sitemap-pages/skill.md`
   When: Planning website architecture, structuring page layouts, or generating sitemaps
 
-- **website-builder**: Website sitemap generation workflow. Analyzes requirements, delegates to sitemap-analyst agent, generates sitemap with shadcn-ui-blocks component selections.
+- **website-builder**: Website sitemap generation workflow. Analyzes requirements, delegates to sitemap-analyst agent, generates sitemap using shadcn-search MCP.
   Path: `.claude/skills/website-builder/Skill.md`
   When: Planning website architecture, structuring pages, selecting components, or requesting sitemap/page structure planning
+
+**Note**: For shadcn/ui components, use `mcp__shadcn-search__search_components` MCP tool instead of static docs (90% token reduction)
 
 <!-- Add skills below. Template:
 

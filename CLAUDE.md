@@ -201,11 +201,7 @@ Task(requirements-analyst, sonnet, "Read agent-context-requirements-analyst.md")
 - **Time Reduction**: 60% (3 hours → 75 minutes via parallelization)
 - **Quality**: ~60% of sessions trigger ≥1 validation retry → higher quality output
 
-### Implementation Guide
+### Implementation Details
 
-See `.claude/docs/IMPLEMENTATION-GUIDE.md` for:
-- Complete agent templates
-- Workflow updates
-- Validation loop patterns
-- Token optimization breakdown
-- Example sessions
+See `.claude/docs/workflows/parent-workflow.md` for complete orchestration workflow
+See `.claude/sessions/README.md` for session structure and management
