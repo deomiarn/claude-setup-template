@@ -84,11 +84,14 @@ Use simplified workflow (NO SEO agents):
 [3] sitemap-executor (create app/ structure)
 [VALIDATE-2] code-structure-validator (TypeScript check only)
 
-**Phase 3: i18n Setup (if multi-language)**
+**Phase 3: i18n Setup**
 [4] i18n-setup-agent (next-intl config)
 
 **Phase 4: Basic Content**
-[5] Create placeholder content (no SEO optimization)
+[5] Create placeholder content (no SEO optimization), just company specific
+
+**Phase 5: Props**
+[6] Add props to components if needed and set i18n keys for every text
 
 **Skip entirely:**
 - ❌ requirements-validator (no SEO requirements)
@@ -134,7 +137,7 @@ Simplified workflow (NO SEO):
 ```
 [2] sitemap-analyst (plan pages, select shadcn components)
 [3] sitemap-executor (create app/ structure, install components)
-    ↓
+↓
 [VALIDATE-2] code-structure-validator (TypeScript check)
 ```
 
@@ -294,28 +297,28 @@ Run full-website-with-seo.md on existing project:
 ## NEXT STEPS AFTER BUILD
 
 1. **Local Testing**
-   ```bash
-   pnpm dev
-   # Visit http://localhost:3000
-   # Test all pages, forms
-   ```
+```bash
+pnpm dev
+# Visit http://localhost:3000
+# Test all pages, forms
+```
 
 2. **Add Real Content**
-   - Edit component files directly
-   - Replace placeholder text
-   - Add real images to /public
+- Edit component files directly
+- Replace placeholder text
+- Add real images to /public
 
 3. **Deploy**
-   ```bash
-   git add .
-   git commit -m "Basic website build"
-   git push
-   # Vercel auto-deploys
-   ```
+```bash
+git add .
+git commit -m "Basic website build"
+git push
+# Vercel auto-deploys
+```
 
 4. **Optional: Add SEO Later**
-   - Run full-website-with-seo.md as "revision"
-   - Parent adds SEO layers to existing structure
+- Run full-website-with-seo.md as "revision"
+- Parent adds SEO layers to existing structure
 
 ---
 
