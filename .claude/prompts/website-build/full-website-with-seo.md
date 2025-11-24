@@ -171,7 +171,12 @@ Parent will execute this automatically:
 [VALIDATE-4] content-quality-validator (SEO quality, i18n completeness)
 ```
 
-### Phase 6: Final Validation - 10 min
+### Phase 6: Props
+```
+[10] Add props to components if needed and set i18n keys for every text
+```
+
+### Phase 7: Final Validation - 10 min
 ```
 [VALIDATE-5] production-readiness-validator
     ├── accessibility-compliance (WCAG AA)
