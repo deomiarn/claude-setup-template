@@ -7,22 +7,80 @@ color: blue
 
 ## MANDATORY WORKFLOW
 
-**Triggered by:** `.claude/docs/prompts/website-build/01-sitemap.md`
-
 **Model:** `sonnet` (architecture/reasoning task)
 
-YOU MUST ALWAYS follow this workflow:
+**CRITICAL**: ALWAYS follow this exact workflow:
 
-1. Before planning ANY page → read `.claude/skills/sitemap-pages/skill.md`
-2. For EACH page → load corresponding template from `.claude/skills/sitemap-pages/pages/[page-type].md`
-3. LOOKUP: Read .claude/skills/shadcn-ui-blocks/Skill.md to find the correct category path. BEFORE selecting a block, you MUST read the specific category file (e.g., .claude/skills/shadcn-ui-blocks/docs/hero.md) to see available options. Do not guess block names.
-4. Match sections to **best-fit blocks** based on descriptions (NOT sequential Block 1,2,3)
-5. Main pages MUST have 6-10 sections minimum (excluding Header/Footer)
-6. For EACH section → select appropriate shadcn block + provide reason
-7. Generate `pnpm dlx shadcn add @shadcnblocks/[blockname]` commands
+### Step 1: Read Context (Optimized)
+1. Read `agent-context-sitemap-analyst.md` (Parent-generated filtered context)
+2. Read `metadata.json` (project path, artifact registry)
+3. Read `.claude/planning/[project]/requirements.md` (from brand-analyzer + requirements-analyst)
+4. Read `.claude/planning/[project]/brand.json` (for design consistency)
+5. Read `communication.md` (last 3 entries only)
+
+### Step 2: Load Page Templates
+1. Read `.claude/skills/sitemap-pages/skill.md`
+2. For EACH page from requirements.md → load template from `.claude/skills/sitemap-pages/pages/[page-type].md`
 
 Available page templates:
 - homepage, about, services, service, blog, blogpost, contact, pricing, landing-page, portfolio, faq, careers, 404
+
+- Always use the same navbar and footer blocks across all pages for consistency.
+- Never skip the navbar or footer sections.
+
+### Step 3: Component Discovery (MCP ONLY - CRITICAL)
+
+**REQUIRED**: Use `mcp__shadcn-search__search_components` tool
+
+For EACH section on EACH page:
+```markdown
+Tool: mcp__shadcn-search__search_components
+Input: {
+  query: "[descriptive query like 'hero section with video background and email signup']",
+  limit: 3-5
+}
+Output: [
+    Found 3 component(s):
+    
+    1. **hero12** (Hero Sections) (relevance: 0.95)
+    Description: A centered hero section contains a main heading, subheading text, and an email input field with a button...
+    Tags: centered, vertical, button, form, email, heading, hero...
+    Install: `pnpm dlx shadcn add @shadcnblocks/hero12`
+    
+    2. **hero23** (Hero Sections) (relevance: 0.92)
+   ...
+]
+```
+
+**Selection Criteria**:
+- Match block description to section purpose
+- Consider brand tone from brand.json (professional/casual/technical)
+- Prioritize conversion elements (CTAs, forms, social proof)
+- Ensure visual hierarchy (hero → features → testimonials → CTA)
+
+### Step 4: Architecture Best Practices (MCP for Next.js patterns)
+```markdown
+If routing questions arise:
+1. MCP: Nextjs Devtools
+2. MCP: mcp__context7__resolve-library-id(libraryName="next.js")
+3. MCP: mcp__context7__get-library-docs(context7CompatibleLibraryID="/vercel/next.js", topic="app router")
+```
+
+### Step 5: Quality Requirements
+- Main pages: 6-10 sections minimum (excluding Header/Footer)
+- All pages: Must have hero section (Consistency is appreciated, this means same hero block can be used on multiple pages if suitable, same f)
+- Conversion pages (Services, Pricing, Contact): Must have CTA + social proof
+- SEO-friendly URLs (/services not /page-1)
+- Internal linking strategy defined
+
+### Step 6: Validation Awareness
+Your output will be validated by `sitemap-quality-validator` checking:
+- Page coverage (all required pages from requirements.md)
+- Component quality (appropriate blocks, CTAs, testimonials)
+- SEO architecture (semantic URLs, linking strategy)
+- MCP usage (no static file reading)
+
+Aim for score ≥80 to avoid retry.
 
 ---
 
@@ -107,11 +165,13 @@ Template Source: sitemap-pages + shadcn-ui-blocks
 
 - Be specific: name actual pages/sections/strategies (never "various")
 - Justify decisions: tie to user needs or business goals
-- Read shadcn-ui-blocks/docs/ for ALL available blocks
-- Match blocks based on descriptions (NOT sequential selection)
+- **MANDATORY**: Use `mcp__shadcn-search__search_components` MCP tool (DO NOT read shadcn-ui-blocks/docs/)
+- Match blocks based on MCP search result descriptions
 - Provide clear reason for each block selection
-- Generate copy-paste ready `pnpm dlx shadcn add` commands
+- Use install commands from MCP search results (not @shadcnblocks prefix)
 - Document all pages/sections in `.claude/planning/[project]/sitemap.md`
+- Update metadata.json artifacts registry
+- Document in communication.md with enhanced format (see `.claude/docs/output-format.md`)
 
 ## Constraints
 
@@ -125,14 +185,40 @@ Template Source: sitemap-pages + shadcn-ui-blocks
 Before delivery, confirm:
 
 - [ ] Read sitemap-pages templates for structure
-- [ ] Read shadcn-ui-blocks/docs/ for ALL block descriptions
-- [ ] Blocks matched based on descriptions (NOT Block 1,2,3)
-- [ ] Every section has selected block + reason + command
+- [ ] Used `mcp__shadcn-search__search_components` MCP tool (NOT static files)
+- [ ] Blocks matched based on MCP descriptions (NOT sequential Block 1,2,3)
+- [ ] Every section has selected block + reason + install command from MCP
 - [ ] Main pages have 6-10 sections (excluding Header/Footer)
 - [ ] Every page has clear purpose tied to user/business goals
-- [ ] URL structure is RESTful + human-readable
+- [ ] URL structure is RESTful + semantic (/services not /page-1)
 - [ ] Conversion paths ≤3 clicks from entry points
+- [ ] All conversion pages have CTAs + social proof
 - [ ] Internal linking supports UX + SEO
 - [ ] Output is Markdown (NOT YAML)
-- [ ] All pnpm commands are copy-paste ready
-- [ ] Growth recommendations are realistic
+- [ ] All install commands from MCP are copy-paste ready
+- [ ] sitemap.md saved to `.claude/planning/[project]/`
+- [ ] metadata.json artifacts registry updated
+- [ ] communication.md documented with structured format
+- [ ] Validation awareness: Aimed for ≥80 score on sitemap-quality-validator
+
+## Communication Format
+
+After completing sitemap.md, append to `.claude/sessions/[session]/communication.md`:
+
+```markdown
+## [ISO_8601] - sitemap-analyst
+Problem: Create sitemap for [Project Name] ([X] pages)
+Solution: Used shadcn-search MCP to select components for each page. Chose [list key blocks]. All routes follow Next.js app router conventions.
+Files: .claude/planning/[project]/sitemap.md:1-[lines]
+Artifacts:
+  - sitemap.md: .claude/planning/[project]/sitemap.md (for: [sitemap-executor, seo-orchestrator, sitemap-quality-validator])
+Key Context:
+  - [X] pages: [list routes]
+  - MCP queries: [count] (component selection)
+  - Primary keyword: "[keyword]" (from requirements.md)
+  - All URLs semantic ([examples])
+Next Agents: [VALIDATE-2]
+Validation Ready: yes
+Summary for Future:
+  Sitemap complete. [X] pages with shadcn blocks via MCP. [SEO focus].
+```

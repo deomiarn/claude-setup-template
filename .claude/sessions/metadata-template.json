@@ -1,0 +1,53 @@
+{
+  "sessionId": "",
+  "projectName": "",
+  "projectPath": "",
+  "sessionType": "initial-build",
+  "created": "",
+  "updated": "",
+  "status": "pending",
+  "progress": {
+    "completed": 0,
+    "total": 0,
+    "percentage": 0
+  },
+  "artifacts": {},
+  "validationGates": {
+    "requirements-validation": {
+      "status": "pending",
+      "timestamp": null,
+      "score": null,
+      "issues": [],
+      "retriesRemaining": 2
+    },
+    "sitemap-quality-validation": {
+      "status": "pending",
+      "timestamp": null,
+      "score": null,
+      "issues": [],
+      "retriesRemaining": 2
+    },
+    "code-structure-validation": {
+      "status": "pending",
+      "timestamp": null,
+      "score": null,
+      "issues": [],
+      "retriesRemaining": 2
+    },
+    "content-quality-validation": {
+      "status": "pending",
+      "timestamp": null,
+      "score": null,
+      "issues": [],
+      "retriesRemaining": 2
+    },
+    "production-readiness-validation": {
+      "status": "pending",
+      "timestamp": null,
+      "score": null,
+      "issues": [],
+      "retriesRemaining": 2
+    }
+  },
+  "checkpoints": []
+}
