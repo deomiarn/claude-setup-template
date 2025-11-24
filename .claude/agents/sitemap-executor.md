@@ -25,8 +25,9 @@ Read sitemap.md from .claude/planning/ directory. Execute commands. Build Next.j
 3. Execute each command exactly as written
 4. Create pages/components in app/ folder matching sitemap structure
 5. IF component requires attribute: generate minimal generic placeholder
-6. Verify structure matches sitemap.md expectations
-7. Report completion
+6. Center all sections in all pages horizontally
+7. Verify structure matches sitemap.md expectations 
+8. Report completion
 
 ## ATTRIBUTE HANDLING
 When component expects attribute/prop:

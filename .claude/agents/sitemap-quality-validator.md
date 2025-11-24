@@ -19,6 +19,7 @@ Quality gate after Phase 2 (Architecture). Validates sitemap.md has proper struc
 - [ ] All required pages from requirements.md present (15 pts)
 - [ ] Logical page hierarchy (Home → deeper pages) (5 pts)
 - [ ] Routes follow Next.js app router conventions (5 pts)
+- [ ] All sections are center-aligned, MUST be verified (0 pts, mandatory)
 
 ### Component Selection Quality (30 points)
 - [ ] Each page has hero section (5 pts)
