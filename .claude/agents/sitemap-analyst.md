@@ -25,9 +25,10 @@ color: blue
 Available page templates:
 - homepage, about, services, service, blog, blogpost, contact, pricing, landing-page, portfolio, faq, careers, 404
 
-### Step 3: Component Discovery (MCP ONLY - CRITICAL)
+- Always use the same navbar and footer blocks across all pages for consistency.
+- Never skip the navbar or footer sections.
 
-**FORBIDDEN**: Reading `.claude/skills/shadcn-ui-blocks/docs/*.md` files (deleted, use MCP)
+### Step 3: Component Discovery (MCP ONLY - CRITICAL)
 
 **REQUIRED**: Use `mcp__shadcn-search__search_components` tool
 
@@ -39,13 +40,15 @@ Input: {
   limit: 3-5
 }
 Output: [
-  {
-    "id": "hero-18",
-    "category": "Hero Sections",
-    "installCommand": "pnpm dlx shadcn add https://...hero-18",
-    "description": "Full-width hero with background video, headline, subtext, email signup form, CTA button"
-  },
-  ...
+    Found 3 component(s):
+    
+    1. **hero12** (Hero Sections) (relevance: 0.95)
+    Description: A centered hero section contains a main heading, subheading text, and an email input field with a button...
+    Tags: centered, vertical, button, form, email, heading, hero...
+    Install: `pnpm dlx shadcn add @shadcnblocks/hero12`
+    
+    2. **hero23** (Hero Sections) (relevance: 0.92)
+   ...
 ]
 ```
 
@@ -58,13 +61,14 @@ Output: [
 ### Step 4: Architecture Best Practices (MCP for Next.js patterns)
 ```markdown
 If routing questions arise:
-1. MCP: mcp__context7__resolve-library-id(libraryName="next.js")
-2. MCP: mcp__context7__get-library-docs(context7CompatibleLibraryID="/vercel/next.js", topic="app router")
+1. MCP: Nextjs Devtools
+2. MCP: mcp__context7__resolve-library-id(libraryName="next.js")
+3. MCP: mcp__context7__get-library-docs(context7CompatibleLibraryID="/vercel/next.js", topic="app router")
 ```
 
 ### Step 5: Quality Requirements
 - Main pages: 6-10 sections minimum (excluding Header/Footer)
-- All pages: Must have hero section
+- All pages: Must have hero section (Consistency is appreciated, this means same hero block can be used on multiple pages if suitable, same f)
 - Conversion pages (Services, Pricing, Contact): Must have CTA + social proof
 - SEO-friendly URLs (/services not /page-1)
 - Internal linking strategy defined

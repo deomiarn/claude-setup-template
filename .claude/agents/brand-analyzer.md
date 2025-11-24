@@ -78,7 +78,10 @@ None (reads project files directly)
    }
    ```
 
-7. **Update Metadata**
+7. Replace values in :root and .dark with the extracted brand colors in the file globals.css.
+Do not add them as new variables, only replace existing ones.
+
+8. **Update Metadata**
    ```json
    {
      "artifacts": {
@@ -91,7 +94,7 @@ None (reads project files directly)
    }
    ```
 
-8. **Document in communication.md**
+9. **Document in communication.md**
    ```markdown
    ## [ISO_8601] - brand-analyzer
    Problem: Extract brand assets from project files

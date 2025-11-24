@@ -1,27 +1,34 @@
 {
-	"mcpServers": {
-		"context7": {
-			"type": "http",
-			"url": "https://mcp.context7.com/mcp",
-			"headers": {
-				"CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
-			}
-		},
-		"next-devtools": {
-			"command": "npx",
-			"args": [
-				"-y",
-				"next-devtools-mcp@latest"
-			]
-		},
-		"shadcn-search": {
-			"command": "node",
-			"args": [
-				"mcp-servers/shadcn-search/build/index.js"
-			],
-			"env": {},
-			"disabled": false,
-			"autoApprove": []
-		}
-	}
+  "mcpServers": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      }
+    },
+    "next-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "next-devtools-mcp@latest"
+      ]
+    },
+    "shadcn-search": {
+      "command": "node",
+      "args": [
+        "mcp-servers/shadcn-search/build/index.js"
+      ],
+      "env": {},
+      "disabled": false,
+      "autoApprove": []
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
+    }
+  }
 }

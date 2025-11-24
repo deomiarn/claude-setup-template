@@ -1,7 +1,6 @@
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
-import { z } from "zod";
 import Fuse from "fuse.js";
 import fs from "fs";
 import path from "path";
@@ -24,6 +23,7 @@ let blocks: Block[] = [];
 try {
     if (fs.existsSync(DB_PATH)) {
         blocks = JSON.parse(fs.readFileSync(DB_PATH, "utf-8"));
+        console.error(`[shadcn-search] Loaded ${blocks.length} blocks from database`);
     } else {
         console.error("blocks-db.json not found. Run generation script.");
     }
@@ -33,9 +33,19 @@ try {
 
 // Initialize Fuse
 const fuse = new Fuse(blocks, {
-    keys: ["description", "category", "id", "tags"],
-    threshold: 0.4,
+    keys: [
+        { name: "tags", weight: 2.0 },        // Prioritize tags (highest weight)
+        { name: "category", weight: 1.5 },    // Then category
+        { name: "id", weight: 1.2 },          // Then id
+        { name: "description", weight: 0.8 }  // Description has lower priority
+    ],
+    threshold: 0.5, // Balanced threshold for good matches
+    includeScore: true,
+    ignoreLocation: true, // Don't penalize matches based on position in text
+    minMatchCharLength: 2, // Minimum character length for matches
 });
+
+console.error(`[shadcn-search] Fuse initialized with ${blocks.length} items`);
 
 const server = new Server(
     { name: "shadcn-search", version: "1.0.0" },
@@ -69,7 +79,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         const query = String(request.params.arguments?.query);
         const limit = Number(request.params.arguments?.limit) || 5;
 
+        console.error(`[shadcn-search] Searching for: "${query}" with limit: ${limit}`);
+
         const results = fuse.search(query).slice(0, limit);
+
+        console.error(`[shadcn-search] Found ${results.length} results`);
 
         if (results.length === 0) {
             return { content: [{ type: "text", text: "No components found matching that query." }] };
